@@ -1,0 +1,177 @@
+.small-navigation {
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  padding: 0.5rem 0;
+
+  &__main {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+
+    /*background: linear-gradient(to right, red, orange, tomato, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+  }
+
+  &__title:hover {
+    transform: rotate(-3deg);
+    transition: var(--transition);
+  }
+
+  &__category-length {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__category {
+    text-transform: uppercase;
+    margin: 0;
+    margin-right: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  &__length {
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__filter {
+    margin: 0;
+    margin-right: 2rem;
+    display: none;
+  }
+
+  &__list p {
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-right: 2rem;
+    user-select: none;
+  }
+
+  &__list .more {
+    display: none;
+  }
+
+  &__list p:hover {
+    transform: scale(1.1);
+    transition: var(--transition);
+  }
+
+  &__list a {
+    text-decoration: none;
+  }
+
+  &__list i {
+    margin-right: 0.5rem;
+  }
+
+  &__options {
+    display: none;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .small-navigation {
+    &__main {
+      width: 100vw;
+    }
+
+    &__filter {
+      display: flex;
+    }
+
+    &__list .more {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .small-navigation {
+    position: fixed;
+    top: unset;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    display: flex;
+
+    &__main {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__list p {
+      margin: 0.8rem 2rem;
+      display: none;
+    }
+
+    &__title {
+      display: flex;
+      margin-right: 2rem;
+    }
+
+    &__filter {
+      display: flex;
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .small-navigation {
+    &__list p {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .small-navigation {
+    &__list p,
+    &__list i {
+      font-size: 0.8rem;
+    }
+
+    &__list p {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    &__options {
+      .more span,
+      .movie-more span,
+      .bookmarks-more span,
+      .search-more span {
+        display: none;
+      }
+    }
+  }
+}

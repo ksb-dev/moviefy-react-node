@@ -1,0 +1,84 @@
+.wishlists {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  overflow-x: hidden;
+
+  .category-length {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+
+    .category,
+    .length {
+      text-transform: uppercase;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .length {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-left: 1rem;
+    }
+  }
+
+  .wishlist-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wishlists {
+    .movie-list {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .wishlists {
+    .category-length {
+      padding-bottom: 0;
+      margin-right: 1rem;
+
+      .category {
+        font-size: 0.9rem;
+      }
+
+      .length {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wishlists {
+    width: 100vw;
+
+    .category-length {
+      padding-top: 4rem;
+      padding-bottom: 0rem;
+    }
+  }
+}

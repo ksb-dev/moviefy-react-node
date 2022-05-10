@@ -1,0 +1,46 @@
+.cat-clear {
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cat-clear .clear-btn {
+  background: #01b4e4;
+  border: none;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cat,
+.err {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.err {
+  letter-spacing: 1px;
+  padding-top: 8rem;
+}
+
+.whiteColorSearch {
+  color: #fff;
+}
+
+.blackColorSearch {
+  color: rgb(13, 37, 63);
+}
+
+@media only screen and (max-width: 640px) {
+  .cat-clear {
+    padding-top: 6rem;
+  }
+}

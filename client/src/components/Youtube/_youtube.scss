@@ -1,0 +1,79 @@
+.youtube {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  transform: translateY(100%);
+  transition: var(--transition);
+
+  &__wrapper {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  &__close {
+    background: transparent;
+    border: none;
+  }
+
+  &__close:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  &__close .fa-solid {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 100%;
+    border: none;
+    font-size: 2rem;
+  }
+
+  &__not-found {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .youtube {
+    &__wrapper {
+      width: 90vw;
+      height: 70vh;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .youtube {
+    &__wrapper {
+      width: 70vw;
+      height: 50vh;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+}
+
+@media screen and (max-width: 640px) {
+  .youtube {
+    &__wrapper {
+      width: 80vw;
+      height: 40vh;
+    }
+
+    &__not-found {
+      font-size: 1rem;
+    }
+  }
+}

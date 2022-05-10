@@ -1,0 +1,161 @@
+.movie-card {
+  border-radius: var(--border-radius);
+  width: 250px;
+  margin: 1rem 2rem;
+  margin-left: 0;
+
+  &__image-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    position: relative;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+
+  &__rating {
+    position: absolute;
+    z-index: 0;
+    top: 0rem;
+    left: 0;
+    color: var(--light-color-1);
+    margin: 0.7rem;
+    width: 35px;
+    height: 35px;
+    padding: 0rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 1px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+  }
+
+  &__title-year {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-right: 1rem;
+    font-weight: 700;
+  }
+
+  &__year {
+    margin: 0;
+    margin-right: 2rem;
+    font-weight: 500;
+  }
+
+  &__wishlist-btn {
+    position: absolute;
+    width: 93%;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+
+    #addCard {
+      color: var(--light-color-1);
+      background: linear-gradient(#38ef7d, green);
+      padding: 0.5rem;
+      cursor: pointer;
+      text-align: center;
+      margin: 0;
+      font-weight: 500;
+      border-radius: var(--border-radius);
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+
+    #addCard:hover {
+      background: linear-gradient(green, #38ef7d);
+      transition: var(--transition);
+    }
+
+    #removeCard {
+      color: var(--light-color-1);
+      background: linear-gradient(tomato, red);
+      padding: 0.5rem;
+      cursor: pointer;
+      text-align: center;
+      margin: 0;
+      font-weight: 500;
+      border-radius: var(--border-radius);
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+
+    #removeCard:hover {
+      background: linear-gradient(red, tomato);
+      transition: var(--transition);
+    }
+  }
+}
+
+.movie-card:hover {
+  box-shadow: 0px 0px 20px #01b4e4;
+  transition: var(--transition);
+}
+
+@media screen and (max-width: 1024px) {
+  .movie-card {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .movie-card {
+    width: 200px;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .movie-card {
+    width: 160px;
+    margin: 0.5rem;
+
+    &__title,
+    &__year {
+      font-size: 0.7rem;
+    }
+
+    &__wishlist-btn {
+      width: 90%;
+    }
+  }
+}

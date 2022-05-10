@@ -1,0 +1,213 @@
+//Components
+@import '../components/MovieCard/movieCard';
+@import '../components/Filter/filter';
+@import '../components/Navigation/navigation';
+@import '../components/Categories/categories';
+@import '../components/sideMenu/sideMenu';
+@import '../components/Pagination/pagination';
+@import '../components/ImageInfo/imageInfo';
+@import '../components/Cast/cast';
+@import '../components/Person/person';
+@import '../components/Youtube/youtube';
+@import '../components/Logout/logout';
+@import '../components/PersonDetail/personDetail';
+@import '../components/SearchedMovies/searchedMovie';
+@import '../components/SmallNav/smallNavigation';
+
+// Pages
+@import '../pages/Movies/movies';
+@import '../pages/Movie/movie';
+@import '../pages/Login/login';
+@import '../pages/Signup/signup';
+@import '../pages/Wishlists/wishlists';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+  --light-color-1: rgb(255, 255, 255);
+  --light-color-2: rgb(220, 220, 220);
+
+  --alpha-light-1: rgba(255, 255, 255, 0.9);
+  --alpha-light-2: rgba(220, 220, 220, 0.9);
+
+  --dark-color-1: rgb(13, 37, 63);
+  --dark-color-2: rgb(0, 17, 36);
+
+  --alpha-dark-1: rgba(13, 37, 63, 0.95);
+  --alpha-dark-2: rgba(0, 17, 36, 0.95);
+
+  --green: green;
+  --orange: orange;
+  --tomato: tomato;
+
+  --transition: all 0.3s ease;
+  --border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-family: 'Montserrat', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.loading {
+  width: 5rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  border-radius: 100%;
+  border: 5px solid #ccc;
+  border-top-color: var(--clr-primary-5);
+  animation: spinner 0.6s linear infinite;
+}
+
+@media screen and (max-width: 1280px) {
+  .loading {
+    width: 100vw;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: rgb(221, 221, 221);
+  color: red;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  padding: 5rem 0rem 1rem;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(207, 207, 207);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: tomato;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: tomato;
+  border-radius: 20px;
+}
+
+/* Bacground color classes */
+
+.lightBg1 {
+  background: var(--light-color-1);
+}
+
+.lightBg2 {
+  background: var(--light-color-2);
+}
+
+.alphaLightBg1 {
+  background: var(--alpha-light-1);
+}
+
+.alphaLightBg2 {
+  background: var(--alpha-light-2);
+}
+
+.darkBg1 {
+  background: var(--dark-color-1);
+}
+
+.darkBg2 {
+  background: var(--dark-color-2);
+}
+
+.alphaDarkBg1 {
+  background: var(--alpha-dark-1);
+}
+
+.alphaDarkBg2 {
+  background: var(--alpha-dark-2);
+}
+
+.green {
+  background: var(--green);
+  color: #fff;
+}
+
+.orange {
+  background: var(--orange);
+  color: #fff;
+}
+
+.tomato {
+  background: var(--tomato);
+  color: #fff;
+}
+
+/* Color classes */
+
+.lightColor1 {
+  color: var(--light-color-1);
+}
+
+.lightColor2 {
+  color: var(--light-color-2);
+}
+
+.darkColor1 {
+  color: var(--dark-color-1);
+}
+
+.darkColor2 {
+  color: var(--dark-color-2);
+}
+
+/* Color Background classes */
+
+.lightColorBg1 {
+  color: var(--dark-color-1);
+  background: var(--light-color-2);
+}
+
+.darkColorBg1 {
+  color: var(--light-color-1);
+  background: var(--dark-color-2);
+}
+
+.lightColorBg2 {
+  color: var(--dark-color-2);
+  background: var(--light-color-1);
+}
+
+.darkColorBg2 {
+  color: var(--light-color-1);
+  background: var(--dark-color-1);
+}

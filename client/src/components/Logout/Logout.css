@@ -1,0 +1,64 @@
+.logout {
+  position: fixed;
+  top: 3.2rem;
+  right: 0;
+  z-index: 10;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transform: translateX(110%);
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.logout h4 {
+  text-transform: none;
+}
+
+.logout .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout .options h5 {
+  cursor: pointer;
+  margin: 0 2rem;
+}
+
+.logout .options h5:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+.light {
+  background: rgba(13, 37, 63);
+  color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+
+.dark {
+  background: rgba(255, 255, 255);
+  color: #0d253f;
+  box-shadow: 0 0 5px #0d253f;
+}
+
+.darker {
+  background: rgba(13, 37, 63);
+  color: #fff;
+}
+
+.lighter {
+  background: rgba(255, 255, 255);
+  color: #0d253f;
+}
+
+@media screen and (max-width: 640px) {
+  .logout {
+    top: unset;
+    bottom: 6.5rem;
+  }
+}

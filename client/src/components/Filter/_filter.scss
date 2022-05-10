@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & i {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &__dropdown {
+    box-sizing: border-box;
+    padding: 0.3rem 0.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 150px;
+    border-radius: var(--border-radius);
+    user-select: none;
+    position: relative;
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__option {
+    font-size: 0.9rem;
+    margin-right: 0.1rem;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 2;
+    top: 2rem;
+    left: 0;
+    width: 150px;
+    border-radius: var(--border-radius);
+  }
+
+  &__item {
+    margin: 10px 0;
+    padding: 0px 2px;
+    cursor: pointer;
+    font-size: 90%;
+  }
+
+  &__item:hover {
+    padding-left: 5px;
+    transition: var(--transition);
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .dropdown {
+    width: 100px;
+  }
+}

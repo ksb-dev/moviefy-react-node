@@ -1,0 +1,121 @@
+.sideMenu {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  z-index: 3;
+  width: 15vw;
+  height: 78vh;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  margin: 0;
+
+  &__main {
+    position: fixed;
+    z-index: 4;
+    top: 5rem;
+    right: 0;
+    width: 15vw;
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  &__results {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  &__counter {
+    margin: 0;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border-radius: 50%;
+    font-weight: 300;
+
+    span {
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__filter {
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0rem;
+  }
+
+  &__list li {
+    margin: 1rem 0rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    user-select: none;
+  }
+
+  &__list li:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
+  &__list li:first-child {
+    margin-top: 2rem;
+  }
+
+  &__list li a {
+    text-decoration: none;
+  }
+
+  &__wishlists a {
+    background: tomato;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .sideMenu {
+    display: none;
+    width: 0;
+    margin: 0;
+
+    &__main {
+      width: 0;
+    }
+
+    &__filter {
+      margin: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.red {
+  border-left: 5px solid #000;
+}
+
+.activeCategory {
+  transform: scale(1.1);
+  font-weight: bold;
+}
