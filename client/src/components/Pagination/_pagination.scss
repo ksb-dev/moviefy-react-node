@@ -1,19 +1,22 @@
 .pagination {
-  width: 100vw;
+  width: 10vw;
   position: fixed;
   bottom: 0%;
-  left: 0;
+  left: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 0;
+  /*padding: 0.2rem 0;*/
+  transform: translate(-50%, 0);
+  border-radius: 50px;
 
   .inner {
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius);
+    border-radius: 50px;
+    padding: 0.3rem 1rem;
+    border: none;
 
     .up,
     .down {
@@ -137,4 +140,12 @@
   .prevNextLight {
     margin: 0.2rem;
   }
+}
+
+.lightBo {
+  box-shadow: 0 0 50px 10px var(--light-color-1);
+}
+
+.darkBo {
+  box-shadow: 0 0 50px 10px var(--dark-color-2);
 }

@@ -1,6 +1,6 @@
 .movie-card {
   border-radius: var(--border-radius);
-  width: 250px;
+  width: 200px;
   margin: 1rem 2rem;
   margin-left: 0;
 
@@ -138,7 +138,7 @@
 
 @media screen and (max-width: 1024px) {
   .movie-card {
-    width: 220px;
+    width: 200px;
   }
 }
 
