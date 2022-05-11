@@ -154,7 +154,11 @@ const MovieCard = ({
             </h5>
           )}
 
-          {!user && <h5 id='addCard'>Login to wishlist</h5>}
+          {!user && (
+            <h5 id='addCard'>
+              <Link to='/login'>Login to wishlist</Link>
+            </h5>
+          )}
         </div>
       </div>
     </div>

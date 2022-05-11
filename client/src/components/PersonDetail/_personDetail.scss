@@ -110,6 +110,16 @@
           width: 200px;
         }
       }
+
+      &__bio {
+        h4 {
+          line-height: 1.5rem;
+          font-size: 0.9rem;
+          font-weight: 400;
+          margin: 0;
+          letter-spacing: 1px;
+        }
+      }
     }
   }
 }
