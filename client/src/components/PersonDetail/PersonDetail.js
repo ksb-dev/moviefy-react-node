@@ -17,8 +17,8 @@ const PersonDetail = ({ detail, person }) => {
       ref={detail}
       className={
         toggleMode === 'white'
-          ? 'person-detail lightBg1'
-          : 'person-detail darkBg1'
+          ? 'person-detail lightBg2'
+          : 'person-detail darkBg2'
       }
     >
       <div

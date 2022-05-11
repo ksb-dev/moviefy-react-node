@@ -17,8 +17,7 @@ const Header = () => {
     isLoading,
     user,
     activeGenre,
-    setActiveGenre,
-    setSelected
+    setActiveGenre
   } = useGlobalContext()
 
   // State of User Name
@@ -64,8 +63,8 @@ const Header = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'navigation alphaLightBg2'
-            : 'navigation alphaDarkBg2'
+            ? 'navigation alphaLightBg1'
+            : 'navigation alphaDarkBg1'
         }
       >
         <div className='navigation__main'>

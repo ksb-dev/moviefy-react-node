@@ -1,7 +1,7 @@
 .pagination {
   width: 100vw;
   position: fixed;
-  bottom: 0rem;
+  bottom: 0%;
   left: 0;
   display: flex;
   align-items: center;
@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--border-radius);
 
     .up,
     .down {
@@ -32,20 +33,22 @@
 
 .prevNextDark {
   border: none;
-  background: var(--light-color-2);
-  color: var(--dark-color-2);
+  background: var(--light-color-1);
+  color: var(--dark-color-1);
   margin: 0.5rem;
   cursor: pointer;
   border-radius: 50%;
+  background: transparent;
 }
 
 .prevNextLight {
   background: var(--dark-color-2);
   border-radius: 50%;
   border: none;
-  color: #fff;
+  color: var(--light-color-1);
   margin: 0.5rem;
   cursor: pointer;
+  background: transparent;
 }
 
 .prevNextDark:hover,
@@ -61,6 +64,7 @@
   border-radius: 50%;
   border: none;
   background: none;
+  margin: 0 0.5rem;
 }
 
 .dbg {
@@ -74,17 +78,16 @@
 }
 
 .darkActive {
-  background: #fff;
+  background: var(--light-color-1);
   border: 2px solid var(--dark-color-2);
-  color: #0d253f;
   color: var(--dark-color-1);
   pointer-events: none;
 }
 
 .lightActive {
   background: var(--dark-color-2);
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--light-color-1);
+  color: var(--light-color-1);
   pointer-events: none;
 }
 
@@ -95,15 +98,15 @@
 }
 
 .lightNumber {
-  background: #fff;
+  background: var(--light-color-2);
   color: var(--dark-color-1);
   border: none;
 }
 
 @media screen and (max-width: 1280px) {
-  .pagination {
+  /*.pagination {
     width: 100vw;
-  }
+  }*/
 }
 
 @media screen and (max-width: 1024px) {

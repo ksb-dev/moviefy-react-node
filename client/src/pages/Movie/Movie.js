@@ -109,8 +109,8 @@ const Movie = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'movie__main lightBg1'
-            : 'movie__main darkBg1'
+            ? 'movie__main lightBg2'
+            : 'movie__main darkBg2'
         }
       >
         <div className='movie__content'>

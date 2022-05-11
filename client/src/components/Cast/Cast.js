@@ -45,11 +45,7 @@ const Cast = ({ setPerson, setPersonError, detail, people }) => {
       {people && <h3>Cast</h3>}
 
       <div
-        className={
-          toggleMode === 'white'
-            ? 'cast__content blackColor'
-            : 'cast__content whiteColor'
-        }
+        className={toggleMode === 'white' ? 'cast__content' : 'cast__content'}
       >
         {people &&
           people.map(person => {

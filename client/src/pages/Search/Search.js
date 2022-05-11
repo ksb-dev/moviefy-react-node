@@ -30,14 +30,14 @@ const Search = () => {
   })
 
   return (
-    <>
+    <div className={toggleMode === 'white' ? 'full lightBg2' : 'full darkBg2'}>
       <Navigation />
 
       <SmallNav />
 
       <div
         className={
-          toggleMode === 'white' ? 'search lightBg1' : 'search darkBg1'
+          toggleMode === 'white' ? 'search lightBg2' : 'search darkBg2'
         }
       >
         {/*<label
@@ -50,8 +50,8 @@ const Search = () => {
         <form
           className={
             toggleMode === 'white'
-              ? 'search-form lightBg2'
-              : 'search-form darkBg2'
+              ? 'search-form lightBg1'
+              : 'search-form darkBg1'
           }
           onSubmit={e => {
             e.preventDefault()
@@ -75,7 +75,7 @@ const Search = () => {
       </div>
 
       <SearchedMovies setQuery={setQuery} />
-    </>
+    </div>
   )
 }
 

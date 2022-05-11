@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import { useGlobalContext } from '../../context/context'
 
@@ -48,14 +48,16 @@ const Pagination = ({ data, pageLimit, dataLimit, handleClick }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'pagination alphaLightBg2'
-            : 'pagination alphaDarkBg2'
+            ? 'pagination alphaLightBg1'
+            : 'pagination alphaDarkBg1'
         }
       >
         {/* previous button */}
         <div
           className={
-            toggleMode === 'white' ? 'inner lightBg2' : 'inner darkBg2'
+            toggleMode === 'white'
+              ? 'inner alphaLightBg1'
+              : 'inner alphaDarkBg1'
           }
         >
           <button

@@ -30,15 +30,15 @@ const SideMenu = ({ filtered }) => {
     <div
       className={
         toggleMode === 'white'
-          ? 'sideMenu alphaLightBg1'
-          : 'sideMenu alphaDarkBg1'
+          ? 'sideMenu alphaLightBg2'
+          : 'sideMenu alphaDarkBg2'
       }
     >
       <div
         className={
           toggleMode === 'white'
-            ? 'sideMenu__main lightBg2'
-            : 'sideMenu__main darkBg2'
+            ? 'sideMenu__main lightBg1'
+            : 'sideMenu__main darkBg1'
         }
       >
         <h2

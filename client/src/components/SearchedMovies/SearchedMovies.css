@@ -6,6 +6,10 @@
   justify-content: space-around;
 }
 
+.cat-clear .cat {
+  letter-spacing: 2px;
+}
+
 .cat-clear .clear-btn {
   background: #01b4e4;
   border: none;
@@ -42,5 +46,10 @@
 @media only screen and (max-width: 640px) {
   .cat-clear {
     padding-top: 6rem;
+  }
+
+  .cat-clear .cat,
+  .cat-clear .clear-btn {
+    font-size: 0.8rem;
   }
 }

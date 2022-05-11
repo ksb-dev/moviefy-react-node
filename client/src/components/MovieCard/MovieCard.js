@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
 // Context
 import { useGlobalContext } from '../../context/context'
@@ -59,8 +58,8 @@ const MovieCard = ({
         <div
           className={
             toggleMode === 'white'
-              ? 'movie-card__image-rating lightBg2'
-              : 'movie-card__image-rating darkBg2'
+              ? 'movie-card__image-rating lightBg1'
+              : 'movie-card__image-rating darkBg1'
           }
         >
           <img
@@ -85,8 +84,8 @@ const MovieCard = ({
       <div
         className={
           toggleMode === 'white'
-            ? 'movie-card__info lightBg2'
-            : 'movie-card__info darkBg2'
+            ? 'movie-card__info lightBg1'
+            : 'movie-card__info darkBg1'
         }
       >
         {/* Titele and Year */}

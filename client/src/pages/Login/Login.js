@@ -57,7 +57,7 @@ export default function Login () {
 
   return (
     <div
-      className={toggleMode === 'white' ? 'login lightBg1' : 'login darkBg1'}
+      className={toggleMode === 'white' ? 'login lightBg2' : 'login darkBg2'}
     >
       <Link
         to='/'
@@ -96,8 +96,8 @@ export default function Login () {
         onSubmit={handleSubmit}
         className={
           toggleMode === 'white'
-            ? 'login__form lightBg2'
-            : 'login__form darkBg2'
+            ? 'login__form lightBg1'
+            : 'login__form darkBg1'
         }
       >
         <h2 className={toggleMode === 'white' ? ' darkColor1' : ' lightColor1'}>
@@ -115,7 +115,11 @@ export default function Login () {
             email
           </span>
           <input
-            className='login__form-label-input'
+            className={
+              toggleMode === 'white'
+                ? 'login__form-label-input lightBg2'
+                : 'login__form-label-input darkBg2'
+            }
             type='email'
             onChange={e => setEmail(e.target.value)}
             value={email}
@@ -156,7 +160,11 @@ export default function Login () {
           </div>
 
           <input
-            className='login__form-label-input'
+            className={
+              toggleMode === 'white'
+                ? 'login__form-label-input lightBg2'
+                : 'login__form-label-input darkBg2'
+            }
             type={show ? 'text' : 'password'}
             onChange={e => setPassword(e.target.value)}
             value={password}
@@ -167,8 +175,8 @@ export default function Login () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg1 darakColor1'
-                : 'login__form-btn darkBg1 lightColor1'
+                ? 'login__form-btn lightBg2 darkColor1'
+                : 'login__form-btn darkBg2 lightColor1'
             }
           >
             Login
@@ -179,8 +187,8 @@ export default function Login () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg1 darakColor1'
-                : 'login__form-btn darkBg1 lightColor1'
+                ? 'login__form-btn lightBg2 darkColor1'
+                : 'login__form-btn darkBg2 lightColor1'
             }
           >
             Loggging in

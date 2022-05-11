@@ -32,16 +32,16 @@ const Categories = ({ sideMenu, back }) => {
       ref={back}
       className={
         toggleMode === 'white'
-          ? 'categories alphaLightBg1'
-          : 'categories alphaDarkBg1'
+          ? 'categories alphaLightBg2'
+          : 'categories alphaDarkBg2'
       }
     >
       <div
         ref={sideMenu}
         className={
           toggleMode === 'white'
-            ? 'categories__main lightBg2'
-            : 'categories__main darkBg2'
+            ? 'categories__main lightBg1'
+            : 'categories__main darkBg1'
         }
       >
         <ul

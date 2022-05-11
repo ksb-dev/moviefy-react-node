@@ -33,7 +33,9 @@ const Wishlists = () => {
   }
 
   return (
-    <>
+    <div
+      className={toggleMode === 'white' ? 'whole lightBg2' : 'whole darkBg2'}
+    >
       <Navgation />
 
       <SmallNav />
@@ -53,8 +55,8 @@ const Wishlists = () => {
           <h4
             className={
               toggleMode === 'white'
-                ? 'length lightColorBg1'
-                : 'length darkColorBg1'
+                ? 'length lightColorBg2'
+                : 'length darkColorBg2'
             }
           >
             <CountUp start={0} end={wishlistFiltered.length} duration={0.1} />
@@ -94,7 +96,7 @@ const Wishlists = () => {
           )}
         </div>
       </section>
-    </>
+    </div>
   )
 }
 
