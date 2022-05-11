@@ -54,7 +54,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
       setFiltered(films)
 
       /*const wish = wishlist.map(movies => movies)
-      setWishlistFiltered(wish)
+      setWishlistFiltered(wish)*/
       return
     }
 
