@@ -152,7 +152,9 @@
 
 @media screen and (max-width: 640px) {
   .navigation {
-    &__list p,
+    &__list p {
+      font-size: 0.85rem;
+    }
     &__list i {
       font-size: 0.8rem;
     }
@@ -163,6 +165,11 @@
     }
 
     &__options {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
       .more span,
       .movie-more span,
       .bookmarks-more span,

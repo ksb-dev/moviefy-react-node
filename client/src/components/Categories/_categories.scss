@@ -61,3 +61,15 @@
     border-radius: 50px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .categories {
+    &__main {
+      justify-content: center;
+    }
+
+    &__list {
+      justify-content: flex-end;
+    }
+  }
+}
