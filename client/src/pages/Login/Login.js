@@ -101,7 +101,7 @@ export default function Login () {
         }
       >
         <h2 className={toggleMode === 'white' ? ' darkColor1' : ' lightColor1'}>
-          login
+          Login
         </h2>
 
         <label className='login__form-label'>
@@ -112,7 +112,7 @@ export default function Login () {
                 : 'login__form-label-email lightColor1'
             }
           >
-            email
+            Email
           </span>
           <input
             className={
@@ -135,7 +135,7 @@ export default function Login () {
                   : 'login__form-label-password lightColor1'
               }
             >
-              password
+              Password
             </span>
             {password && !show && (
               <i
@@ -175,8 +175,8 @@ export default function Login () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor1'
-                : 'login__form-btn darkBg2 lightColor1'
+                ? 'login__form-btn darkBg2 lightColor1'
+                : 'login__form-btn lightBg2 darkColor1'
             }
           >
             Login
@@ -187,8 +187,8 @@ export default function Login () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor1'
-                : 'login__form-btn darkBg2 lightColor1'
+                ? 'login__form-btn darkBg2 lightColor1'
+                : 'login__form-btn lightBg2 darkColor1'
             }
           >
             Loggging in

@@ -11,7 +11,7 @@
     letter-spacing: 1px;
 
     h4 {
-      font-weight: 400;
+      font-weight: 500;
       margin: 0;
       margin-top: 2rem;
     }
@@ -30,7 +30,6 @@
     width: 350px;
     max-width: 350px;
     padding: 2rem;
-    text-transform: capitalize;
     letter-spacing: 1px;
     border-radius: var(--border-radius);
     border-top: 5px solid #90cea1;
@@ -55,6 +54,7 @@
       &-password {
         display: block;
         margin-bottom: 6px;
+        font-weight: 500;
       }
 
       &-input {
@@ -79,13 +79,15 @@
       letter-spacing: 1px;
       cursor: pointer;
       border: none;
+      font-weight: 500;
     }
 
     &-ask {
-      font-weight: 400;
+      font-weight: 500;
       &-link {
         text-decoration: none;
         cursor: pointer;
+        font-weight: bold;
       }
     }
 

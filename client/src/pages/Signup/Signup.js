@@ -96,7 +96,7 @@ export default function Signup () {
         }
       >
         <h2 className={toggleMode === 'white' ? ' darkColor1' : ' lightColor1'}>
-          signup
+          Signup
         </h2>
 
         <label className='login__form-label'>
@@ -107,7 +107,7 @@ export default function Signup () {
                 : 'login__form-label-name lightColor1'
             }
           >
-            name
+            Name
           </span>
           <input
             className={
@@ -129,7 +129,7 @@ export default function Signup () {
                 : 'login__form-label-email lightColor1'
             }
           >
-            email
+            Email
           </span>
           <input
             className={
@@ -152,7 +152,7 @@ export default function Signup () {
                   : 'login__form-label-password lightColor1'
               }
             >
-              password
+              Password
             </span>
             {password && !show && (
               <i
@@ -192,8 +192,8 @@ export default function Signup () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor1'
-                : 'login__form-btn darkBg2 lightColor1'
+                ? 'login__form-btn darkBg2 lightColor1'
+                : 'login__form-btn lightBg1 darkColor1'
             }
           >
             Signup
@@ -204,8 +204,8 @@ export default function Signup () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor1'
-                : 'login__form-btn darkBg2 lightColor1'
+                ? 'login__form-btn darkBg2 lightColor1'
+                : 'login__form-btn lightBg1 darkColor1'
             }
           >
             Signing in
@@ -219,7 +219,7 @@ export default function Signup () {
               : 'login__form-ask lightColor1'
           }
         >
-          Already have have an account ?{' '}
+          Already have an account ?{' '}
           <Link
             to='/login'
             className={
