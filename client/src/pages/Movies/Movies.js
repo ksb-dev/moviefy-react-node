@@ -100,7 +100,9 @@ const Movies = () => {
             })}
 
           {filtered.length === 0 && (
-            <h3 style={{ color: 'tomato' }}>No movies found</h3>
+            <h3 style={{ color: 'tomato' }}>
+              No {`${localStorage.getItem('genre')}`} movies found
+            </h3>
           )}
         </div>
       </section>

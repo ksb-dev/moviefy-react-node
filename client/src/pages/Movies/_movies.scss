@@ -8,7 +8,7 @@
   margin-left: 1.5rem;
   border-radius: var(--border-radius);
   padding-bottom: 8rem;
-  padding-top: 2.9rem;
+  padding-top: 9rem;
   overflow: hidden;
 
   .category-length {
@@ -63,6 +63,12 @@
     .category-length {
       display: flex;
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .movies {
+    padding-top: 3rem;
   }
 }
 

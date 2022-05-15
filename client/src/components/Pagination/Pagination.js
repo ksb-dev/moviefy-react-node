@@ -15,26 +15,50 @@ const Pagination = ({ data, pageLimit, dataLimit, handleClick }) => {
 
   //console.log(number)
 
-  function goToNextPage () {
+  function goToNextPage (e) {
     // not yet implemented
-    setPage(page => page + 1)
+    //setPage(page => page + 1)
+
+    const pageNumber = Number(localStorage.getItem('page'))
+    const storedCategory = localStorage.getItem('category') || 'popular'
+
+    loadMovies(storedCategory, pageNumber + 1)
+
+    /*if (category === 'popular') loadMovies('popular', page + 1)
+    if (category === 'trending') loadMovies('trending', page + 1)
+    if (category === 'now playing') loadMovies('now playing', page + 1)
+    if (category === 'upcoming') loadMovies('upcoming', page + 1)
+    if (category === 'top rated') loadMovies('top rated', page + 1)*/
   }
 
   function goToPreviousPage () {
     // not yet implemented
-    setPage(page => page - 1)
+    //setPage(page => page - 1)
+
+    const pageNumber = Number(localStorage.getItem('page'))
+    const storedCategory = localStorage.getItem('category') || 'popular'
+
+    loadMovies(storedCategory, pageNumber - 1)
+
+    /*if (category === 'popular') loadMovies('popular', page - 1)
+    if (category === 'trending') loadMovies('trending', page - 1)
+    if (category === 'now playing') loadMovies('now playing', page - 1)
+    if (category === 'upcoming') loadMovies('upcoming', page - 1)
+    if (category === 'top rated') loadMovies('top rated', page - 1)*/
   }
 
   function changePage (e) {
     // not yet implemented
     const pageNumber = Number(e.target.textContent)
-    //setPage(pageNumber)
+    const storedCategory = localStorage.getItem('category') || 'popular'
 
-    if (category === 'popular') loadMovies('popular', pageNumber)
+    loadMovies(storedCategory, pageNumber)
+
+    /*if (category === 'popular') loadMovies('popular', pageNumber)
     if (category === 'trending') loadMovies('trending', pageNumber)
     if (category === 'now playing') loadMovies('now playing', pageNumber)
     if (category === 'upcoming') loadMovies('upcoming', pageNumber)
-    if (category === 'top rated') loadMovies('top rated', pageNumber)
+    if (category === 'top rated') loadMovies('top rated', pageNumber)*/
   }
 
   const getPaginationGroup = () => {
@@ -48,14 +72,16 @@ const Pagination = ({ data, pageLimit, dataLimit, handleClick }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'pagination alphaLightBg1'
-            : 'pagination alphaDarkBg1'
+            ? 'pagination alphaLightBg2'
+            : 'pagination alphaDarkBg2'
         }
       >
         {/* previous button */}
         <div
           className={
-            toggleMode === 'white' ? 'inner lightBg1' : 'inner darkBg1'
+            toggleMode === 'white'
+              ? 'inner alphaLightBg1'
+              : 'inner alphaDarkBg1'
           }
         >
           <button
