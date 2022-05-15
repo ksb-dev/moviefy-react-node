@@ -19,17 +19,15 @@ export default function Login () {
 
   const { error, isPending, login } = useLogin()
 
-  const {
-    user,
-    setSearchMovie,
-    setSearchTerm,
-    loadMovies,
-    toggleMode
-  } = useGlobalContext()
+  const { user, setSearchMovie, setSearchTerm, loadMovies } = useGlobalContext()
 
   const navigate = useNavigate()
 
+  const [toggleMode, setToggleMode] = useState('white')
+
   useEffect(() => {
+    setToggleMode(localStorage.getItem('toggleMode'))
+
     if (user) {
       localStorage.removeItem('term')
       localStorage.setItem('mode', 'white')
@@ -44,7 +42,7 @@ export default function Login () {
 
       //window.location.reload()
     }
-  }, [user, navigate, loadMovies])
+  }, [user, navigate, loadMovies, setSearchMovie, setSearchTerm])
 
   const handleSubmit = e => {
     e.preventDefault()
