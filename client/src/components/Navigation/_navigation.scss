@@ -154,14 +154,22 @@
   .navigation {
     &__list p {
       font-size: 0.85rem;
-    }
-    &__list i {
-      font-size: 0.8rem;
-    }
-
-    &__list p {
       margin-left: 0.5rem;
       margin-right: 0.5rem;
+
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__list i {
+      font-size: 0.8rem;
     }
 
     &__options {
@@ -170,12 +178,12 @@
       flex-direction: row;
       justify-content: space-around;
 
-      .more span,
+      /*.more span,
       .movie-more span,
       .bookmarks-more span,
       .search-more span {
         display: none;
-      }
+      }*/
     }
   }
 }
