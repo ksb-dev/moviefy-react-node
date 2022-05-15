@@ -19,14 +19,20 @@ export default function Login () {
 
   const { error, isPending, login } = useLogin()
 
-  const { user, setSearchMovie, setSearchTerm, loadMovies } = useGlobalContext()
+  const {
+    user,
+    setSearchMovie,
+    setSearchTerm,
+    loadMovies,
+    toggleMode
+  } = useGlobalContext()
 
   const navigate = useNavigate()
 
-  const [toggleMode, setToggleMode] = useState('white')
+  //const [toggleMode, setToggleMode] = useState('white')
 
   useEffect(() => {
-    setToggleMode(localStorage.getItem('toggleMode'))
+    //setToggleMode(localStorage.getItem('toggleMode'))
 
     if (user) {
       localStorage.removeItem('term')

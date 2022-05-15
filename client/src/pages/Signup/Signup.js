@@ -18,16 +18,16 @@ export default function Signup () {
   const [displayName, setDisplayName] = useState('')
   const [show, setShow] = useState(false)
 
-  const [toggleMode, setToggleMode] = useState('white')
+  //const [toggleMode, setToggleMode] = useState('white')
 
   const { error, isPending, signup } = useSignup()
 
-  const { user, loadMovies } = useGlobalContext()
+  const { user, loadMovies, toggleMode } = useGlobalContext()
 
   const navigate = useNavigate()
 
   useEffect(() => {
-    setToggleMode(localStorage.getItem('toggleMode'))
+    //setToggleMode(localStorage.getItem('toggleMode'))
 
     if (user) {
       localStorage.removeItem('term')

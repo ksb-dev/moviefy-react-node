@@ -163,6 +163,9 @@ const AppProvider = ({ children }) => {
     // Set mode
     if (localStorage.getItem('mode') === null) {
       localStorage.setItem('mode', 'white')
+      setToggleMode('white')
+    } else {
+      setToggleMode(localStorage.getItem('mode'))
     }
 
     // Set genre
