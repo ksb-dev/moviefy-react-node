@@ -82,12 +82,23 @@
       font-weight: 500;
     }
 
+    &-btn:hover {
+      box-shadow: 0 0 50px tomato;
+    }
+
     &-ask {
       font-weight: 500;
       &-link {
         text-decoration: none;
         cursor: pointer;
         font-weight: bold;
+        padding: 0.2rem 0.5rem;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+      }
+
+      &-link:hover {
+        box-shadow: 0 0 5px tomato;
       }
     }
 
@@ -111,8 +122,8 @@
     }
 
     &__form {
-      width: 250px;
-      max-width: 250px;
+      width: 280px;
+      max-width: 280px;
       margin-bottom: 2rem;
     }
   }
