@@ -63,8 +63,8 @@ const SmallNav = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'small-navigation alphaLightBg1'
-            : 'small-navigation alphaDarkBg1'
+            ? 'small-navigation lightBg1'
+            : 'small-navigation darkBg1'
         }
       >
         <div className='small-navigation__main'>
