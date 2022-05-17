@@ -79,9 +79,7 @@ const Pagination = ({ data, pageLimit, dataLimit, handleClick }) => {
         {/* previous button */}
         <div
           className={
-            toggleMode === 'white'
-              ? 'inner alphaLightBg1'
-              : 'inner alphaDarkBg1'
+            toggleMode === 'white' ? 'inner lightBg1' : 'inner alphaDarkBg1'
           }
         >
           <button
