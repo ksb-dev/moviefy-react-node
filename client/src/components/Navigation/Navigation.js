@@ -62,9 +62,7 @@ const Header = () => {
 
       <div
         className={
-          toggleMode === 'white'
-            ? 'navigation alphaLightBg1'
-            : 'navigation alphaDarkBg1'
+          toggleMode === 'white' ? 'navigation lightBg1' : 'navigation darkBg1'
         }
       >
         <div className='navigation__main'>
