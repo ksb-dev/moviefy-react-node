@@ -8,6 +8,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   &__main {
     width: 95vw;
@@ -96,6 +97,7 @@
 
 @media screen and (max-width: 1280px) {
   .navigation {
+    width: 100vw;
     &__main {
       width: 100vw;
     }

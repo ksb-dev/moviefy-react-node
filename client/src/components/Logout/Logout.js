@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import { useGlobalContext } from '../../context/context'
 
@@ -16,8 +16,30 @@ const Logout = ({ log }) => {
     loadMovies
   } = useGlobalContext()
 
+  const logInner = useRef(null)
+
+  useEffect(() => {
+    // Function for click event
+    function handleOutsideClick (event) {
+      if (
+        log.current.contains(event.target) &&
+        !logInner.current.contains(event.target)
+      ) {
+        //console.log('you just clicked outside of box!')
+        log.current.style.opacity = '0'
+        log.current.style.zIndex = '-1'
+      }
+    }
+
+    // Adding click event listener
+    document.addEventListener('click', handleOutsideClick)
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [logInner, log])
+
   const hide = () => {
-    log.current.style.transform = 'translateX(100%)'
+    //log.current.style.transform = 'translateX(100%)'
+    log.current.style.opacity = '0'
+    log.current.style.zIndex = '-1'
   }
 
   const logout = () => {
@@ -42,7 +64,9 @@ const Logout = ({ log }) => {
     setWishlist([])
     setSearchTerm('')
 
-    log.current.style.transform = 'translateX(100%)'
+    //log.current.style.transform = 'translateX(0%)'
+    log.current.style.opacity = '0'
+    log.current.style.zIndex = '-1'
     //window.location.reload()
   }
 
@@ -51,32 +75,41 @@ const Logout = ({ log }) => {
       ref={log}
       className={
         toggleMode === 'white'
-          ? 'logout lightBg1 darkColor1'
-          : 'logout darkBg1 lightColor1'
+          ? 'log-back alphaLightBg2'
+          : 'log-back alphaDarkBg2'
       }
     >
-      <h4>Do you want to logout?</h4>
-      <div className='logout__options'>
-        <h5
-          className={
-            toggleMode === 'white'
-              ? 'darkBg2 lightColor1'
-              : 'lightBg2 darkColor1'
-          }
-          onClick={logout}
-        >
-          <span>Yes</span>
-        </h5>
-        <h5
-          className={
-            toggleMode === 'white'
-              ? 'darkBg2 lightColor1'
-              : 'lightBg2 darkColor1'
-          }
-          onClick={hide}
-        >
-          <span>No</span>
-        </h5>
+      <div
+        ref={logInner}
+        className={
+          toggleMode === 'white'
+            ? 'logout lightBg1 darkColor1'
+            : 'logout darkBg1 lightColor1'
+        }
+      >
+        <h4>Do you want to logout?</h4>
+        <div className='logout__options'>
+          <h5
+            className={
+              toggleMode === 'white'
+                ? 'darkBg2 lightColor1'
+                : 'lightBg2 darkColor1'
+            }
+            onClick={logout}
+          >
+            <span>Yes</span>
+          </h5>
+          <h5
+            className={
+              toggleMode === 'white'
+                ? 'darkBg2 lightColor1'
+                : 'lightBg2 darkColor1'
+            }
+            onClick={hide}
+          >
+            <span>No</span>
+          </h5>
+        </div>
       </div>
     </div>
   )

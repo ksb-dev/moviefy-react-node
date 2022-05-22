@@ -9,7 +9,6 @@
   border-radius: var(--border-radius);
   padding-bottom: 7rem;
   padding-top: 9rem;
-  overflow: hidden;
 
   .category-length {
     width: 100%;
@@ -101,6 +100,7 @@
 @media screen and (max-width: 640px) {
   .movies {
     width: 100vw;
+    overflow: hidden;
 
     .category-length {
       padding-bottom: 1rem;

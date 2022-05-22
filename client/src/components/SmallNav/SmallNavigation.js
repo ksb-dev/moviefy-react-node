@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useGlobalContext } from '../../context/context'
 
 // Components
-import Logout from '../Logout/Logout'
+//import Logout from '../Logout/Logout'
 import Filter from '../Filter/Filter'
 import Categories from '../Categories/Categories'
 
@@ -54,7 +54,7 @@ const SmallNav = () => {
 
   return (
     <>
-      <Logout log={log} />
+      {/*<Logout log={log} />*/}
 
       {/* Categories Component */}
 

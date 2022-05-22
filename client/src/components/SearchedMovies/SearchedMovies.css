@@ -1,5 +1,5 @@
 .cat-clear {
-  padding-top: 8rem;
+  padding-top: 9rem;
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .cat-clear .clear-btn {
-  background: #01b4e4;
+  background: tomato;
   border: none;
   color: #fff;
   padding: 0.3rem 0.5rem;
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 640px) {
   .cat-clear {
-    padding-top: 6rem;
+    padding-top: 8rem;
   }
 
   .cat-clear .cat,

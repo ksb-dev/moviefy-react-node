@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import axios from 'axios'
-
 // Hooks
 import { getTrailer } from '../../Hooks/useGetTrailer'
 import { addWishlist } from '../../Hooks/useAddWishlist'
