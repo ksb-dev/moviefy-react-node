@@ -16,13 +16,10 @@ export const useLogin = () => {
 
     try {
       // Sign the user in
-      const response = await axios.post(
-        'http://127.0.0.1:5000/api/v1/auth/login',
-        {
-          email,
-          password
-        }
-      )
+      const response = await axios.post('/api/v1/auth/login', {
+        email,
+        password
+      })
 
       if (!response) {
         throw new Error('Could not complete signup')
