@@ -38,15 +38,19 @@
     padding: 0;
     margin-bottom: 0.5rem;
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
     h3 {
       font-size: 1rem;
       margin: 1.5rem 0;
     }
 
     &__content {
-      width: 90vw;
+      /*width: 90vw;
       margin: 0;
-      padding: 0.5rem;
+      padding: 0.5rem;*/
     }
   }
 }

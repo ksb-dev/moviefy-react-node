@@ -155,6 +155,10 @@
 
 @media screen and (max-width: 640px) {
   .small-navigation {
+    &__title {
+      margin-right: 0rem;
+    }
+
     &__list p,
     &__list i {
       font-size: 0.8rem;
