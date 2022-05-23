@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import { useGlobalContext } from '../../context/context'
 
+import { motion } from 'framer-motion'
+
 //import './Filter.css'
 
 const Filter = ({ activeGenre, setActiveGenre }) => {
@@ -273,7 +275,10 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
         </div>
 
         {isActive && (
-          <div
+          <motion.div
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.2 }}
             className={
               toggleMode === 'white'
                 ? 'filter__content darkColorBg2'
@@ -296,7 +301,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
                 </div>
               )
             })}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

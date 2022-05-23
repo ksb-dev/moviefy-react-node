@@ -15,7 +15,7 @@
     width: 90vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__title {
@@ -121,10 +121,10 @@
     display: flex;
 
     &__main {
-      width: 100vw;
+      /*width: 100vw;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center;*/
     }
 
     &__list p {
