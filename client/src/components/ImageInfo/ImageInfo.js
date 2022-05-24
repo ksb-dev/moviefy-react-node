@@ -58,7 +58,7 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
     <motion.div
       initial={{ x: '-100vw' }}
       animate={{ x: 0 }}
-      transition={{ delay: 0.5, duration: 0.5 }}
+      transition={{ delay: 0.25, duration: 0.5 }}
       className='first-segment'
       style={{ backgroundImage: `url(${IMG_PATH + backdrop_path})` }}
     >
@@ -74,7 +74,7 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ delay: 0.75 }}
           className='first-segment__image-rating'
         >
           <img

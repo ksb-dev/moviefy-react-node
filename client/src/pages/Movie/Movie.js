@@ -127,7 +127,7 @@ const Movie = () => {
           <motion.h6
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 0.75, duration: 0.75 }}
             className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
           ></motion.h6>
 
@@ -137,7 +137,7 @@ const Movie = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
+              transition={{ delay: 0.75, duration: 0.75 }}
               className={
                 toggleMode === 'white'
                   ? 'movie__overview darkColor1'
