@@ -87,14 +87,14 @@ const Header = () => {
           <div className='navigation__list'>
             {/* Filter Component */}
 
-            <div className='navigation__filter'>
+            {/*<div className='navigation__filter'>
               {window.location.pathname === '/' && (
                 <Filter
                   activeGenre={activeGenre}
                   setActiveGenre={setActiveGenre}
                 />
               )}
-            </div>
+              </div>*/}
 
             <div className='navigation__options'>
               {/* Home */}

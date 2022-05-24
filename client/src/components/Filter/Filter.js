@@ -281,8 +281,8 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
             transition={{ duration: 0.2 }}
             className={
               toggleMode === 'white'
-                ? 'filter__content darkColorBg2'
-                : 'filter__content lightColorBg2'
+                ? 'filter__content alphaDarkBg1 '
+                : 'filter__content alphaLightBg1 '
             }
           >
             {options.map((option, index) => {
@@ -297,7 +297,13 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
                     handleClick(e.target.textContent)
                   }}
                 >
-                  {option}
+                  <span
+                    className={
+                      toggleMode === 'white' ? 'lightShadow' : 'darkShadow'
+                    }
+                  >
+                    {option}
+                  </span>
                 </div>
               )
             })}

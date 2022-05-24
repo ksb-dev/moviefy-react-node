@@ -10,12 +10,19 @@
   padding-bottom: 7rem;
   padding-top: 9rem;
 
-  .category-length {
+  .category-length-filter {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
+    justify-content: space-around;
+    display: none;
+  }
+
+  .category-length {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    margin-top: 0rem;
     display: none;
 
     .category,
@@ -58,20 +65,26 @@
       justify-content: center;
     }
 
-    .category-length {
-      width: 100vw;
-      margin: 0 auto;
+    .category-length-filter {
       display: flex;
+    }
+
+    .category-length {
+      /*width: 100vw;
+      margin: 0 auto;*/
+      display: flex;
+      align-items: center;
+      margin-top: 0;
     }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .movies {
-    padding-top: 3rem;
+    padding-top: 4rem;
 
     .category-length {
-      margin-top: 1rem;
+      margin-top: 0rem;
     }
   }
 }
@@ -102,8 +115,12 @@
     width: 100vw;
     overflow: hidden;
 
-    .category-length {
+    .category-length-filter {
       padding-bottom: 1rem;
     }
+
+    /*.category-length {
+      padding-bottom: 1rem;
+    }*/
   }
 }

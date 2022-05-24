@@ -35,7 +35,7 @@
 
   &__content {
     box-sizing: border-box;
-    padding: 0.5rem;
+    padding: 0rem 0.5rem;
     position: absolute;
     z-index: 2;
     top: 2rem;
@@ -45,15 +45,21 @@
   }
 
   &__item {
-    margin: 10px 0;
-    padding: 0px 2px;
+    margin: 0.6rem 0;
+    padding: 0px 0px;
     cursor: pointer;
     font-size: 90%;
-  }
 
-  &__item:hover {
-    padding-left: 5px;
-    transition: var(--transition);
+    span {
+      display: block;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    span:hover {
+      box-shadow: 0 0 20px tomato;
+    }
   }
 }
 
@@ -61,4 +67,20 @@
   .dropdown {
     width: 100px;
   }
+}
+
+.darkShadow {
+  background: var(--light-color-1);
+  color: var(--dark-color-2);
+  box-shadow: 0 0 5px var(--dark-color-2);
+  /*border: 2px solid var(--dark-color-2);*/
+  border: none;
+}
+
+.lightShadow {
+  background: var(--dark-color-1);
+  color: var(--light-color-1);
+  box-shadow: 0 0 5px var(--light-color-1);
+  /*border: 2px solid var(--light-color-1);*/
+  border: none;
 }

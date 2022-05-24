@@ -11,6 +11,7 @@ import Pagination from '../../components/Pagination/Pagination'
 import Navgation from '../../components/Navigation/Navigation'
 import SideMenu from '../../components/SideMenu/SideMenu'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
+import Filter from '../../components/Filter/Filter'
 
 const Movies = () => {
   let {
@@ -19,7 +20,9 @@ const Movies = () => {
     toggleMode,
     filtered,
     error,
-    loadMovies
+    loadMovies,
+    activeGenre,
+    setActiveGenre
   } = useGlobalContext()
 
   useEffect(() => {}, [filtered])
@@ -50,26 +53,30 @@ const Movies = () => {
 
       <section className='movies'>
         {category && (
-          <div className='category-length'>
-            <h4 className='category'>
-              <span
+          <div className='category-length-filter'>
+            <div className='category-length'>
+              <h4 className='category'>
+                <span
+                  className={
+                    toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
+                  }
+                >
+                  {category}
+                </span>
+              </h4>
+
+              <h4
                 className={
-                  toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
+                  toggleMode === 'white'
+                    ? 'length lightColorBg1'
+                    : 'length darkColorBg1'
                 }
               >
-                {category}
-              </span>
-            </h4>
+                <CountUp start={0} end={filtered.length} duration={0.1} />
+              </h4>
+            </div>
 
-            <h4
-              className={
-                toggleMode === 'white'
-                  ? 'length lightColorBg1'
-                  : 'length darkColorBg1'
-              }
-            >
-              <CountUp start={0} end={filtered.length} duration={0.1} />
-            </h4>
+            <Filter activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
           </div>
         )}
 

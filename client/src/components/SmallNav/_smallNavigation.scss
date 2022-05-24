@@ -9,13 +9,13 @@
   align-items: center;
   justify-content: center;
   display: none;
-  padding: 0.8rem 0;
+  padding: 0.6rem 0;
 
   &__main {
     width: 90vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   &__title {
@@ -128,13 +128,13 @@
     }
 
     &__list p {
-      margin: 0.8rem 2rem;
+      margin: 0.5rem 2rem;
       display: none;
     }
 
     &__title {
       display: flex;
-      margin-right: 2rem;
+      margin-right: 0rem;
     }
 
     &__filter {

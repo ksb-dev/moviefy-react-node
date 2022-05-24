@@ -87,14 +87,14 @@ const SmallNav = () => {
           <div className='small-navigation__list'>
             {/* Filter Component */}
 
-            <div className='small-navigation__filter'>
+            {/*<div className='small-navigation__filter'>
               {window.location.pathname === '/' && (
                 <Filter
                   activeGenre={activeGenre}
                   setActiveGenre={setActiveGenre}
                 />
               )}
-            </div>
+              </div>*/}
 
             <div className='small-navigation__options'>
               {/* Home */}
