@@ -53,7 +53,13 @@ const Movies = () => {
 
       <section className='movies'>
         {category && (
-          <div className='category-length-filter'>
+          <div
+            className={
+              toggleMode === 'white'
+                ? 'category-length-filter alphaLightBg2'
+                : 'category-length-filter alphaDarkBg2'
+            }
+          >
             <div className='category-length'>
               <h4 className='category'>
                 <span
@@ -68,8 +74,8 @@ const Movies = () => {
               <h4
                 className={
                   toggleMode === 'white'
-                    ? 'length lightColorBg1'
-                    : 'length darkColorBg1'
+                    ? 'length lightColorBg2'
+                    : 'length darkColorBg2'
                 }
               >
                 <CountUp start={0} end={filtered.length} duration={0.1} />

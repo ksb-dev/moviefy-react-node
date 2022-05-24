@@ -147,7 +147,7 @@ const AppProvider = ({ children }) => {
   const loadMovies = useCallback((category, page) => {
     if (category === 'popular') fetchMovies(POPULAR_URL, category, page)
     if (category === 'trending') fetchMovies(TRENDING, category, page)
-    if (category === 'now playing') fetchMovies(NOW_PLAYING, category, page)
+    if (category === 'in cinemas') fetchMovies(NOW_PLAYING, category, page)
     if (category === 'upcoming') fetchMovies(UPCOMING, category, page)
     if (category === 'top rated') fetchMovies(TOP_RATED, category, page)
   }, [])
