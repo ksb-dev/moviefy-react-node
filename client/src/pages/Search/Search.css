@@ -23,12 +23,12 @@
 
 .search form {
   border-radius: 3px;
-  margin: 1rem;
+  margin: 2rem;
   border-radius: var(--border-radius);
 }
 
 .search form input {
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   border: none;
   background: transparent;
   font-size: 1rem;
@@ -69,10 +69,15 @@
   letter-spacing: 1px;
   font-weight: 500;
 }
+@media only screen and (max-width: 1024px) {
+  .search {
+    top: 3.05rem;
+  }
+}
 
 @media only screen and (max-width: 640px) {
-  .search {
-    top: 3.4rem;
+  /*.search {
+    top: 3.05rem;
   }
 
   .search form {
@@ -90,6 +95,13 @@
 
   .search p i {
     font-size: 1rem;
+  }*/
+  .search form {
+    margin: 1rem 0;
+  }
+
+  .search form input {
+    width: 80vw;
   }
 }
 

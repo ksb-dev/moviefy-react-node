@@ -1,5 +1,5 @@
 .cat-clear {
-  padding-top: 9rem;
+  padding-top: 11rem;
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 640px) {
   .cat-clear {
-    padding-top: 8rem;
+    padding-top: 9rem;
   }
 
   .cat-clear .cat,
