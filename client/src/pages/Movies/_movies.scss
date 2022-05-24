@@ -1,5 +1,6 @@
 .movies {
   width: 80vw;
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -7,8 +8,12 @@
   min-height: 100vh;
   margin: 0 1rem;
   border-radius: var(--border-radius);
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
   padding-top: 9rem;
+
+  h6 {
+    margin: 1rem auto;
+  }
 
   .category-length-filter {
     position: fixed;
@@ -63,6 +68,7 @@
     width: 100vw;
     display: flex;
     padding-top: 8rem;
+    padding-bottom: 6rem;
 
     .movie-list {
       margin-top: 0rem;
@@ -87,6 +93,7 @@
 @media screen and (max-width: 1024px) {
   .movies {
     padding-top: 8rem;
+    padding-bottom: 8rem;
 
     .category-length-filter {
       top: 3rem;
@@ -102,6 +109,7 @@
   .movies {
     margin: 0;
     padding-top: 7rem;
+    padding-bottom: 9rem;
 
     .category-length {
       padding-bottom: 0;
@@ -124,6 +132,7 @@
   .movies {
     width: 100vw;
     overflow: hidden;
+    padding-bottom: 7rem;
 
     .category-length-filter {
       padding-bottom: 1rem;

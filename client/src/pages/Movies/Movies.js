@@ -118,6 +118,10 @@ const Movies = () => {
             </h3>
           )}
         </div>
+
+        <h6
+          className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+        ></h6>
       </section>
 
       <Pagination
