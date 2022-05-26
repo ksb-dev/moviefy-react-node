@@ -21,20 +21,28 @@ export const useLogin = () => {
   } = useGlobalContext()
 
   const login = async (email, password, setEmail, setPassword) => {
-    console.log(email, password)
+    console.log(1)
     setError(null)
     setIsPending(true)
 
     try {
+      console.log(2)
+
       // Sign the user in
       const response = await axios.post('/api/v1/auth/login', {
         email,
         password
       })
 
+      console.log(3)
+
       if (!response) {
+        console.log(4)
+
         throw new Error('Could not complete signup')
       } else {
+        console.log(5)
+
         localStorage.setItem('name', response.data.user.name)
         localStorage.setItem('token', response.data.token)
         setUser(response.data.user.name)
@@ -61,27 +69,31 @@ export const useLogin = () => {
         //window.location.reload()
       }
 
+      console.log(6)
+
       // Update state
       if (isCancelled) {
-        console.log('pending')
+        console.log(7)
+
         setError(null)
         setIsPending(false)
       }
 
-      console.log(response.data)
+      console.log(8)
     } catch (error) {
       if (isCancelled) {
-        console.log(isPending)
-        console.log(error.response.data.message)
+        console.log(9)
+
         setError(error.response.data.message)
         setIsPending(false)
-        console.log(isPending)
       }
     }
   }
 
   useEffect(() => {
     return () => {
+      console.log(10)
+
       setIsCancelled(true)
     }
   }, [])
