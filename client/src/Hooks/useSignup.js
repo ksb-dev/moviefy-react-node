@@ -70,12 +70,12 @@ export const useSignup = () => {
       }
 
       // Update state
-      if (isCancelled) {
+      if (!isCancelled) {
         setError(null)
         setIsPending(false)
       }
     } catch (error) {
-      if (isCancelled) {
+      if (!isCancelled) {
         setError(error.response.data.message)
         setIsPending(false)
       }
@@ -83,7 +83,7 @@ export const useSignup = () => {
   }
 
   useEffect(() => {
-    return () => setIsCancelled(true)
+    return () => setIsCancelled(false)
   }, [])
 
   return { error, isPending, signup }
