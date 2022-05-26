@@ -18,7 +18,7 @@ export default function Login () {
   const [password, setPassword] = useState('')
   const [show, setShow] = useState(false)
 
-  const { error, isPending, login } = useLogin()
+  const { error, setError, isPending, login } = useLogin()
 
   const { toggleMode, logPage, signPage } = useGlobalContext()
 
@@ -35,6 +35,10 @@ export default function Login () {
         logPage.current.style.opacity = '0'
         logPage.current.style.zIndex = '-1'
         logPage.current.style.transform = 'scale(0)'
+
+        setEmail('')
+        setPassword('')
+        setError('')
       }
     }
 

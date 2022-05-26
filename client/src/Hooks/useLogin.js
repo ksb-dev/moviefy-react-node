@@ -79,5 +79,5 @@ export const useLogin = () => {
     }
   }, [])
 
-  return { error, isPending, login }
+  return { error, setError, isPending, login }
 }

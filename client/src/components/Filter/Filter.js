@@ -42,15 +42,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
   ]
 
   useEffect(() => {
-    // Function for click event
-    function handleOutsideClick (event) {
-      if (!filterRef.current.contains(event.target)) {
-        setIsActive(false)
-      }
-    }
-
-    // Adding click event listener
-    document.addEventListener('click', handleOutsideClick)
+    setIsActive(false)
 
     window.scroll({
       top: 0,
@@ -201,8 +193,6 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
       movie.genre.includes(storedActiveGenre)
     )
     setWishlistFiltered(filterWishlist)*/
-
-    return () => document.removeEventListener('click', handleOutsideClick)
   }, [activeGenre, more, isLoading, movies, setFiltered, storedActiveGenre])
 
   const handleClick = genre => {
@@ -269,12 +259,11 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
         <div
           className='filter__btn'
           onClick={() => {
-            console.log(isActive)
             if (isActive === true) {
-              setIsActive(!isActive)
+              setIsActive(false)
               filterInnerRef.current.style.transform = 'translateY(100vh)'
             } else {
-              setIsActive(!isActive)
+              setIsActive(true)
               filterInnerRef.current.style.transform = 'translateY(0%)'
             }
           }}
@@ -313,6 +302,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
                   localStorage.setItem('genre', e.target.textContent)
                   setIsActive(!isActive)
                   handleClick(e.target.textContent)
+                  filterInnerRef.current.style.transform = 'translateY(100vh)'
                 }}
               >
                 <span

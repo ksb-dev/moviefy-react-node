@@ -18,16 +18,13 @@ export default function Signup () {
 
   //const [toggleMode, setToggleMode] = useState('white')
 
-  const { error, isPending, signup } = useSignup()
+  const { error, setError, isPending, signup } = useSignup()
 
   const { toggleMode, logPage, signPage } = useGlobalContext()
 
   const signPageInner = useRef(null)
 
   useEffect(() => {
-    setDisplayName('')
-    setEmail('')
-    setPassword('')
     // Function for click event
     function handleOutsideClick (event) {
       if (
@@ -38,6 +35,11 @@ export default function Signup () {
         signPage.current.style.opacity = '0'
         signPage.current.style.zIndex = '-1'
         signPage.current.style.transform = 'scale(0)'
+
+        setDisplayName('')
+        setEmail('')
+        setPassword('')
+        setError('')
       }
     }
 
