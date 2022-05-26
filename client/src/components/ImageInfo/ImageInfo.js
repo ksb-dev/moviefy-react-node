@@ -228,7 +228,7 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
               className={
                 toggleMode === 'white'
                   ? 'first-segment__more-info--trailer-btn darkColor2'
-                  : 'first-segment__more-info--trailer-btn lightColor2'
+                  : 'first-segment__more-info--trailer-btn lightColor1'
               }
               onClick={() =>
                 getTrailer(id, youtube_div, trailerUrl, setTrailerUrl)

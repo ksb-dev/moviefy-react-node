@@ -1,6 +1,6 @@
 .first-segment {
   margin: 0 1rem 3rem 1rem;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 
   &__content {
     display: flex;
