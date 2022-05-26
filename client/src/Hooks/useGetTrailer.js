@@ -6,6 +6,10 @@ export const getTrailer = async (
 ) => {
   youtube_div.current.style.transform = 'translateY(0%)'
 
+  /*youtube_div.current.style.zIndex = '3'
+  youtube_div.current.style.opacity = '1'
+  youtube_div.current.style.transform = 'scale(1)'*/
+
   if (trailerUrl && id) {
     setTrailerUrl('')
   } else {

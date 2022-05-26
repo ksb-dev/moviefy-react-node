@@ -10,10 +10,15 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
   const { toggleMode } = useGlobalContext()
 
   const close = () => {
-    setTimeout(() => {
+    /*setTimeout(() => {
       setTrailerUrl('')
-    }, 500)
+    }, 500)*/
+    setTrailerUrl('')
     youtube_div.current.style.transform = 'translateY(100%)'
+
+    /*youtube_div.current.style.zIndex = '-1'
+    youtube_div.current.style.opacity = '0'
+    youtube_div.current.style.transform = 'scale(0)'*/
   }
 
   return (

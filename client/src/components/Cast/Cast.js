@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 // Components
 import Person from '../Person/Person'

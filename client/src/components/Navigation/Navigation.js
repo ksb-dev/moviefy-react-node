@@ -6,7 +6,6 @@ import { useGlobalContext } from '../../context/context'
 
 // Components
 import Logout from '../Logout/Logout'
-import Filter from '../Filter/Filter'
 import Categories from '../Categories/Categories'
 
 const Header = () => {
@@ -15,9 +14,7 @@ const Header = () => {
     setToggleMode,
     loadMovies,
     isLoading,
-    user,
-    activeGenre,
-    setActiveGenre
+    user
   } = useGlobalContext()
 
   // State of User Name
