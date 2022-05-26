@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import { useGlobalContext } from '../../context/context'
 
@@ -23,6 +23,9 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
   } = useGlobalContext()
 
   const [isActive, setIsActive] = useState(false)
+
+  const filterRef = useRef(null)
+  const filterInnerRef = useRef(null)
 
   const options = [
     'All',
@@ -194,7 +197,29 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
       movie.genre.includes(storedActiveGenre)
     )
     setWishlistFiltered(filterWishlist)*/
-  }, [activeGenre, more, isLoading, movies, setFiltered, storedActiveGenre])
+
+    // Function for click event
+    function handleOutsideClick (event) {
+      console.log(event)
+      if (!filterInnerRef.current.contains(event.target)) {
+        //console.filterRef('you just clicked outside of box!')
+        setIsActive(!isActive)
+      }
+    }
+
+    // Adding click event listener
+    document.addEventListener('click', handleOutsideClick)
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [
+    activeGenre,
+    more,
+    isLoading,
+    movies,
+    setFiltered,
+    storedActiveGenre,
+    filterInnerRef,
+    isActive
+  ])
 
   const handleClick = genre => {
     if (genre === 'All') {
@@ -241,7 +266,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
   }
 
   return (
-    <div className='filter'>
+    <div className='filter' ref={filterRef}>
       <i
         className={
           toggleMode === 'white'
@@ -276,6 +301,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
 
         {isActive && (
           <motion.div
+            ref={filterInnerRef}
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             transition={{ duration: 0.2 }}
