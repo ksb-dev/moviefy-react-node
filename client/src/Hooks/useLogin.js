@@ -81,8 +81,9 @@ export const useLogin = () => {
 
       console.log(8)
     } catch (error) {
+      console.log(9)
       if (isCancelled) {
-        console.log(9)
+        console.log(10)
 
         setError(error.response.data.message)
         setIsPending(false)
@@ -92,7 +93,7 @@ export const useLogin = () => {
 
   useEffect(() => {
     return () => {
-      console.log(10)
+      console.log(11)
 
       setIsCancelled(true)
     }
