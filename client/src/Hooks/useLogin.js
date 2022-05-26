@@ -21,6 +21,7 @@ export const useLogin = () => {
   } = useGlobalContext()
 
   const login = async (email, password, setEmail, setPassword) => {
+    console.log(email, password)
     setError(null)
     setIsPending(true)
 
