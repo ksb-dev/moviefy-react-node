@@ -20,9 +20,9 @@ export const useLogin = () => {
     setSearchTerm
   } = useGlobalContext()
 
-  const login = async (email, password, setEmail, setPassword, hideLog) => {
+  const login = async (email, password, setEmail, setPassword) => {
     setError(null)
-    setIsPending(true)
+    setIsPending(false)
 
     try {
       // Sign the user in
@@ -62,6 +62,7 @@ export const useLogin = () => {
 
       // Update state
       if (isCancelled) {
+        console.log('pending')
         setError(null)
         setIsPending(false)
       }
@@ -69,8 +70,11 @@ export const useLogin = () => {
       //console.log(response.data)
     } catch (error) {
       if (isCancelled) {
+        console.log(isPending)
+        console.log(error.response.data.message)
         setError(error.response.data.message)
         setIsPending(false)
+        console.log(isPending)
       }
     }
   }

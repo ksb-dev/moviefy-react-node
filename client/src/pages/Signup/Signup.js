@@ -25,6 +25,9 @@ export default function Signup () {
   const signPageInner = useRef(null)
 
   useEffect(() => {
+    setDisplayName('')
+    setEmail('')
+    setPassword('')
     // Function for click event
     function handleOutsideClick (event) {
       if (

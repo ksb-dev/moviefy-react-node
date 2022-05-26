@@ -145,6 +145,7 @@ export default function Login () {
               >
                 Password
               </span>
+
               {password && !show && (
                 <i
                   className={
@@ -155,6 +156,7 @@ export default function Login () {
                   onClick={handleClick}
                 ></i>
               )}
+
               {password && show && (
                 <i
                   className={
