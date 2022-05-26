@@ -55,6 +55,10 @@ export default function Login () {
     logPage.current.style.zIndex = '-1'
     logPage.current.style.opacity = '0'
     logPage.current.style.transform = 'scale(0)'
+
+    setEmail('')
+    setPassword('')
+    setError('')
   }
 
   const showSign = () => {

@@ -64,6 +64,11 @@ export default function Signup () {
     signPage.current.style.zIndex = '-1'
     signPage.current.style.opacity = '0'
     signPage.current.style.transform = 'scale(0)'
+
+    setDisplayName('')
+    setEmail('')
+    setPassword('')
+    setError('')
   }
 
   const handleSubmit = e => {
