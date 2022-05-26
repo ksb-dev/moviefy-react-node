@@ -1,4 +1,10 @@
-import React, { useState, useContext, useEffect, useCallback } from 'react'
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  useCallback,
+  useRef
+} from 'react'
 import axios from 'axios'
 
 const AppContext = React.createContext()
@@ -39,6 +45,10 @@ const AppProvider = ({ children }) => {
   const [searchMovie, setSearchMovie] = useState([])
   const [searchError, setSearchError] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
+
+  // Ref's
+  const logPage = useRef(null)
+  const signPage = useRef(null)
 
   // Search Movies
   const searchMovies = async (searchTerm, queryTerm) => {
@@ -222,7 +232,9 @@ const AppProvider = ({ children }) => {
         setSearchMovie,
         searchTerm,
         setSearchTerm,
-        searchError
+        searchError,
+        logPage,
+        signPage
       }}
     >
       {children}

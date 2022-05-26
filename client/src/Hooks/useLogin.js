@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 import { useGlobalContext } from '../context/context'
@@ -8,9 +9,18 @@ export const useLogin = () => {
   const [error, setError] = useState(null)
   const [isPending, setIsPending] = useState(false)
 
-  const { setUser, setToken } = useGlobalContext()
+  const navigate = useNavigate()
 
-  const login = async (email, password) => {
+  const {
+    setUser,
+    setToken,
+    logPage,
+    loadMovies,
+    setSearchMovie,
+    setSearchTerm
+  } = useGlobalContext()
+
+  const login = async (email, password, setEmail, setPassword, hideLog) => {
     setError(null)
     setIsPending(true)
 
@@ -28,6 +38,26 @@ export const useLogin = () => {
         localStorage.setItem('token', response.data.token)
         setUser(response.data.user.name)
         setToken(response.data.token)
+        setEmail('')
+        setPassword('')
+
+        localStorage.removeItem('term')
+        localStorage.setItem('mode', 'white')
+        localStorage.setItem('genre', 'All')
+        localStorage.setItem('page', 1)
+        localStorage.setItem('category', 'popular')
+        localStorage.setItem('activeGenre', 0)
+        loadMovies('popular', 1)
+        setSearchMovie([])
+        setSearchTerm('')
+
+        navigate('/')
+
+        logPage.current.style.zIndex = '-1'
+        logPage.current.style.opacity = '0'
+        logPage.current.style.transform = 'scale(0)'
+
+        //window.location.reload()
       }
 
       // Update state

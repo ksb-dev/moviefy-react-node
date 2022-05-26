@@ -11,6 +11,8 @@ import Youtube from '../../components/Youtube/Youtube'
 import Cast from '../../components/Cast/Cast'
 import PersonDetail from '../../components/PersonDetail/PersonDetail'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
+import Login from '../Login/Login'
+import Signup from '../Signup/Signup'
 
 import { motion } from 'framer-motion'
 
@@ -97,109 +99,114 @@ const Movie = () => {
   }
 
   return (
-    <div className='movie'>
-      {/* Navigation */}
+    <>
+      <Login />
+      <Signup />
 
-      <Navigation />
+      <div className='movie'>
+        {/* Navigation */}
 
-      <SmallNav />
+        <Navigation />
 
-      {/* Single Movie */}
+        <SmallNav />
 
-      <div
-        className={
-          toggleMode === 'white'
-            ? 'movie__main lightBg2'
-            : 'movie__main darkBg2'
-        }
-      >
-        <div className='movie__content'>
-          {/* Image Information */}
+        {/* Single Movie */}
 
-          <ImageInfo
-            movie={movie}
-            id={id}
-            trailerUrl={trailerUrl}
-            youtube_div={youtube_div}
-            setTrailerUrl={setTrailerUrl}
-          />
+        <div
+          className={
+            toggleMode === 'white'
+              ? 'movie__main lightBg2'
+              : 'movie__main darkBg2'
+          }
+        >
+          <div className='movie__content'>
+            {/* Image Information */}
 
-          <motion.h6
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.75, duration: 0.75 }}
-            className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
-          ></motion.h6>
+            <ImageInfo
+              movie={movie}
+              id={id}
+              trailerUrl={trailerUrl}
+              youtube_div={youtube_div}
+              setTrailerUrl={setTrailerUrl}
+            />
 
-          {/* Overview */}
-
-          {movie.overview && (
-            <motion.div
+            <motion.h6
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.75, duration: 0.75 }}
-              className={
-                toggleMode === 'white'
-                  ? 'movie__overview darkColor1'
-                  : 'movie__overview lightColor1'
-              }
-            >
-              <h3>Overview</h3>
+              className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+            ></motion.h6>
 
-              <h4>
-                {!read && movie.overview.substring(0, 250)}
+            {/* Overview */}
 
-                {!read && movie.overview.length > 250 && (
-                  <span onClick={() => setRead(true)}>
-                    {' '}
-                    read more <i className='fa-solid fa-plus'></i>
-                  </span>
-                )}
+            {movie.overview && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.75, duration: 0.75 }}
+                className={
+                  toggleMode === 'white'
+                    ? 'movie__overview darkColor1'
+                    : 'movie__overview lightColor1'
+                }
+              >
+                <h3>Overview</h3>
 
-                {read && movie.overview}
+                <h4>
+                  {!read && movie.overview.substring(0, 250)}
 
-                {read && movie.overview.length > 250 && (
-                  <span onClick={() => setRead(false)}>
-                    {' '}
-                    hide more <i className='fa-solid fa-minus'></i>
-                  </span>
-                )}
-              </h4>
-            </motion.div>
-          )}
+                  {!read && movie.overview.length > 250 && (
+                    <span onClick={() => setRead(true)}>
+                      {' '}
+                      read more <i className='fa-solid fa-plus'></i>
+                    </span>
+                  )}
 
-          <motion.h6
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
-          ></motion.h6>
+                  {read && movie.overview}
 
-          {/* Cast */}
+                  {read && movie.overview.length > 250 && (
+                    <span onClick={() => setRead(false)}>
+                      {' '}
+                      hide more <i className='fa-solid fa-minus'></i>
+                    </span>
+                  )}
+                </h4>
+              </motion.div>
+            )}
 
-          {people && (
-            <Cast
-              people={people}
-              setPerson={setPerson}
-              personError={personError}
-              setPersonError={setPersonError}
-              detail={detail}
-            />
-          )}
+            <motion.h6
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+              className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+            ></motion.h6>
+
+            {/* Cast */}
+
+            {people && (
+              <Cast
+                people={people}
+                setPerson={setPerson}
+                personError={personError}
+                setPersonError={setPersonError}
+                detail={detail}
+              />
+            )}
+          </div>
         </div>
+
+        {/* person detail */}
+        <PersonDetail detail={detail} person={person} />
+
+        {/* youtube-div div*/}
+        <Youtube
+          off={off}
+          youtube_div={youtube_div}
+          trailerUrl={trailerUrl}
+          setTrailerUrl={setTrailerUrl}
+        />
       </div>
-
-      {/* person detail */}
-      <PersonDetail detail={detail} person={person} />
-
-      {/* youtube-div div*/}
-      <Youtube
-        off={off}
-        youtube_div={youtube_div}
-        trailerUrl={trailerUrl}
-        setTrailerUrl={setTrailerUrl}
-      />
-    </div>
+    </>
   )
 }
 

@@ -1,16 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState, useEffect } from 'react'
 
 // Recat Router
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // Hooks
 import { useSignup } from '../../Hooks/useSignup'
 
 // Context
 import { useGlobalContext } from '../../context/context'
-
-import { motion } from 'framer-motion'
 
 export default function Signup () {
   const [email, setEmail] = useState('')
@@ -22,63 +20,81 @@ export default function Signup () {
 
   const { error, isPending, signup } = useSignup()
 
-  const { user, loadMovies, toggleMode } = useGlobalContext()
+  const { toggleMode, logPage, signPage } = useGlobalContext()
 
-  const navigate = useNavigate()
+  const signPageInner = useRef(null)
 
   useEffect(() => {
-    //setToggleMode(localStorage.getItem('toggleMode'))
-
-    if (user) {
-      localStorage.removeItem('term')
-      localStorage.setItem('mode', 'white')
-      localStorage.setItem('genre', 'All')
-      localStorage.setItem('page', 1)
-      localStorage.setItem('category', 'popular')
-      localStorage.setItem('activeGenre', 0)
-      loadMovies('popular', 1)
-      //setSearchedMovies([])
-      //setSearchTerm('')
-      navigate('/')
-
-      //window.location.reload()
+    // Function for click event
+    function handleOutsideClick (event) {
+      if (
+        signPage.current.contains(event.target) &&
+        !signPageInner.current.contains(event.target)
+      ) {
+        //console.signPage('you just clicked outside of box!')
+        signPage.current.style.opacity = '0'
+        signPage.current.style.zIndex = '-1'
+        signPage.current.style.transform = 'scale(0)'
+      }
     }
-  }, [user, navigate, loadMovies])
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    signup(displayName, email, password)
-  }
+    // Adding click event listener
+    document.addEventListener('click', handleOutsideClick)
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [signPage])
 
   const handleClick = () => {
     setShow(!show)
   }
 
+  const showLog = () => {
+    logPage.current.style.zIndex = '10'
+    logPage.current.style.opacity = '1'
+    logPage.current.style.transform = 'scale(1)'
+
+    hideSign()
+  }
+
+  const hideSign = () => {
+    signPage.current.style.zIndex = '-1'
+    signPage.current.style.opacity = '0'
+    signPage.current.style.transform = 'scale(0)'
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    signup(
+      displayName,
+      email,
+      password,
+      setEmail,
+      setPassword,
+      setDisplayName,
+      hideSign
+    )
+  }
+
   return (
     <div
-      className={toggleMode === 'white' ? 'login lightBg2' : 'login darkBg2'}
+      ref={signPage}
+      className={
+        toggleMode === 'white' ? 'login alphaLightBg2' : 'login alphaDarkBg2'
+      }
     >
       <Link
-        to='/'
+        to='#'
         className={
           toggleMode === 'white'
             ? 'login__back darkColor1'
             : 'login__back lightColor1'
         }
       >
-        <motion.h4
-          initial={{ x: '100vw' }}
-          animate={{ x: 0 }}
-          transition={{ delay: 0.2, duration: 0.2 }}
-        >
-          <i className='fa-solid fa-arrow-left'></i> Back to home
-        </motion.h4>
+        <h4 onClick={hideSign} style={{ marginBottom: '1rem' }}>
+          <i className='fa-solid fa-xmark fa-2x'></i>
+        </h4>
       </Link>
 
-      <motion.div
-        initial={{ x: '-100vw' }}
-        animate={{ x: 0 }}
-        transition={{ delay: 0.2, duration: 0.2 }}
+      {/*<div
         className={
           toggleMode === 'white'
             ? 'login__title darkColor1'
@@ -86,12 +102,10 @@ export default function Signup () {
         }
       >
         <h1>Moviefy</h1>
-      </motion.div>
+      </div>*/}
 
-      <motion.form
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.4 }}
+      <form
+        ref={signPageInner}
         onSubmit={handleSubmit}
         className={
           toggleMode === 'white'
@@ -217,6 +231,7 @@ export default function Signup () {
         )}
 
         <h5
+          onClick={showLog}
           className={
             toggleMode === 'white'
               ? 'login__form-ask darkColor1'
@@ -225,7 +240,7 @@ export default function Signup () {
         >
           Already have an account ?{' '}
           <Link
-            to='/login'
+            to='#'
             className={
               toggleMode === 'white'
                 ? 'login__form-ask-link darkColor1'
@@ -241,7 +256,7 @@ export default function Signup () {
             {error}
           </h4>
         )}
-      </motion.form>
+      </form>
     </div>
   )
 }

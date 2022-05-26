@@ -9,6 +9,8 @@ import { useGlobalContext } from '../../context/context'
 import MovieCard from '../../components/MovieCard/MovieCard'
 import Navgation from '../../components/Navigation/Navigation'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
+import Login from '../Login/Login'
+import Signup from '../Signup/Signup'
 
 const Wishlists = () => {
   const {
@@ -33,70 +35,77 @@ const Wishlists = () => {
   }
 
   return (
-    <div
-      className={toggleMode === 'white' ? 'whole lightBg2' : 'whole darkBg2'}
-    >
-      <Navgation />
+    <>
+      <Login />
+      <Signup />
 
-      <SmallNav />
+      <div
+        className={toggleMode === 'white' ? 'whole lightBg2' : 'whole darkBg2'}
+      >
+        <Navgation />
 
-      {/*<SideMenu filtered={wishlistFiltered} />*/}
+        <SmallNav />
 
-      <section className='wishlists'>
-        <div className='category-length'>
-          <h4 className='category'>
-            <span
-              className={toggleMode === 'white' ? 'darkColor1' : 'lightColor1'}
+        {/*<SideMenu filtered={wishlistFiltered} />*/}
+
+        <section className='wishlists'>
+          <div className='category-length'>
+            <h4 className='category'>
+              <span
+                className={
+                  toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
+                }
+              >
+                wishlists
+              </span>
+            </h4>
+
+            <h4
+              className={
+                toggleMode === 'white'
+                  ? 'length lightColorBg2'
+                  : 'length darkColorBg2'
+              }
             >
-              wishlists
-            </span>
-          </h4>
+              <CountUp start={0} end={wishlistFiltered.length} duration={0.1} />
+            </h4>
+          </div>
 
-          <h4
-            className={
-              toggleMode === 'white'
-                ? 'length lightColorBg2'
-                : 'length darkColorBg2'
-            }
-          >
-            <CountUp start={0} end={wishlistFiltered.length} duration={0.1} />
-          </h4>
-        </div>
-
-        <div className='wishlist-list'>
-          {/*{wishlist.length === 0 && (
+          <div className='wishlist-list'>
+            {/*{wishlist.length === 0 && (
             <h3 style={{ color: 'tomato' }}>Add Movies To Wishlist</h3>
           )}*/}
 
-          {wishlistFiltered.length > 0 &&
-            wishlistFiltered.map(movie => {
-              const {
-                movie_id,
-                movie_name,
-                poster_path,
-                release_date,
-                movie_vote
-              } = movie
+            {wishlistFiltered.length > 0 &&
+              wishlistFiltered.map(movie => {
+                const {
+                  movie_id,
+                  movie_name,
+                  poster_path,
+                  release_date,
+                  movie_vote
+                } = movie
 
-              return (
-                <MovieCard
-                  key={movie_id}
-                  movie={movie}
-                  id={movie_id}
-                  title={movie_name}
-                  poster_path={poster_path}
-                  vote_average={movie_vote}
-                  release_date={release_date}
-                />
-              )
-            })}
+                return (
+                  <MovieCard
+                    key={movie_id}
+                    movie={movie}
+                    id={movie_id}
+                    title={movie_name}
+                    poster_path={poster_path}
+                    vote_average={movie_vote}
+                    release_date={release_date}
+                  />
+                )
+              })}
 
-          {wishlistFiltered.length === 0 && (
-            <h3 style={{ color: 'tomato' }}>Add movies to wishlist</h3>
-          )}
-        </div>
-      </section>
-    </div>
+            {wishlistFiltered.length === 0 && (
+              <h3 style={{ color: 'tomato' }}>Add movies to wishlist</h3>
+            )}
+          </div>
+        </section>
+      </div>
+    </>
   )
 }
 

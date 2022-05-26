@@ -16,7 +16,13 @@ const url =
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
 const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
-  const { toggleMode, wishlist, getWishlist, user } = useGlobalContext()
+  const {
+    toggleMode,
+    wishlist,
+    getWishlist,
+    user,
+    logPage
+  } = useGlobalContext()
 
   const [bookmark, setBookmark] = useState(false)
 
@@ -52,6 +58,12 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
     } else {
       return 'tomato'
     }
+  }
+
+  const showLog = () => {
+    logPage.current.style.zIndex = '10'
+    logPage.current.style.opacity = '1'
+    logPage.current.style.transform = 'scale(1)'
   }
 
   return (
@@ -130,8 +142,8 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
           )}
 
           {!user && (
-            <h5 className='first-segment__add'>
-              <Link to='/login'>Login to wishlist</Link>
+            <h5 onClick={showLog} className='first-segment__add'>
+              <Link to='#'>Login to wishlist</Link>
             </h5>
           )}
         </motion.div>

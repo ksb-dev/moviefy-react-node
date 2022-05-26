@@ -22,7 +22,13 @@ const MovieCard = ({
   release_date
   //genre_ids
 }) => {
-  const { toggleMode, wishlist, user, getWishlist } = useGlobalContext()
+  const {
+    toggleMode,
+    wishlist,
+    user,
+    getWishlist,
+    logPage
+  } = useGlobalContext()
 
   const [bookmark, setBookmark] = useState(false)
 
@@ -48,6 +54,12 @@ const MovieCard = ({
     } else {
       return 'tomato'
     }
+  }
+
+  const showLog = () => {
+    logPage.current.style.zIndex = '10'
+    logPage.current.style.opacity = '1'
+    logPage.current.style.transform = 'scale(1)'
   }
 
   return (
@@ -155,8 +167,8 @@ const MovieCard = ({
           )}
 
           {!user && (
-            <h5 id='addCard'>
-              <Link to='/login'>Login to wishlist</Link>
+            <h5 onClick={showLog} id='addCard'>
+              <Link to='#'>Login to wishlist</Link>
             </h5>
           )}
         </div>

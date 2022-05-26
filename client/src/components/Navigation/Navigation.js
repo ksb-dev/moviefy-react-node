@@ -14,7 +14,8 @@ const Header = () => {
     setToggleMode,
     loadMovies,
     isLoading,
-    user
+    user,
+    logPage
   } = useGlobalContext()
 
   // State of User Name
@@ -50,6 +51,12 @@ const Header = () => {
     log.current.style.opacity = '1'
     log.current.style.zIndex = '10'
     log.current.style.transform = 'scale(1)'
+  }
+
+  const showLog = () => {
+    logPage.current.style.zIndex = '10'
+    logPage.current.style.opacity = '1'
+    logPage.current.style.transform = 'scale(1)'
   }
 
   return (
@@ -150,9 +157,9 @@ const Header = () => {
               {/* Login  */}
 
               {!userName && (
-                <p>
+                <p onClick={showLog}>
                   <Link
-                    to='/login'
+                    to='#'
                     className={
                       toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
                     }
