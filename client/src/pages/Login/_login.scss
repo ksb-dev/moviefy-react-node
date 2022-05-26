@@ -32,7 +32,7 @@
     padding: 2rem;
     letter-spacing: 1px;
     border-radius: var(--border-radius);
-    border-top: 5px solid tomato;
+    border-top: 5px solid var(--blue);
 
     &-label {
       display: block;
@@ -83,7 +83,7 @@
     }
 
     &-btn:hover {
-      box-shadow: 0 0 50px tomato;
+      box-shadow: 0 0 50px var(--blue);
     }
 
     &-ask {
@@ -98,7 +98,7 @@
       }
 
       &-link:hover {
-        box-shadow: 0 0 5px tomato;
+        box-shadow: 0 0 5px var(--blue);
       }
     }
 

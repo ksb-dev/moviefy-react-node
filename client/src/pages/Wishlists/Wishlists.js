@@ -55,8 +55,8 @@ const Wishlists = () => {
           <h4
             className={
               toggleMode === 'white'
-                ? 'length darkColor1'
-                : 'length lightColor1'
+                ? 'length lightColorBg2'
+                : 'length darkColorBg2'
             }
           >
             <CountUp start={0} end={wishlistFiltered.length} duration={0.1} />

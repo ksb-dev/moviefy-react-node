@@ -99,15 +99,15 @@ const SideMenu = ({ filtered }) => {
             <li onClick={() => handleClick('trending')}>Trending</li>
           )}
 
-          {category && category === 'now playing' ? (
+          {category && category === 'in cinemas' ? (
             <li
-              onClick={() => handleClick('now playing')}
+              onClick={() => handleClick('in cinemas')}
               className='activeCategory'
             >
               In Cinemas
             </li>
           ) : (
-            <li onClick={() => handleClick('now playing')}>In Cinemas</li>
+            <li onClick={() => handleClick('in cinemas')}>In Cinemas</li>
           )}
 
           {category && category === 'upcoming' ? (

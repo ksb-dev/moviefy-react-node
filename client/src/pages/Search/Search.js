@@ -37,9 +37,7 @@ const Search = () => {
 
       <div
         className={
-          toggleMode === 'white'
-            ? 'search alphaLightBg2'
-            : 'search alphaDarkBg2'
+          toggleMode === 'white' ? 'search lightBg2' : 'search darkBg2'
         }
       >
         {/*<label

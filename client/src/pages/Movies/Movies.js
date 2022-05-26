@@ -56,8 +56,8 @@ const Movies = () => {
           <div
             className={
               toggleMode === 'white'
-                ? 'category-length-filter alphaLightBg2'
-                : 'category-length-filter alphaDarkBg2'
+                ? 'category-length-filter lightBg2'
+                : 'category-length-filter darkBg2'
             }
           >
             <div className='category-length'>

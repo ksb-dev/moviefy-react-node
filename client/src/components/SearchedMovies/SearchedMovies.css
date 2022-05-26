@@ -11,7 +11,7 @@
 }
 
 .cat-clear .clear-btn {
-  background: tomato;
+  background: linear-gradient(tomato, red);
   border: none;
   color: #fff;
   padding: 0.3rem 0.5rem;
@@ -19,6 +19,11 @@
   text-transform: uppercase;
   border-radius: 5px;
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.cat-clear .clear-btn:hover {
+  background: linear-gradient(red, tomato);
 }
 
 .cat,
