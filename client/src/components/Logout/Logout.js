@@ -28,6 +28,7 @@ const Logout = ({ log }) => {
         //console.log('you just clicked outside of box!')
         log.current.style.opacity = '0'
         log.current.style.zIndex = '-1'
+        log.current.style.transform = 'scale(0)'
       }
     }
 
@@ -40,6 +41,7 @@ const Logout = ({ log }) => {
     //log.current.style.transform = 'translateX(100%)'
     log.current.style.opacity = '0'
     log.current.style.zIndex = '-1'
+    log.current.style.transform = 'scale(0)'
   }
 
   const logout = () => {

@@ -52,6 +52,7 @@ const Header = () => {
     //log.current.style.transform = 'translateX(0%)'
     log.current.style.opacity = '1'
     log.current.style.zIndex = '10'
+    log.current.style.transform = 'scale(1)'
   }
 
   return (

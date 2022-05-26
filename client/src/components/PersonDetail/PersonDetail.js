@@ -9,7 +9,10 @@ const PersonDetail = ({ detail, person }) => {
   const { toggleMode } = useGlobalContext()
 
   const closeDetail = () => {
-    detail.current.style.transform = 'translateX(-120%)'
+    //detail.current.style.transform = 'translateX(-120%)'
+    detail.current.style.zIndex = '-1'
+    detail.current.style.opacity = '0'
+    detail.current.style.transform = 'scale(0)'
   }
 
   return (

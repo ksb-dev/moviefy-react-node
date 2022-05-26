@@ -11,8 +11,6 @@ import { motion } from 'framer-motion'
 const Cast = ({ setPerson, setPersonError, detail, people }) => {
   const { toggleMode } = useGlobalContext()
 
-  const charName = useRef(null)
-
   const getPersonDetail = async id => {
     const getPersonDetail = `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_KEY}&language=en-US`
 
@@ -22,15 +20,13 @@ const Cast = ({ setPerson, setPersonError, detail, people }) => {
     if (details) {
       setPerson(details)
       setPersonError(false)
-      detail.current.style.transform = 'translateX(0%)'
+      //detail.current.style.transform = 'translateX(0%)'
+      detail.current.style.zIndex = '3'
+      detail.current.style.opacity = '1'
+      detail.current.style.transform = 'scale(1)'
     } else {
       setPersonError(true)
     }
-  }
-
-  const hide = () => {
-    charName.current.style.background = 'white'
-    console.log(charName.current)
   }
 
   return (
