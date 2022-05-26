@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import { useGlobalContext } from '../../context/context'
 
-import { motion } from 'framer-motion'
-
 //import './Filter.css'
 
 const Filter = ({ activeGenre, setActiveGenre }) => {
@@ -44,9 +42,15 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
   ]
 
   useEffect(() => {
-    //console.log(localStorage.getItem('genre'))
+    // Function for click event
+    function handleOutsideClick (event) {
+      if (!filterRef.current.contains(event.target)) {
+        setIsActive(false)
+      }
+    }
 
-    //let storedActiveGenre = Number(localStorage.getItem('activeGenre'))
+    // Adding click event listener
+    document.addEventListener('click', handleOutsideClick)
 
     window.scroll({
       top: 0,
@@ -198,18 +202,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
     )
     setWishlistFiltered(filterWishlist)*/
 
-    // Function for click event
-    /*function handleOutsideClick (event) {
-      console.log(event)
-      if (!filterInnerRef.current.contains(event.target)) {
-        //console.filterRef('you just clicked outside of box!')
-        setIsActive(!isActive)
-      }
-    }
-
-    // Adding click event listener
-    document.addEventListener('click', handleOutsideClick)
-    return () => document.removeEventListener('click', handleOutsideClick)*/
+    return () => document.removeEventListener('click', handleOutsideClick)
   }, [activeGenre, more, isLoading, movies, setFiltered, storedActiveGenre])
 
   const handleClick = genre => {
@@ -273,7 +266,19 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
             : 'filter__dropdown lightColorBg2'
         }
       >
-        <div className='filter__btn' onClick={() => setIsActive(!isActive)}>
+        <div
+          className='filter__btn'
+          onClick={() => {
+            console.log(isActive)
+            if (isActive === true) {
+              setIsActive(!isActive)
+              filterInnerRef.current.style.transform = 'translateY(100vh)'
+            } else {
+              setIsActive(!isActive)
+              filterInnerRef.current.style.transform = 'translateY(0%)'
+            }
+          }}
+        >
           {/*{selected ? selected : 'All'}*/}
           {/*{filtered.length === 20 && selected}*/}
 
@@ -290,42 +295,37 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
           )}
         </div>
 
-        {isActive && (
-          <motion.div
-            ref={filterInnerRef}
-            initial={{ y: '100%' }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.2 }}
-            className={
-              toggleMode === 'white'
-                ? 'filter__content alphaDarkBg1 '
-                : 'filter__content alphaLightBg1 '
-            }
-          >
-            {options.map((option, index) => {
-              return (
-                <div
-                  key={index}
-                  className='filter__item'
-                  onClick={e => {
-                    setSelected(e.target.textContent)
-                    localStorage.setItem('genre', e.target.textContent)
-                    setIsActive(!isActive)
-                    handleClick(e.target.textContent)
-                  }}
+        <div
+          ref={filterInnerRef}
+          className={
+            toggleMode === 'white'
+              ? 'filter__content alphaDarkBg1 '
+              : 'filter__content alphaLightBg1 '
+          }
+        >
+          {options.map((option, index) => {
+            return (
+              <div
+                key={index}
+                className='filter__item'
+                onClick={e => {
+                  setSelected(e.target.textContent)
+                  localStorage.setItem('genre', e.target.textContent)
+                  setIsActive(!isActive)
+                  handleClick(e.target.textContent)
+                }}
+              >
+                <span
+                  className={
+                    toggleMode === 'white' ? 'lightShadow' : 'darkShadow'
+                  }
                 >
-                  <span
-                    className={
-                      toggleMode === 'white' ? 'lightShadow' : 'darkShadow'
-                    }
-                  >
-                    {option}
-                  </span>
-                </div>
-              )
-            })}
-          </motion.div>
-        )}
+                  {option}
+                </span>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
