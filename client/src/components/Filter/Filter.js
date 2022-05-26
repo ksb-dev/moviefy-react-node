@@ -199,7 +199,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
     setWishlistFiltered(filterWishlist)*/
 
     // Function for click event
-    function handleOutsideClick (event) {
+    /*function handleOutsideClick (event) {
       console.log(event)
       if (!filterInnerRef.current.contains(event.target)) {
         //console.filterRef('you just clicked outside of box!')
@@ -209,17 +209,8 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
 
     // Adding click event listener
     document.addEventListener('click', handleOutsideClick)
-    return () => document.removeEventListener('click', handleOutsideClick)
-  }, [
-    activeGenre,
-    more,
-    isLoading,
-    movies,
-    setFiltered,
-    storedActiveGenre,
-    filterInnerRef,
-    isActive
-  ])
+    return () => document.removeEventListener('click', handleOutsideClick)*/
+  }, [activeGenre, more, isLoading, movies, setFiltered, storedActiveGenre])
 
   const handleClick = genre => {
     if (genre === 'All') {

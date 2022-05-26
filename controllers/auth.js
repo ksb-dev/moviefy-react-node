@@ -38,7 +38,7 @@ const login = async (req, res) => {
   if (!email || !password) {
     res
       .status(StatusCodes.BAD_REQUEST)
-      .json({ message: 'Please fill all above fields' })
+      .json({ message: 'Please fill in all above fields' })
     return
   }
 

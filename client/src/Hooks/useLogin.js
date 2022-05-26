@@ -22,7 +22,7 @@ export const useLogin = () => {
 
   const login = async (email, password, setEmail, setPassword) => {
     setError(null)
-    setIsPending(false)
+    setIsPending(true)
 
     try {
       // Sign the user in
@@ -67,7 +67,7 @@ export const useLogin = () => {
         setIsPending(false)
       }
 
-      //console.log(response.data)
+      console.log(response.data)
     } catch (error) {
       if (isCancelled) {
         console.log(isPending)
