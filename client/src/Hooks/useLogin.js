@@ -82,12 +82,16 @@ export const useLogin = () => {
       console.log(8)
     } catch (error) {
       console.log(9)
-      if (isCancelled) {
+      /*if (isCancelled) {
         console.log(10)
 
         setError(error.response.data.message)
         setIsPending(false)
-      }
+      }*/
+      setError(error.response.data.message)
+      setIsPending(false)
+
+      console.log(10)
     }
   }
 
