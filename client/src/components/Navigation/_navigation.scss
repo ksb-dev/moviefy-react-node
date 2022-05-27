@@ -1,5 +1,6 @@
 .navigation {
   width: 100vw;
+  height: 8vh;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -10,15 +11,17 @@
   justify-content: center;
 
   &__main {
-    width: 95vw;
+    width: 1280px;
+    max-width: 1280px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 2rem;
   }
 
   &__title {
     margin: 0;
-    margin-left: 1rem;
+    padding: 0;
     font-weight: bold;
     cursor: pointer;
     letter-spacing: 1px;
@@ -67,8 +70,8 @@
   &__list p {
     cursor: pointer;
     letter-spacing: 1px;
-    margin-right: 2rem;
-    user-select: none;
+    margin: 0;
+    margin-left: 2rem;
     user-select: none;
   }
 
@@ -97,16 +100,13 @@
 
 @media screen and (max-width: 1280px) {
   .navigation {
-    width: 100vw;
+    width: 100%;
+
     &__main {
-      width: 100vw;
+      width: 100%;
     }
 
     &__filter {
-      display: flex;
-    }
-
-    &__list .more {
       display: flex;
     }
   }
@@ -114,31 +114,12 @@
 
 @media screen and (max-width: 1024px) {
   .navigation {
-    position: fixed;
-    top: unset;
-    bottom: 0;
-    left: 0;
-    box-shadow: none;
-
-    &__main {
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__list p {
-      margin: 0.8rem 2rem;
-    }
-
     &__title {
-      display: none;
       margin: 0;
     }
 
-    &__filter {
-      display: none;
-      margin-right: 0;
+    &__list .more {
+      display: flex;
     }
   }
 }
@@ -154,6 +135,13 @@
 
 @media screen and (max-width: 640px) {
   .navigation {
+    top: unset;
+    bottom: 0;
+
+    &__title {
+      display: none;
+    }
+
     &__list p {
       font-size: 0.85rem;
       margin-left: 0.5rem;
@@ -181,13 +169,6 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-
-      /*.more span,
-      .movie-more span,
-      .bookmarks-more span,
-      .search-more span {
-        display: none;
-      }*/
     }
   }
 }

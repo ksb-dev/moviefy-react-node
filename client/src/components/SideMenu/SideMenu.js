@@ -29,9 +29,7 @@ const SideMenu = ({ filtered }) => {
   return (
     <div
       className={
-        toggleMode === 'white'
-          ? 'sideMenu alphaLightBg2'
-          : 'sideMenu alphaDarkBg2'
+        toggleMode === 'white' ? 'sideMenu lightBg1' : 'sideMenu darkBg1'
       }
     >
       <div
@@ -41,31 +39,6 @@ const SideMenu = ({ filtered }) => {
             : 'sideMenu__main darkBg1'
         }
       >
-        <h2
-          className={
-            toggleMode === 'white'
-              ? 'sideMenu__results darkColor1'
-              : 'sideMenu__results lightColor1'
-          }
-        >
-          Results
-        </h2>
-        <h2
-          className={
-            toggleMode === 'white'
-              ? 'sideMenu__counter darkBg1 lightColor1'
-              : 'sideMenu__counter lightBg1 darkColor1'
-          }
-        >
-          <span>
-            <CountUp start={0} end={filtered.length} duration={0.5} />
-          </span>
-        </h2>
-
-        <div className='sideMenu__filter'>
-          <Filter activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
-        </div>
-
         <ul
           className={
             toggleMode === 'white'
@@ -132,6 +105,22 @@ const SideMenu = ({ filtered }) => {
             <li onClick={() => handleClick('top rated')}>Top Rated</li>
           )}
         </ul>
+
+        <div className='sideMenu__filter'>
+          <Filter activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
+
+          <h2
+            className={
+              toggleMode === 'white'
+                ? 'sideMenu__filter-counter darkBg1 lightColor1'
+                : 'sideMenu__filter-counter lightBg1 darkColor1'
+            }
+          >
+            <span>
+              <CountUp start={0} end={filtered.length} duration={0.5} />
+            </span>
+          </h2>
+        </div>
       </div>
     </div>
   )
