@@ -44,8 +44,7 @@
   padding-bottom: 0rem;
 }
 
-.hrlineBlack,
-.hrlineWhite {
+.hr {
   margin: 1rem auto;
   margin-bottom: 5rem;
 }

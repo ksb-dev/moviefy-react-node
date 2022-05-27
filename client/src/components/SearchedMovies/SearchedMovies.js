@@ -95,7 +95,7 @@ const SearchedMovies = ({ setQuery }) => {
           : ''}
       </section>
       <h6
-        className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+        className={toggleMode === 'white' ? 'hr hrlineBlack' : 'hr hrlineWhite'}
       ></h6>
     </>
   )

@@ -182,24 +182,36 @@ const SideMenu = ({ filtered }) => {
         {!window.location.pathname.includes('/movie') &&
           !window.location.pathname.includes('/search') &&
           !window.location.pathname.includes('/bookmarks') && (
-            <div className='sideMenu__filter'>
-              <Filter
-                activeGenre={activeGenre}
-                setActiveGenre={setActiveGenre}
-              />
+            <>
+              <div className='sideMenu__filter'>
+                <p
+                  className={
+                    toggleMode === 'white'
+                      ? 'sideMenu__filter-number darkBg1 lightColor2'
+                      : 'sideMenu__filter-number lightBg2 darkColor2'
+                  }
+                >
+                  Page {localStorage.getItem('page')}
+                </p>
 
-              <h2
-                className={
-                  toggleMode === 'white'
-                    ? 'sideMenu__filter-counter darkBg1 lightColor2'
-                    : 'sideMenu__filter-counter lightBg2 darkColor2'
-                }
-              >
-                <span>
-                  <CountUp start={0} end={filtered.length} duration={0.5} />
-                </span>
-              </h2>
-            </div>
+                <Filter
+                  activeGenre={activeGenre}
+                  setActiveGenre={setActiveGenre}
+                />
+
+                <h2
+                  className={
+                    toggleMode === 'white'
+                      ? 'sideMenu__filter-counter darkBg1 lightColor2'
+                      : 'sideMenu__filter-counter lightBg2 darkColor2'
+                  }
+                >
+                  <span>
+                    <CountUp start={0} end={filtered.length} duration={0.5} />
+                  </span>
+                </h2>
+              </div>
+            </>
           )}
       </div>
     </div>

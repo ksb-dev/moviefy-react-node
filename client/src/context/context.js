@@ -119,6 +119,8 @@ const AppProvider = ({ children }) => {
 
   // Fetch Movies
   const fetchMovies = async (url, category, page) => {
+    if (page === 0) page = 1
+
     localStorage.setItem('category', category)
     localStorage.setItem('page', page)
 

@@ -52,6 +52,15 @@ const Movies = () => {
       <SideMenu filtered={filtered} />
 
       <section className='movies'>
+        {/*<h1
+          className={
+            toggleMode === 'white'
+              ? 'page-no darkColorBg2'
+              : 'page-no lightColorBg1'
+          }
+        >
+          <span>Page {localStorage.getItem('page')}</span>
+        </h1>*/}
         {category && (
           <div
             className={

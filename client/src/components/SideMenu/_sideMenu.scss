@@ -24,8 +24,20 @@
 
   &__filter {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
+
+    &-number {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      border-radius: 50px;
+      margin-right: 0.5rem;
+    }
 
     &-counter {
       margin: 0;
@@ -52,19 +64,20 @@
     align-items: center;
     justify-content: flex-start;
     list-style: none;
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     margin: 0;
   }
 
   &__list li {
-    margin-right: 1.5rem;
-    font-size: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 3px;
     user-select: none;
     padding: 0.5rem 1rem;
     border-radius: 50px;
+    font-weight: bold;
   }
 
   &__list li:hover {

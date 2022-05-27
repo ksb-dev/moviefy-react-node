@@ -1,10 +1,10 @@
 .pagination {
-  position: fixed;
-  z-index: 1;
+  /*position: fixed;
+  z-index: 1;*/
   width: 100vw;
   height: 75px;
-  bottom: 0;
-  left: 0;
+  /*bottom: 0;
+  left: 0;*/
   border: none;
   display: flex;
   align-items: center;
@@ -55,7 +55,9 @@
 
 @media screen and (max-width: 786px) {
   .pagination {
-    bottom: 55px;
+    /*bottom: 55px;
+    height: 55px;*/
+    margin-bottom: 55px;
     height: 55px;
   }
 }
