@@ -79,8 +79,8 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'first-segment__content alphaLightBg2 darkColor1'
-            : 'first-segment__content alphaDarkBg2 lightColor1'
+            ? 'first-segment__content alphaLightBg1 darkColor2'
+            : 'first-segment__content alphaDarkBg1 lightColor2'
         }
       >
         <motion.div
@@ -228,7 +228,7 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
               className={
                 toggleMode === 'white'
                   ? 'first-segment__more-info--trailer-btn darkColor2'
-                  : 'first-segment__more-info--trailer-btn lightColor1'
+                  : 'first-segment__more-info--trailer-btn lightColor2'
               }
               onClick={() =>
                 getTrailer(id, youtube_div, trailerUrl, setTrailerUrl)

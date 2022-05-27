@@ -1,8 +1,8 @@
 .sideMenu {
   position: fixed;
   width: 100vw;
-  height: 8vh;
-  top: 8vh;
+  height: 75px;
+  top: 75px;
   left: 0;
   z-index: 3;
 
@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   &__results {
@@ -35,7 +35,6 @@
       width: 40px;
       position: relative;
       border-radius: 50%;
-      font-weight: 400;
 
       span {
         font-size: 1rem;
@@ -53,7 +52,7 @@
     align-items: center;
     justify-content: flex-start;
     list-style: none;
-    padding: 0;
+    padding: 0.5rem 0;
     margin: 0;
   }
 
@@ -69,10 +68,6 @@
   &__list li:hover {
     transform: scale(1.1);
     transition: all 0.3s ease;
-  }
-
-  &__list li:first-child {
-    /*margin-top: 2rem;*/
   }
 
   &__list li a {

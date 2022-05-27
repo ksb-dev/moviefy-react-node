@@ -6,17 +6,7 @@ import { useGlobalContext } from '../../context/context'
 const SmallNav = () => {
   const { toggleMode } = useGlobalContext()
 
-  return (
-    <h4
-      className={
-        toggleMode === 'white'
-          ? 'small-navigation lightBg2'
-          : 'small-navigation darkBg2'
-      }
-    >
-      Moviefy
-    </h4>
-  )
+  return <h4 className='small-navigation'>Moviefy</h4>
 }
 
 export default SmallNav

@@ -79,7 +79,7 @@ export default function Login () {
       <div
         ref={logPage}
         className={
-          toggleMode === 'white' ? 'login alphaLightBg2' : 'login alphaDarkBg2'
+          toggleMode === 'white' ? 'login alphaLightBg1' : 'login alphaDarkBg1'
         }
       >
         <Link

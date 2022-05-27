@@ -74,8 +74,8 @@ const Movies = () => {
               <h4
                 className={
                   toggleMode === 'white'
-                    ? 'length lightColorBg2'
-                    : 'length darkColorBg2'
+                    ? 'length lightColorBg1'
+                    : 'length darkColorBg1'
                 }
               >
                 <CountUp start={0} end={filtered.length} duration={0.1} />

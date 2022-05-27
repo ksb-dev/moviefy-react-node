@@ -253,7 +253,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
         className={
           toggleMode === 'white'
             ? 'filter__dropdown darkColorBg2'
-            : 'filter__dropdown lightColorBg2'
+            : 'filter__dropdown lightColorBg1'
         }
       >
         <div
@@ -288,8 +288,8 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
           ref={filterInnerRef}
           className={
             toggleMode === 'white'
-              ? 'filter__content alphaDarkBg1 '
-              : 'filter__content alphaLightBg1 '
+              ? 'filter__content darkBg1 '
+              : 'filter__content lightBg2 '
           }
         >
           {options.map((option, index) => {

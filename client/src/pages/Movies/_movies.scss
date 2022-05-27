@@ -8,8 +8,8 @@
   min-height: 100vh;
   margin: 0 auto;
   border-radius: var(--border-radius);
-  padding-bottom: 2rem;
-  padding-top: 9rem;
+  padding-bottom: 5rem;
+  padding-top: 10rem;
 
   h6 {
     margin: 1rem auto;
@@ -50,17 +50,15 @@
 
 @media screen and (max-width: 1024px) {
   .movies {
-    padding-bottom: 8rem;
-
     .category-length-filter {
       position: fixed;
       z-index: 1;
       width: 100%;
-      height: 8vh;
+      height: 75px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      top: 8vh;
+      top: 75px;
       left: 0;
     }
 
@@ -92,10 +90,16 @@
 @media screen and (max-width: 786px) {
   .movies {
     margin: 0;
+    padding-top: 8rem;
     padding-bottom: 9rem;
 
     .movie-list {
       margin-left: 0rem;
+    }
+
+    .category-length-filter {
+      top: 55px;
+      height: 55px;
     }
 
     .category-length {

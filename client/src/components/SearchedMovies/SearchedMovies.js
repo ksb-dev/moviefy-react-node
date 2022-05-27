@@ -46,9 +46,7 @@ const SearchedMovies = ({ setQuery }) => {
         <div className='cat-clear'>
           <h4
             className={
-              toggleMode === 'white'
-                ? 'cat blackColorSearch'
-                : 'cat whiteColorSearch'
+              toggleMode === 'white' ? 'cat darkColor2' : 'cat lightColor2'
             }
           >
             {searchTerm}

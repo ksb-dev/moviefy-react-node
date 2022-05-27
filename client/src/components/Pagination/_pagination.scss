@@ -2,17 +2,13 @@
   position: fixed;
   z-index: 1;
   width: 100vw;
-  /*top: 4.2rem;
-  top: 3rem;*/
+  height: 75px;
   bottom: 0;
   left: 0;
   border: none;
-  padding: 0.5rem 0;
-  /*padding-top: 2rem;*/
   display: flex;
   align-items: center;
   justify-content: center;
-  /*margin-left: 56%;*/
 
   .inner {
     display: flex;
@@ -39,6 +35,46 @@
     .paginationItem:hover {
       transform: scale(1.1);
     }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .pagination {
+    width: 100vw;
+    top: unset;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+
+    .inner {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .pagination {
+    bottom: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pagination {
+    .inner {
+      padding: 0;
+      .paginationItem {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .prevNextDark,
+  .prevNextLight {
+    margin: 0.2rem;
   }
 }
 
@@ -121,52 +157,6 @@
   /*border: 2px solid var(--light-color-1);*/
   border: none;
 }
-
-@media screen and (max-width: 1280px) {
-  .pagination {
-    width: 100vw;
-    top: unset;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-    padding: 0.5rem;
-
-    .inner {
-      margin-right: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .pagination {
-    padding: 1rem 0;
-    bottom: 8vh;
-    border-bottom: 2px solid var(--blue);
-
-    .inner {
-      padding: 0;
-      .paginationItem {
-        width: 25px;
-        height: 25px;
-      }
-    }
-  }
-
-  .prevNextDark,
-  .prevNextLight {
-    margin: 0.2rem;
-  }
-}
-
-/*.lightBo {
-  box-shadow: 0 0 50px 10px var(--light-color-1);
-}
-
-.darkBo {
-  box-shadow: 0 0 50px 10px var(--dark-color-2);
-}*/
 
 .transparent {
   background: transparent;

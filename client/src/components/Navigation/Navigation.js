@@ -67,18 +67,10 @@ const Header = () => {
 
       <Categories sideMenu={sideMenu} back={back} />
 
-      <div
-        className={
-          toggleMode === 'white' ? 'navigation lightBg2' : 'navigation darkBg2'
-        }
-      >
+      <div className='navigation'>
         <div className='navigation__main'>
           <h2
-            className={
-              toggleMode === 'white'
-                ? 'navigation__title darkColor1'
-                : 'navigation__title lightColor1'
-            }
+            className='navigation__title'
             onClick={() => {
               localStorage.setItem('activeGenre', 0)
               localStorage.setItem('genre', 'All')
@@ -90,17 +82,6 @@ const Header = () => {
           </h2>
 
           <div className='navigation__list'>
-            {/* Filter Component */}
-
-            {/*<div className='navigation__filter'>
-              {window.location.pathname === '/' && (
-                <Filter
-                  activeGenre={activeGenre}
-                  setActiveGenre={setActiveGenre}
-                />
-              )}
-              </div>*/}
-
             <div className='navigation__options'>
               {/* Home */}
 
@@ -108,12 +89,7 @@ const Header = () => {
                 window.location.pathname.includes('/movie') ||
                 window.location.pathname === '/search') && (
                 <p>
-                  <Link
-                    to='/'
-                    className={
-                      toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                    }
-                  >
+                  <Link to='/'>
                     <i className='fa-solid fa-house'></i>
                     <span>Home</span>
                   </Link>
@@ -123,19 +99,8 @@ const Header = () => {
               {/* Search */}
 
               <p>
-                <Link
-                  to='/search'
-                  className={
-                    toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                  }
-                >
-                  <i
-                    className={
-                      toggleMode === 'white'
-                        ? 'fa-solid fa-magnifying-glass darkColor1'
-                        : 'fa-solid fa-magnifying-glass lightColor1'
-                    }
-                  ></i>
+                <Link to='/search'>
+                  <i className='fa-solid fa-magnifying-glass'></i>
                   <span>Search</span>
                 </Link>
               </p>
@@ -143,13 +108,13 @@ const Header = () => {
               {/* Mode*/}
 
               {toggleMode === 'white' ? (
-                <p className='darkColor1' onClick={() => toggle(toggleMode)}>
-                  <i className='fa-solid fa-moon darkColor1'></i>
+                <p onClick={() => toggle(toggleMode)}>
+                  <i className='fa-solid fa-moon'></i>
                   <span>Dark</span>
                 </p>
               ) : (
-                <p className='lightColor1' onClick={() => toggle(toggleMode)}>
-                  <i className='fa-solid fa-sun lightColor1'></i>
+                <p onClick={() => toggle(toggleMode)}>
+                  <i className='fa-solid fa-sun'></i>
                   <span>Light</span>
                 </p>
               )}
@@ -158,19 +123,8 @@ const Header = () => {
 
               {!userName && (
                 <p onClick={showLog}>
-                  <Link
-                    to='#'
-                    className={
-                      toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                    }
-                  >
-                    <i
-                      className={
-                        toggleMode === 'white'
-                          ? 'fa-solid fa-circle-user darkColor1'
-                          : 'fa-solid fa-circle-user lightColor1'
-                      }
-                    ></i>
+                  <Link to='#'>
+                    <i className='fa-solid fa-circle-user'></i>
                     <span>Login</span>
                   </Link>
                 </p>
@@ -180,19 +134,8 @@ const Header = () => {
 
               {userName && (
                 <p onClick={showLogout}>
-                  <Link
-                    to='#'
-                    className={
-                      toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                    }
-                  >
-                    <i
-                      className={
-                        toggleMode === 'white'
-                          ? 'fa-solid fa-circle-user darkColor1'
-                          : 'fa-solid fa-circle-user lightColor1'
-                      }
-                    ></i>
+                  <Link to='#'>
+                    <i className='fa-solid fa-circle-user'></i>
                     <span>{userName}</span>
                   </Link>
                 </p>
@@ -200,89 +143,10 @@ const Header = () => {
 
               {/* More */}
 
-              {window.location.pathname.includes('/movie') ||
-              window.location.pathname.includes('/bookmarks') ||
-              window.location.pathname.includes('/search') ? (
-                ''
-              ) : (
-                <p
-                  className={
-                    toggleMode === 'white'
-                      ? ' more darkColor1'
-                      : ' more lightColor1'
-                  }
-                  onClick={showMenu}
-                >
-                  <i
-                    className={
-                      toggleMode === 'white'
-                        ? 'fa fa-bars-staggered darkColor1'
-                        : 'fa fa-bars-staggered lightColor1'
-                    }
-                  ></i>
-                  <span>More</span>
-                </p>
-              )}
-
-              {window.location.pathname.includes('/movie') && (
-                <p
-                  className={
-                    toggleMode === 'white'
-                      ? ' movie-more darkColor1'
-                      : ' movie-more lightColor1'
-                  }
-                  onClick={showMenu}
-                >
-                  <i
-                    className={
-                      toggleMode === 'white'
-                        ? 'fa fa-bars-staggered darkColor1'
-                        : 'fa fa-bars-staggered lightColor1'
-                    }
-                  ></i>
-                  <span>More</span>
-                </p>
-              )}
-
-              {window.location.pathname.includes('/bookmarks') && (
-                <p
-                  className={
-                    toggleMode === 'white'
-                      ? ' bookmarks-more darkColor1'
-                      : ' boomarks-more lightColor1'
-                  }
-                  onClick={showMenu}
-                >
-                  <i
-                    className={
-                      toggleMode === 'white'
-                        ? 'fa fa-bars-staggered darkColor1'
-                        : 'fa fa-bars-staggered lightColor1'
-                    }
-                  ></i>
-                  <span>More</span>
-                </p>
-              )}
-
-              {window.location.pathname.includes('/search') && (
-                <p
-                  className={
-                    toggleMode === 'white'
-                      ? ' search-more darkColor1'
-                      : ' search-more lightColor1'
-                  }
-                  onClick={showMenu}
-                >
-                  <i
-                    className={
-                      toggleMode === 'white'
-                        ? 'fa fa-bars-staggered darkColor1'
-                        : 'fa fa-bars-staggered lightColor1'
-                    }
-                  ></i>
-                  <span>More</span>
-                </p>
-              )}
+              <p className='more' onClick={showMenu}>
+                <i className='fa fa-bars-staggered'></i>
+                <span>More</span>
+              </p>
             </div>
           </div>
         </div>

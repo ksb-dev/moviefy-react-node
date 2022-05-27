@@ -8,6 +8,7 @@ import { useGlobalContext } from '../../context/context'
 // Components
 import MovieCard from '../../components/MovieCard/MovieCard'
 import Navgation from '../../components/Navigation/Navigation'
+import SideMenu from '../../components/SideMenu/SideMenu'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup'
@@ -19,6 +20,7 @@ const Wishlists = () => {
     wishlistFiltered,
     setWishlistFiltered,
     wishlist,
+    filtered,
     error
   } = useGlobalContext()
 
@@ -37,6 +39,7 @@ const Wishlists = () => {
   return (
     <>
       <Login />
+      <SideMenu filtered={filtered} />
       <Signup />
 
       <div

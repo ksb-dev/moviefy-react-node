@@ -6,6 +6,7 @@ import { useGlobalContext } from '../../context/context'
 // Components
 import SearchedMovies from '../../components/SearchedMovies/SearchedMovies'
 import Navigation from '../../components/Navigation/Navigation'
+import SideMenu from '../../components/SideMenu/SideMenu'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup'
@@ -15,7 +16,7 @@ import './Search.css'
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_KEY}&query="`
 
 const Search = () => {
-  const { searchMovies, toggleMode, isLoading } = useGlobalContext()
+  const { searchMovies, toggleMode, isLoading, filtered } = useGlobalContext()
   const [query, setQuery] = useState('')
 
   useEffect(() => {
@@ -40,6 +41,8 @@ const Search = () => {
         className={toggleMode === 'white' ? 'full lightBg2' : 'full darkBg2'}
       >
         <Navigation />
+
+        <SideMenu filtered={filtered} />
 
         <SmallNav />
 

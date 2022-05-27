@@ -77,8 +77,8 @@ const Logout = ({ log }) => {
       ref={log}
       className={
         toggleMode === 'white'
-          ? 'log-back alphaLightBg2'
-          : 'log-back alphaDarkBg2'
+          ? 'log-back alphaLightBg1'
+          : 'log-back alphaDarkBg1'
       }
     >
       <div

@@ -11,6 +11,7 @@ import Youtube from '../../components/Youtube/Youtube'
 import Cast from '../../components/Cast/Cast'
 import PersonDetail from '../../components/PersonDetail/PersonDetail'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
+import SideMenu from '../../components/SideMenu/SideMenu'
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup'
 
@@ -30,7 +31,8 @@ const Movie = () => {
     error,
     setError,
     isLoading,
-    setIsLoading
+    setIsLoading,
+    filtered
   } = useGlobalContext()
 
   // URL's
@@ -108,6 +110,8 @@ const Movie = () => {
 
         <Navigation />
 
+        <SideMenu filtered={filtered} />
+
         <SmallNav />
 
         {/* Single Movie */}
@@ -146,8 +150,8 @@ const Movie = () => {
                 transition={{ delay: 0.75, duration: 0.75 }}
                 className={
                   toggleMode === 'white'
-                    ? 'movie__overview darkColor1'
-                    : 'movie__overview lightColor1'
+                    ? 'movie__overview darkColor2'
+                    : 'movie__overview lightColor2'
                 }
               >
                 <h3>Overview</h3>

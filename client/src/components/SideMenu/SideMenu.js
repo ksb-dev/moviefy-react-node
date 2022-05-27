@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import CountUp from 'react-countup'
 
@@ -18,12 +18,16 @@ const SideMenu = ({ filtered }) => {
     category
   } = useGlobalContext()
 
+  const navigate = useNavigate()
+
   const handleClick = category => {
     localStorage.setItem('genre', 'All')
     localStorage.setItem('activeGenre', 0)
     localStorage.setItem('category', category)
 
     loadMovies(category, 1)
+
+    navigate('/')
   }
 
   return (
@@ -42,8 +46,8 @@ const SideMenu = ({ filtered }) => {
         <ul
           className={
             toggleMode === 'white'
-              ? 'sideMenu__list darkColor1'
-              : 'sideMenu__list lightColor1'
+              ? 'sideMenu__list darkColor2'
+              : 'sideMenu__list lightColor2'
           }
         >
           <li className='sideMenu__wishlists'>
@@ -106,21 +110,27 @@ const SideMenu = ({ filtered }) => {
           )}
         </ul>
 
-        <div className='sideMenu__filter'>
-          <Filter activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
+        {!window.location.pathname.includes('/movie') &&
+          !window.location.pathname.includes('/search') && (
+            <div className='sideMenu__filter'>
+              <Filter
+                activeGenre={activeGenre}
+                setActiveGenre={setActiveGenre}
+              />
 
-          <h2
-            className={
-              toggleMode === 'white'
-                ? 'sideMenu__filter-counter darkBg1 lightColor1'
-                : 'sideMenu__filter-counter lightBg1 darkColor1'
-            }
-          >
-            <span>
-              <CountUp start={0} end={filtered.length} duration={0.5} />
-            </span>
-          </h2>
-        </div>
+              <h2
+                className={
+                  toggleMode === 'white'
+                    ? 'sideMenu__filter-counter darkBg1 lightColor2'
+                    : 'sideMenu__filter-counter lightBg2 darkColor2'
+                }
+              >
+                <span>
+                  <CountUp start={0} end={filtered.length} duration={0.5} />
+                </span>
+              </h2>
+            </div>
+          )}
       </div>
     </div>
   )

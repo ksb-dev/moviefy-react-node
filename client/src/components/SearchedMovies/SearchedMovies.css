@@ -1,5 +1,5 @@
 .cat-clear {
-  padding-top: 11rem;
+  padding-top: 15rem;
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -40,21 +40,20 @@
   padding-top: 8rem;
 }
 
-.whiteColorSearch {
-  color: #fff;
+@media only screen and (max-width: 1024px) {
+  .cat-clear {
+    padding-top: 11rem;
+  }
 }
 
-.blackColorSearch {
-  color: rgb(13, 37, 63);
+@media only screen and (max-width: 786px) {
+  .cat-clear {
+    padding-top: 9rem;
+  }
 }
 
 @media only screen and (max-width: 640px) {
   .cat-clear {
     padding-top: 9rem;
-  }
-
-  .cat-clear .cat,
-  .cat-clear .clear-btn {
-    /*font-size: 0.8rem;*/
   }
 }

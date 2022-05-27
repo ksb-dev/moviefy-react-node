@@ -88,7 +88,7 @@ export default function Signup () {
     <div
       ref={signPage}
       className={
-        toggleMode === 'white' ? 'login alphaLightBg2' : 'login alphaDarkBg2'
+        toggleMode === 'white' ? 'login alphaLightBg1' : 'login alphaDarkBg1'
       }
     >
       <Link

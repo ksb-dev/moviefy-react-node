@@ -40,8 +40,8 @@ const Categories = ({ sideMenu, back }) => {
         ref={sideMenu}
         className={
           toggleMode === 'white'
-            ? 'categories__main lightBg1'
-            : 'categories__main darkBg1'
+            ? 'categories__main lightBg2'
+            : 'categories__main darkBg2'
         }
       >
         <ul

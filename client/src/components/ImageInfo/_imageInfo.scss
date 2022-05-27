@@ -1,5 +1,5 @@
 .first-segment {
-  margin: 0 1rem 3rem 1rem;
+  margin: 5rem 1rem 3rem 1rem;
   border-radius: var(--border-radius);
 
   &__content {
@@ -154,6 +154,8 @@
 
 @media only screen and (max-width: 1024px) {
   .first-segment {
+    margin: 1rem 1rem 3rem 1rem;
+
     &__content {
       padding: 1rem;
     }
@@ -206,7 +208,6 @@
 @media only screen and (max-width: 786px) {
   .first-segment {
     margin: 0;
-    margin-bottom: 3.5rem;
     background-image: none !important;
 
     &__content {
@@ -215,6 +216,7 @@
       align-items: center;
       justify-content: center;
       padding: 4rem;
+      padding-bottom: 2.5rem;
     }
 
     &__image-rating {
@@ -231,14 +233,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      &--title {
-        font-size: 1rem;
-        margin-bottom: 0.2rem;
-      }
-      &--tagline {
-        font-size: 0.7rem;
-      }
     }
 
     &__genre-div {
@@ -260,6 +254,7 @@
 
     &__content {
       padding: 2rem;
+      padding-bottom: 1rem;
     }
 
     &__image-rating {

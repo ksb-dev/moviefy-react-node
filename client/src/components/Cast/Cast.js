@@ -35,7 +35,7 @@ const Cast = ({ setPerson, setPersonError, detail, people }) => {
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 1 }}
       className={
-        toggleMode === 'white' ? 'cast darkColor1' : 'cast lightColor1'
+        toggleMode === 'white' ? 'cast darkColor2' : 'cast lightColor2'
       }
     >
       {people && <h3>Cast</h3>}
