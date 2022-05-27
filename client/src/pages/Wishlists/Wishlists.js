@@ -26,6 +26,12 @@ const Wishlists = () => {
 
   useEffect(() => {
     setWishlistFiltered(wishlist)
+
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
   }, [])
 
   if (isLoading) {
@@ -52,7 +58,7 @@ const Wishlists = () => {
         {/*<SideMenu filtered={wishlistFiltered} />*/}
 
         <section className='wishlists'>
-          <div className='category-length'>
+          {/*<div className='category-length'>
             <h4 className='category'>
               <span
                 className={
@@ -72,7 +78,7 @@ const Wishlists = () => {
             >
               <CountUp start={0} end={wishlistFiltered.length} duration={0.1} />
             </h4>
-          </div>
+            </div>*/}
 
           <div className='wishlist-list'>
             {/*{wishlist.length === 0 && (
@@ -106,6 +112,9 @@ const Wishlists = () => {
               <h3 style={{ color: 'tomato' }}>Add movies to wishlist</h3>
             )}
           </div>
+          <h6
+            className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+          ></h6>
         </section>
       </div>
     </>

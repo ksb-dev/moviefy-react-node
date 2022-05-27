@@ -198,6 +198,9 @@
     }
 
     &__genre-div {
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: flex-end;
       &--genre {
         font-size: 0.7rem;
       }

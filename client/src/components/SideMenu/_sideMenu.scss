@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   &__results {
@@ -63,11 +63,13 @@
     cursor: pointer;
     border-radius: 3px;
     user-select: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
   }
 
   &__list li:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease;
+    transform: scale(1.05);
+    transition: var(--transition);
   }
 
   &__list li a {
@@ -75,10 +77,25 @@
   }
 
   &__wishlists a {
-    background: tomato;
+    background: linear-gradient(tomato, red);
     color: #fff;
-    padding: 0.2rem 0.5rem;
+    padding: 0.4rem 0.5rem;
     border-radius: 50px;
+
+    span {
+      font-weight: 500;
+      padding: 0 0.5rem;
+      border-radius: 50px;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .sideMenu {
+    &__list li {
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -93,6 +110,5 @@
 }
 
 .activeCategory {
-  transform: scale(1.1);
-  font-weight: bold;
+  box-shadow: 0 0 10px tomato;
 }

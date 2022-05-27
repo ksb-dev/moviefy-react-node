@@ -16,6 +16,7 @@ const SideMenu = ({ filtered }) => {
     setActiveGenre,
     loadMovies,
     category
+    //wishlistFiltered
   } = useGlobalContext()
 
   const navigate = useNavigate()
@@ -50,68 +51,137 @@ const SideMenu = ({ filtered }) => {
               : 'sideMenu__list lightColor2'
           }
         >
-          <li className='sideMenu__wishlists'>
-            <Link to='/bookmarks'>Wishlist</Link>
-          </li>
+          {/*<li className='sideMenu__wishlists'>
+            <Link to='/bookmarks'>
+              Wishlists
+              <span className='lightColorBg1'>{wishlistFiltered.length}</span>
+            </Link>
+        </li>*/}
 
-          {category && category === 'popular' ? (
+          {category &&
+          category === 'popular' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('popular')}
-              className='activeCategory'
+              className={
+                toggleMode === 'white'
+                  ? 'activeCategory lightBg2'
+                  : 'activeCategory darkBg2'
+              }
             >
               Popular
             </li>
           ) : (
-            <li onClick={() => handleClick('popular')}>Popular</li>
+            <li
+              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              onClick={() => handleClick('popular')}
+            >
+              Popular
+            </li>
           )}
 
-          {category && category === 'trending' ? (
+          {category &&
+          category === 'trending' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('trending')}
-              className='activeCategory'
+              className={
+                toggleMode === 'white'
+                  ? 'activeCategory lightBg2'
+                  : 'activeCategory darkBg2'
+              }
             >
               Trending
             </li>
           ) : (
-            <li onClick={() => handleClick('trending')}>Trending</li>
+            <li
+              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              onClick={() => handleClick('trending')}
+            >
+              Trending
+            </li>
           )}
 
-          {category && category === 'in cinemas' ? (
+          {category &&
+          category === 'in cinemas' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('in cinemas')}
-              className='activeCategory'
+              className={
+                toggleMode === 'white'
+                  ? 'activeCategory lightBg2'
+                  : 'activeCategory darkBg2'
+              }
             >
               In Cinemas
             </li>
           ) : (
-            <li onClick={() => handleClick('in cinemas')}>In Cinemas</li>
+            <li
+              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              onClick={() => handleClick('in cinemas')}
+            >
+              In Cinemas
+            </li>
           )}
 
-          {category && category === 'upcoming' ? (
+          {category &&
+          category === 'upcoming' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('upcoming')}
-              className='activeCategory'
+              className={
+                toggleMode === 'white'
+                  ? 'activeCategory lightBg2'
+                  : 'activeCategory darkBg2'
+              }
             >
               Upcoming
             </li>
           ) : (
-            <li onClick={() => handleClick('upcoming')}>Upcoming</li>
+            <li
+              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              onClick={() => handleClick('upcoming')}
+            >
+              Upcoming
+            </li>
           )}
 
-          {category && category === 'top rated' ? (
+          {category &&
+          category === 'top rated' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('top rated')}
-              className='activeCategory'
+              className={
+                toggleMode === 'white'
+                  ? 'activeCategory lightBg2'
+                  : 'activeCategory darkBg2'
+              }
             >
               Top Rated
             </li>
           ) : (
-            <li onClick={() => handleClick('top rated')}>Top Rated</li>
+            <li
+              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              onClick={() => handleClick('top rated')}
+            >
+              Top Rated
+            </li>
           )}
         </ul>
 
         {!window.location.pathname.includes('/movie') &&
-          !window.location.pathname.includes('/search') && (
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/bookmarks') && (
             <div className='sideMenu__filter'>
               <Filter
                 activeGenre={activeGenre}

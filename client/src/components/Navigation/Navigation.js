@@ -15,7 +15,8 @@ const Header = () => {
     loadMovies,
     isLoading,
     user,
-    logPage
+    logPage,
+    wishlistFiltered
   } = useGlobalContext()
 
   // State of User Name
@@ -79,10 +80,27 @@ const Header = () => {
             }}
           >
             Moviefy
+            {window.location.pathname.includes('/movie') && (
+              <span style={{ color: '#fff' }}> / movie</span>
+            )}
+            {window.location.pathname.includes('/search') && (
+              <span style={{ color: '#fff' }}> / search</span>
+            )}
+            {window.location.pathname.includes('/bookmarks') && (
+              <span style={{ color: '#fff' }}> / wishlists</span>
+            )}
           </h2>
 
           <div className='navigation__list'>
             <div className='navigation__options'>
+              <p className='wish-link'>
+                <Link to='/bookmarks'>
+                  Wishlists
+                  <span className='lightColorBg1'>
+                    {wishlistFiltered.length}
+                  </span>
+                </Link>
+              </p>
               {/* Home */}
 
               {(window.location.pathname === '/bookmarks' ||

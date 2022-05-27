@@ -20,17 +20,23 @@ const Search = () => {
   const [query, setQuery] = useState('')
 
   useEffect(() => {
-    const query = localStorage.getItem('term')
-    if (isLoading && query) searchMovies(SEARCH_API + query, query)
-  }, [isLoading])
-
-  useEffect(() => {
     window.scroll({
       top: 0,
       left: 0,
       behavior: 'smooth'
     })
-  })
+
+    const query = localStorage.getItem('term')
+    if (isLoading && query) searchMovies(SEARCH_API + query, query)
+  }, [isLoading])
+
+  /*useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  })*/
 
   return (
     <>

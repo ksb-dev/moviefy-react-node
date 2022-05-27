@@ -40,6 +40,16 @@
   padding-top: 8rem;
 }
 
+.search-movie {
+  padding-bottom: 0rem;
+}
+
+.hrlineBlack,
+.hrlineWhite {
+  margin: 1rem auto;
+  margin-bottom: 5rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .cat-clear {
     padding-top: 11rem;

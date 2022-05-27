@@ -15,6 +15,42 @@
 
   letter-spacing: 1px;
   font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .title {
+    span {
+      font-size: 0.8rem;
+    }
+  }
+
+  .wish-link-small {
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.4rem;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    span {
+      display: inline-block;
+      background: linear-gradient(tomato, red);
+      color: #fff;
+      font-weight: 500;
+      padding: 0.3rem 0.5rem;
+      border-radius: 50px;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .wish-link-small:hover {
+    box-shadow: 0 0 10px tomato;
+  }
 }
 
 @media screen and (max-width: 786px) {

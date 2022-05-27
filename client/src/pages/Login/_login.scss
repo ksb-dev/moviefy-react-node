@@ -37,7 +37,7 @@
     padding: 2rem;
     letter-spacing: 1px;
     border-radius: var(--border-radius);
-    border-top: 5px solid var(--blue);
+    border-top: 5px solid tomato;
 
     &-label {
       display: block;
@@ -78,7 +78,7 @@
 
     &-btn {
       padding: 0.5rem 1rem;
-      border-radius: var(--border-radius);
+      border-radius: 50px;
       margin-right: 1rem;
       font-size: 1rem;
       letter-spacing: 1px;
@@ -89,7 +89,7 @@
     }
 
     &-btn:hover {
-      box-shadow: 0 0 20px var(--blue);
+      box-shadow: 0 0 10px tomato;
     }
 
     &-ask {
@@ -99,12 +99,12 @@
         cursor: pointer;
         font-weight: bold;
         padding: 0.2rem 0.5rem;
-        border-radius: var(--border-radius);
+        border-radius: 50px;
         transition: var(--transition);
       }
 
       &-link:hover {
-        box-shadow: 0 0 5px var(--blue);
+        box-shadow: 0 0 10px tomato;
       }
     }
 
