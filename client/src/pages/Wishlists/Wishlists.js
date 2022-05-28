@@ -109,7 +109,15 @@ const Wishlists = () => {
               })}
 
             {wishlistFiltered.length === 0 && (
-              <h3 style={{ color: 'tomato' }}>Add movies to wishlist</h3>
+              <h3
+                style={{
+                  color: 'tomato',
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase'
+                }}
+              >
+                Add movies to wishlist
+              </h3>
             )}
           </div>
           <h6
