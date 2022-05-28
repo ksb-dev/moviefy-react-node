@@ -288,8 +288,8 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
           ref={filterInnerRef}
           className={
             toggleMode === 'white'
-              ? 'filter__content lightBg1 darkShadow'
-              : 'filter__content darkBg1 lightShadow'
+              ? 'filter__content lightBg1'
+              : 'filter__content darkBg1'
           }
         >
           {options.map((option, index) => {
@@ -306,11 +306,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
                 }}
               >
                 <span
-                  className={
-                    toggleMode === 'white'
-                      ? 'lightBg1 darkShadow'
-                      : 'darkBg1 lightShadow'
-                  }
+                  className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
                 >
                   {option}
                 </span>

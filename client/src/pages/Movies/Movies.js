@@ -72,8 +72,8 @@ const Movies = () => {
             <h4
               className={
                 toggleMode === 'white'
-                  ? 'category__filter__length-category lightBg1 darkColor1'
-                  : 'category__filter__length-category darkBg1 lightColor2'
+                  ? 'category__filter__length-category lightBg2 darkColor1'
+                  : 'category__filter__length-category darkBg2 lightColor2'
               }
             >
               <span>{category}</span>

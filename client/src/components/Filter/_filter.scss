@@ -45,6 +45,7 @@
     border-radius: var(--border-radius);
     transform: translateY(100vh);
     transition: var(--transition);
+    box-shadow: 0 0 5px #000;
   }
 
   &__item {
