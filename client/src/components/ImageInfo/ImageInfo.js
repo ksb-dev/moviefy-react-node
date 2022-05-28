@@ -79,8 +79,8 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'first-segment__content alphaLightBg1 darkColor2'
-            : 'first-segment__content alphaDarkBg1 lightColor2'
+            ? 'first-segment__content alphaLightBg2 darkColor2'
+            : 'first-segment__content alphaDarkBg2 lightColor2'
         }
       >
         <motion.div

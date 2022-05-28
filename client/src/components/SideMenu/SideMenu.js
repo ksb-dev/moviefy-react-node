@@ -34,14 +34,14 @@ const SideMenu = ({ filtered }) => {
   return (
     <div
       className={
-        toggleMode === 'white' ? 'sideMenu lightBg1' : 'sideMenu darkBg1'
+        toggleMode === 'white' ? 'sideMenu lightBg2' : 'sideMenu darkBg2'
       }
     >
       <div
         className={
           toggleMode === 'white'
-            ? 'sideMenu__main lightBg1'
-            : 'sideMenu__main darkBg1'
+            ? 'sideMenu__main lightBg2'
+            : 'sideMenu__main darkBg2'
         }
       >
         <ul

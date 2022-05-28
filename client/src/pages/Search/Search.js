@@ -44,7 +44,7 @@ const Search = () => {
       <Signup />
 
       <div
-        className={toggleMode === 'white' ? 'full lightBg2' : 'full darkBg2'}
+        className={toggleMode === 'white' ? 'full lightBg1' : 'full darkBg1'}
       >
         <Navigation />
 
@@ -54,7 +54,7 @@ const Search = () => {
 
         <div
           className={
-            toggleMode === 'white' ? 'search lightBg2' : 'search darkBg2'
+            toggleMode === 'white' ? 'search lightBg1' : 'search darkBg1'
           }
         >
           {/*<label
@@ -67,8 +67,8 @@ const Search = () => {
           <form
             className={
               toggleMode === 'white'
-                ? 'search-form lightBg1'
-                : 'search-form darkBg1'
+                ? 'search-form lightBg2'
+                : 'search-form darkBg2'
             }
             onSubmit={e => {
               e.preventDefault()

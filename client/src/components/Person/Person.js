@@ -25,7 +25,7 @@ const Person = ({
 
   return (
     <div
-      className={toggleMode === 'white' ? 'person lightBg1' : 'person darkBg1'}
+      className={toggleMode === 'white' ? 'person lightBg2' : 'person darkBg2'}
       key={id}
       onMouseOver={show}
       onMouseLeave={hide}
@@ -42,8 +42,8 @@ const Person = ({
             ref={charName}
             className={
               toggleMode === 'white'
-                ? 'person__name lightBg1'
-                : 'person__name darkBg1'
+                ? 'person__name lightBg2'
+                : 'person__name darkBg2'
             }
           >
             <h5>{character}</h5>
@@ -51,8 +51,8 @@ const Person = ({
               onClick={() => getPersonDetail(id)}
               className={
                 toggleMode === 'white'
-                  ? 'darkBg1 lightColor1'
-                  : 'lightBg1 darkColor1'
+                  ? 'darkBg1 lightColor2'
+                  : 'lightBg1 darkColor2'
               }
             >
               Biography

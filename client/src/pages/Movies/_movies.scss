@@ -23,7 +23,7 @@
     margin: 1rem auto;
   }
 
-  .category-length-filter {
+  .category__filter__length {
     display: none;
   }
 
@@ -45,18 +45,12 @@
       align-items: center;
       justify-content: center;
     }
-
-    .category-length {
-      display: flex;
-      align-items: center;
-      margin-top: 0;
-    }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .movies {
-    .category-length-filter {
+    .category__filter__length {
       position: fixed;
       z-index: 1;
       width: 100%;
@@ -66,28 +60,37 @@
       justify-content: space-around;
       top: 75px;
       left: 0;
-    }
 
-    .category-length {
-      display: flex;
-      align-items: center;
-      margin-top: 0rem;
-
-      .category,
-      .length {
+      &-category {
         text-transform: uppercase;
-        margin: 0;
         letter-spacing: 1px;
+        font-size: 0.8rem;
+        border-bottom: 2px solid tomato;
+        padding: 0.3rem;
       }
 
-      .length {
-        width: 40px;
-        height: 40px;
+      &-filter-length {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-        margin-left: 1rem;
+
+        .length {
+          margin: 0;
+          margin-left: 0.5rem;
+          letter-spacing: 1px;
+          height: 35px;
+          width: 35px;
+          position: relative;
+          border-radius: 50%;
+
+          span {
+            font-size: 0.8rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
       }
     }
   }
@@ -102,19 +105,16 @@
       margin-left: 0rem;
     }
 
-    .category-length-filter {
+    .category__filter__length {
       top: 55px;
       height: 55px;
-    }
 
-    .category-length {
-      padding-bottom: 0;
-
-      .length {
-        width: 30px;
-        height: 30px;
-        /*font-size: 0.9rem;*/
-        margin-left: 0.3rem;
+      &-filter-length {
+        .length {
+          width: 30px;
+          height: 30px;
+          margin-left: 0.3rem;
+        }
       }
     }
   }

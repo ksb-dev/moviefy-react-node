@@ -16,7 +16,7 @@ function App () {
   const { toggleMode, movies } = useGlobalContext()
 
   return (
-    <div className={toggleMode === 'white' ? 'app lightBg2' : 'app darkBg2'}>
+    <div className={toggleMode === 'white' ? 'app lightBg1' : 'app darkBg1'}>
       <>
         <BrowserRouter>
           <Routes>

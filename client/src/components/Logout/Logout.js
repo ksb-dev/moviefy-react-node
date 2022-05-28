@@ -77,16 +77,16 @@ const Logout = ({ log }) => {
       ref={log}
       className={
         toggleMode === 'white'
-          ? 'log-back alphaLightBg1'
-          : 'log-back alphaDarkBg1'
+          ? 'log-back alphaLightBg2'
+          : 'log-back alphaDarkBg2'
       }
     >
       <div
         ref={logInner}
         className={
           toggleMode === 'white'
-            ? 'logout lightBg1 darkColor1'
-            : 'logout darkBg1 lightColor1'
+            ? 'logout lightBg2 darkColor1'
+            : 'logout darkBg2 lightColor2'
         }
       >
         <h4>Do you want to logout?</h4>
@@ -94,8 +94,8 @@ const Logout = ({ log }) => {
           <h5
             className={
               toggleMode === 'white'
-                ? 'darkBg2 lightColor1'
-                : 'lightBg2 darkColor1'
+                ? 'darkBg1 lightColor1'
+                : 'lightBg2 darkColor2'
             }
             onClick={logout}
           >
@@ -104,8 +104,8 @@ const Logout = ({ log }) => {
           <h5
             className={
               toggleMode === 'white'
-                ? 'darkBg2 lightColor1'
-                : 'lightBg2 darkColor1'
+                ? 'darkBg1 lightColor1'
+                : 'lightBg2 darkColor2'
             }
             onClick={hide}
           >

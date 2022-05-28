@@ -49,7 +49,7 @@ const Wishlists = () => {
       <Signup />
 
       <div
-        className={toggleMode === 'white' ? 'whole lightBg2' : 'whole darkBg2'}
+        className={toggleMode === 'white' ? 'whole lightBg1' : 'whole darkBg1'}
       >
         <Navgation />
 

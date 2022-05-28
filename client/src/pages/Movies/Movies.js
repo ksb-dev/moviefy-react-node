@@ -65,33 +65,37 @@ const Movies = () => {
           <div
             className={
               toggleMode === 'white'
-                ? 'category-length-filter lightBg1'
-                : 'category-length-filter darkBg1'
+                ? 'category__filter__length lightBg2'
+                : 'category__filter__length darkBg2'
             }
           >
-            <div className='category-length'>
-              <h4 className='category'>
-                <span
-                  className={
-                    toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                  }
-                >
-                  {category}
-                </span>
-              </h4>
+            <h4 className='category__filter__length-category'>
+              <span
+                className={
+                  toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
+                }
+              >
+                {category}
+              </span>
+            </h4>
 
+            <div className='category__filter__length-filter-length'>
+              <Filter
+                activeGenre={activeGenre}
+                setActiveGenre={setActiveGenre}
+              />
               <h4
                 className={
                   toggleMode === 'white'
-                    ? 'length lightColorBg1'
-                    : 'length darkColorBg1'
+                    ? 'length darkColorBg2'
+                    : 'length lightColorBg1'
                 }
               >
-                <CountUp start={0} end={filtered.length} duration={0.1} />
+                <span>
+                  <CountUp start={0} end={filtered.length} duration={0.1} />
+                </span>
               </h4>
             </div>
-
-            <Filter activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
           </div>
         )}
 

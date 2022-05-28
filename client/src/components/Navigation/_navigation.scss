@@ -74,12 +74,14 @@
 
   &__list p {
     cursor: pointer;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 0;
     padding: 0.5rem 0.8rem;
     margin-left: 1rem;
     user-select: none;
     border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 
   &__list .more {
@@ -98,6 +100,7 @@
 
   &__list i {
     margin-right: 0.5rem;
+    font-size: 0.8rem;
   }
 
   &__options {
@@ -154,6 +157,14 @@
         display: block;
       }
     }
+
+    &__list i {
+      padding-bottom: 0.4rem;
+    }
+
+    &__list .more {
+      display: flex;
+    }
   }
 }
 
@@ -164,7 +175,19 @@
     height: 55px;
 
     &__list p {
-      padding: 0.2rem 1rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0rem;
+      text-transform: capitalize;
+    }
+
+    &__list p:hover {
+      box-shadow: none;
+      transition: var(--transition);
+    }
+
+    &__list i {
+      padding-bottom: 0.4rem;
     }
 
     &__title {
@@ -187,10 +210,6 @@
 @media screen and (max-width: 640px) {
   .navigation {
     &__list p {
-      font-size: 0.85rem;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -205,7 +224,6 @@
     &__list i {
       font-size: 0.8rem;
       margin-right: 0rem;
-      margin-bottom: 0.2rem;
     }
   }
 }

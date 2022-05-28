@@ -41,15 +41,15 @@
 
     &-counter {
       margin: 0;
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       letter-spacing: 1px;
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
       position: relative;
       border-radius: 50%;
 
       span {
-        font-size: 1rem;
+        font-size: 0.8rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -69,15 +69,15 @@
   }
 
   &__list li {
-    margin-right: 1rem;
+    margin-right: 2rem;
     font-size: 0.8rem;
     letter-spacing: 2px;
     cursor: pointer;
-    border-radius: 3px;
     user-select: none;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+    padding: 0.5rem 0.3rem;
+    /*border-radius: 50px;*/
     font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__list li:hover {
@@ -123,5 +123,6 @@
 }
 
 .activeCategory {
-  box-shadow: 0 0 10px tomato;
+  /*box-shadow: 0 0 10px tomato;*/
+  border-bottom: 2px solid tomato;
 }

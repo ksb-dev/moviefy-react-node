@@ -70,8 +70,8 @@ const MovieCard = ({
         <div
           className={
             toggleMode === 'white'
-              ? 'movie-card__image-rating lightBg1'
-              : 'movie-card__image-rating darkBg1'
+              ? 'movie-card__image-rating lightBg2'
+              : 'movie-card__image-rating darkBg2'
           }
         >
           <img
@@ -96,8 +96,8 @@ const MovieCard = ({
       <div
         className={
           toggleMode === 'white'
-            ? 'movie-card__info lightBg1'
-            : 'movie-card__info darkBg1'
+            ? 'movie-card__info lightBg2'
+            : 'movie-card__info darkBg2'
         }
       >
         {/* Titele and Year */}
