@@ -86,8 +86,8 @@ export default function Login () {
           to='#'
           className={
             toggleMode === 'white'
-              ? 'login__back darkColor1'
-              : 'login__back lightColor1'
+              ? 'login__back darkColor2'
+              : 'login__back lightColor2'
           }
         >
           <h4 onClick={hideLog} style={{ marginBottom: '1rem' }}>
@@ -115,7 +115,7 @@ export default function Login () {
           }
         >
           <h2
-            className={toggleMode === 'white' ? ' darkColor1' : ' lightColor1'}
+            className={toggleMode === 'white' ? ' darkColor2' : ' lightColor2'}
           >
             Login
           </h2>
@@ -124,8 +124,8 @@ export default function Login () {
             <span
               className={
                 toggleMode === 'white'
-                  ? 'login__form-label-email darkColor1'
-                  : 'login__form-label-email lightColor1'
+                  ? 'login__form-label-email darkColor2'
+                  : 'login__form-label-email lightColor2'
               }
             >
               Email
@@ -147,8 +147,8 @@ export default function Login () {
               <span
                 className={
                   toggleMode === 'white'
-                    ? 'login__form-label-password darkColor1'
-                    : 'login__form-label-password lightColor1'
+                    ? 'login__form-label-password darkColor2'
+                    : 'login__form-label-password lightColor2'
                 }
               >
                 Password
@@ -158,8 +158,8 @@ export default function Login () {
                 <i
                   className={
                     toggleMode === 'white'
-                      ? 'fa-regular fa-eye eye darkColor1'
-                      : ' fa-regular fa-eye eye lightColor1'
+                      ? 'fa-regular fa-eye eye darkColor2'
+                      : ' fa-regular fa-eye eye lightColor2'
                   }
                   onClick={handleClick}
                 ></i>
@@ -169,8 +169,8 @@ export default function Login () {
                 <i
                   className={
                     toggleMode === 'white'
-                      ? 'fa-regular fa-eye-slash eye darkColor1'
-                      : 'fa-regular fa-eye-slash eye lightColor1'
+                      ? 'fa-regular fa-eye-slash eye darkColor2'
+                      : 'fa-regular fa-eye-slash eye lightColor2'
                   }
                   onClick={handleClick}
                 ></i>
@@ -193,8 +193,8 @@ export default function Login () {
             <button
               className={
                 toggleMode === 'white'
-                  ? 'login__form-btn darkBg2 lightColor1'
-                  : 'login__form-btn lightBg2 darkColor1'
+                  ? 'login__form-btn lightBg2 darkColor2'
+                  : 'login__form-btn darkBg2 lightColor2'
               }
             >
               Login
@@ -205,8 +205,8 @@ export default function Login () {
             <button
               className={
                 toggleMode === 'white'
-                  ? 'login__form-btn darkBg2 lightColor1'
-                  : 'login__form-btn lightBg2 darkColor1'
+                  ? 'login__form-btn lightBg2 darkColor2'
+                  : 'login__form-btn darkBg2 lightColor2'
               }
             >
               Loggging in
@@ -217,8 +217,8 @@ export default function Login () {
             onClick={showSign}
             className={
               toggleMode === 'white'
-                ? 'login__form-ask darkColor1'
-                : 'login__form-ask lightColor1'
+                ? 'login__form-ask darkColor2'
+                : 'login__form-ask lightColor2'
             }
           >
             Don't have an account ?{' '}
@@ -226,8 +226,8 @@ export default function Login () {
               to='#'
               className={
                 toggleMode === 'white'
-                  ? 'login__form-ask-link darkColor1'
-                  : 'login__form-ask-link lightColor1'
+                  ? 'login__form-ask-link darkColor2'
+                  : 'login__form-ask-link lightColor2'
               }
             >
               Signup

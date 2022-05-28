@@ -87,8 +87,8 @@ const Movies = () => {
               <h4
                 className={
                   toggleMode === 'white'
-                    ? 'length darkColorBg2'
-                    : 'length lightColorBg1'
+                    ? 'length lightColorBg2'
+                    : 'length darkColorBg2'
                 }
               >
                 <span>

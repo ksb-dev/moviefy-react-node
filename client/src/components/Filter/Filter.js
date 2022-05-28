@@ -245,15 +245,15 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
         className={
           toggleMode === 'white'
             ? 'fa-solid fa-filter darkColor1'
-            : 'fa-solid fa-filter lightColor1'
+            : 'fa-solid fa-filter lightColor2'
         }
       ></i>
 
       <div
         className={
           toggleMode === 'white'
-            ? 'filter__dropdown darkColorBg2'
-            : 'filter__dropdown lightColorBg1'
+            ? 'filter__dropdown lightBg1 darkColor1'
+            : 'filter__dropdown darkBg1 lightColor2'
         }
       >
         <div
@@ -288,8 +288,8 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
           ref={filterInnerRef}
           className={
             toggleMode === 'white'
-              ? 'filter__content darkBg1 '
-              : 'filter__content lightBg2 '
+              ? 'filter__content lightBg2 darkShadow'
+              : 'filter__content darkBg2 lightShadow'
           }
         >
           {options.map((option, index) => {
@@ -306,9 +306,7 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
                 }}
               >
                 <span
-                  className={
-                    toggleMode === 'white' ? 'lightShadow' : 'darkShadow'
-                  }
+                  className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
                 >
                   {option}
                 </span>

@@ -177,6 +177,20 @@ const SideMenu = ({ filtered }) => {
               Top Rated
             </li>
           )}
+
+          {!window.location.pathname.includes('/bookmarks') &&
+            !window.location.pathname.includes('/search') &&
+            !window.location.pathname.includes('/movie') && (
+              <p
+                className={
+                  toggleMode === 'white'
+                    ? 'sideMenu__list-number lightBg1 darkColor2'
+                    : 'sideMenu__list-number darkBg1 lightColor2'
+                }
+              >
+                PAGE {localStorage.getItem('page')}
+              </p>
+            )}
         </ul>
 
         {!window.location.pathname.includes('/movie') &&
@@ -184,15 +198,15 @@ const SideMenu = ({ filtered }) => {
           !window.location.pathname.includes('/bookmarks') && (
             <>
               <div className='sideMenu__filter'>
-                <p
+                {/*<p
                   className={
                     toggleMode === 'white'
-                      ? 'sideMenu__filter-number darkBg1 lightColor2'
-                      : 'sideMenu__filter-number lightBg2 darkColor2'
+                      ? 'sideMenu__filter-number lightBg1 darkColor2'
+                      : 'sideMenu__filter-number darkBg1 lightColor2'
                   }
                 >
-                  Page {localStorage.getItem('page')}
-                </p>
+                  PAGE {localStorage.getItem('page')}
+                </p>*/}
 
                 <Filter
                   activeGenre={activeGenre}
@@ -202,8 +216,8 @@ const SideMenu = ({ filtered }) => {
                 <h2
                   className={
                     toggleMode === 'white'
-                      ? 'sideMenu__filter-counter darkBg1 lightColor2'
-                      : 'sideMenu__filter-counter lightBg2 darkColor2'
+                      ? 'sideMenu__filter-counter lightBg1 darkColor2'
+                      : 'sideMenu__filter-counter darkBg1 lightColor2'
                   }
                 >
                   <span>
