@@ -197,8 +197,8 @@
       margin-right: 0.5rem;
       padding: 0rem;
       text-transform: capitalize;
-
-      font-weight: 400;
+      font-size: 0.8rem;
+      font-weight: 500;
 
       span {
         padding: 0;
@@ -213,6 +213,7 @@
     &__list i {
       padding: 0;
       padding-bottom: 0.4rem;
+      font-size: 0.8rem;
     }
 
     &__title {
