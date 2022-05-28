@@ -83,7 +83,7 @@
   }
 
   &__list li:hover {
-    transform: scale(1.05);
+    box-shadow: 0 0 10px tomato;
     transition: var(--transition);
   }
 
@@ -125,6 +125,5 @@
 }
 
 .activeCategory {
-  /*box-shadow: 0 0 10px tomato;*/
-  border: 2px solid tomato;
+  box-shadow: 0 0 10px tomato;
 }
