@@ -111,15 +111,15 @@ const MovieCard = ({
             }
           >
             {title &&
-              (title.length > 25 ? title.substring(0, 25) + '...' : title)}
+              (title.length > 25 ? title.substring(0, 15) + '...' : title)}
           </h5>
 
           <div>
             <h5
               className={
                 toggleMode === 'white'
-                  ? 'movie-card__year darkColor1'
-                  : 'movie-card__year lightColor2'
+                  ? 'movie-card__year darkColorBg2'
+                  : 'movie-card__year lightColorBg1'
               }
             >
               {release_date ? release_date.substring(0, 4) : ''}

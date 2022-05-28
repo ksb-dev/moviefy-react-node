@@ -83,7 +83,7 @@
   }
 
   &__list li:hover {
-    box-shadow: 0 0 10px tomato;
+    box-shadow: 0 0 10px var(--tomato);
     transition: var(--transition);
   }
 
@@ -92,7 +92,7 @@
   }
 
   &__wishlists a {
-    background: linear-gradient(tomato, red);
+    background: linear-gradient(var(--tomato), var(--red));
     color: #fff;
     padding: 0.4rem 0.5rem;
     border-radius: 50px;
@@ -132,10 +132,6 @@
   }
 }
 
-.red {
-  border-left: 5px solid #000;
-}
-
 .activeCategory {
-  box-shadow: 0 0 10px tomato;
+  box-shadow: 0 0 10px var(--tomato);
 }

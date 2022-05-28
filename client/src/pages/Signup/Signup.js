@@ -88,7 +88,7 @@ export default function Signup () {
     <div
       ref={signPage}
       className={
-        toggleMode === 'white' ? 'login alphaLightBg1' : 'login alphaDarkBg1'
+        toggleMode === 'white' ? 'login alphaLightBg2' : 'login alphaDarkBg2'
       }
     >
       <Link
@@ -119,8 +119,8 @@ export default function Signup () {
         onSubmit={handleSubmit}
         className={
           toggleMode === 'white'
-            ? 'login__form lightBg1'
-            : 'login__form darkBg1'
+            ? 'login__form lightBg2'
+            : 'login__form darkBg2'
         }
       >
         <h2 className={toggleMode === 'white' ? ' darkColor1' : ' lightColor2'}>
@@ -140,8 +140,8 @@ export default function Signup () {
           <input
             className={
               toggleMode === 'white'
-                ? 'login__form-label-input lightBg2'
-                : 'login__form-label-input darkBg2'
+                ? 'login__form-label-input lightBg1'
+                : 'login__form-label-input darkBg1'
             }
             type='text'
             onChange={e => setDisplayName(e.target.value)}
@@ -162,8 +162,8 @@ export default function Signup () {
           <input
             className={
               toggleMode === 'white'
-                ? 'login__form-label-input lightBg2'
-                : 'login__form-label-input darkBg2'
+                ? 'login__form-label-input lightBg1'
+                : 'login__form-label-input darkBg1'
             }
             type='email'
             onChange={e => setEmail(e.target.value)}
@@ -207,8 +207,8 @@ export default function Signup () {
           <input
             className={
               toggleMode === 'white'
-                ? 'login__form-label-input lightBg2'
-                : 'login__form-label-input darkBg2'
+                ? 'login__form-label-input lightBg1'
+                : 'login__form-label-input darkBg1'
             }
             type={show ? 'text' : 'password'}
             onChange={e => setPassword(e.target.value)}
@@ -220,8 +220,8 @@ export default function Signup () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor1'
-                : 'login__form-btn darkBg2 lightColor2'
+                ? 'login__form-btn lightBg1 darkColor1'
+                : 'login__form-btn darkBg1 lightColor2'
             }
           >
             Signup
@@ -232,8 +232,8 @@ export default function Signup () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor1'
-                : 'login__form-btn darkBg2 lightColor2'
+                ? 'login__form-btn lightBg1 darkColor1'
+                : 'login__form-btn darkBg1 lightColor2'
             }
           >
             Signing in
