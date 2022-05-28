@@ -51,18 +51,13 @@ const SideMenu = ({ filtered }) => {
               : 'sideMenu__list lightColor2'
           }
         >
-          {/*<li className='sideMenu__wishlists'>
-            <Link to='/bookmarks'>
-              Wishlists
-              <span className='lightColorBg1'>{wishlistFiltered.length}</span>
-            </Link>
-        </li>*/}
-
-          {category &&
-          category === 'popular' &&
+          {/*&&
           !window.location.pathname.includes('/bookmarks') &&
           !window.location.pathname.includes('/search') &&
-          !window.location.pathname.includes('/movie') ? (
+          !window.location.pathname.includes('/movie')
+*/}
+
+          {category && category === 'popular' ? (
             <li
               onClick={() => handleClick('popular')}
               className={
@@ -82,11 +77,7 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category &&
-          category === 'trending' &&
-          !window.location.pathname.includes('/bookmarks') &&
-          !window.location.pathname.includes('/search') &&
-          !window.location.pathname.includes('/movie') ? (
+          {category && category === 'trending' ? (
             <li
               onClick={() => handleClick('trending')}
               className={
@@ -106,11 +97,7 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category &&
-          category === 'in cinemas' &&
-          !window.location.pathname.includes('/bookmarks') &&
-          !window.location.pathname.includes('/search') &&
-          !window.location.pathname.includes('/movie') ? (
+          {category && category === 'in cinemas' ? (
             <li
               onClick={() => handleClick('in cinemas')}
               className={
@@ -130,11 +117,7 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category &&
-          category === 'upcoming' &&
-          !window.location.pathname.includes('/bookmarks') &&
-          !window.location.pathname.includes('/search') &&
-          !window.location.pathname.includes('/movie') ? (
+          {category && category === 'upcoming' ? (
             <li
               onClick={() => handleClick('upcoming')}
               className={
@@ -154,11 +137,7 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category &&
-          category === 'top rated' &&
-          !window.location.pathname.includes('/bookmarks') &&
-          !window.location.pathname.includes('/search') &&
-          !window.location.pathname.includes('/movie') ? (
+          {category && category === 'top rated' ? (
             <li
               onClick={() => handleClick('top rated')}
               className={
@@ -177,20 +156,6 @@ const SideMenu = ({ filtered }) => {
               Top Rated
             </li>
           )}
-
-          {/*{!window.location.pathname.includes('/bookmarks') &&
-            !window.location.pathname.includes('/search') &&
-            !window.location.pathname.includes('/movie') && (
-              <p
-                className={
-                  toggleMode === 'white'
-                    ? 'sideMenu__list-number darkBg1 lightColor2'
-                    : 'sideMenu__list-number lightBg1 darkColor1'
-                }
-              >
-                PAGE {localStorage.getItem('page')}
-              </p>
-              )}*/}
         </ul>
 
         {!window.location.pathname.includes('/movie') &&
