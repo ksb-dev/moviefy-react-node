@@ -3,11 +3,12 @@
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .cat-clear .cat {
   letter-spacing: 2px;
+  margin: 0 1rem;
 }
 
 .cat-clear .clear-btn {
@@ -20,6 +21,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: var(--transition);
+  margin: 0 1rem;
 }
 
 .cat-clear .clear-btn:hover {

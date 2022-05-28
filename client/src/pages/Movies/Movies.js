@@ -65,8 +65,8 @@ const Movies = () => {
           <div
             className={
               toggleMode === 'white'
-                ? 'category__filter__length lightBg1'
-                : 'category__filter__length darkBg1'
+                ? 'category__filter__length lightBg2'
+                : 'category__filter__length darkBg2'
             }
           >
             <h4
@@ -97,8 +97,8 @@ const Movies = () => {
               <h4
                 className={
                   toggleMode === 'white'
-                    ? 'length lightColorBg1'
-                    : 'length darkColorBg1'
+                    ? 'length lightColorBg2'
+                    : 'length darkColorBg2'
                 }
               >
                 <span>

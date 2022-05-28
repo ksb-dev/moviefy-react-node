@@ -34,14 +34,14 @@ const SideMenu = ({ filtered }) => {
   return (
     <div
       className={
-        toggleMode === 'white' ? 'sideMenu lightBg1' : 'sideMenu darkBg1'
+        toggleMode === 'white' ? 'sideMenu lightBg2' : 'sideMenu darkBg2'
       }
     >
       <div
         className={
           toggleMode === 'white'
-            ? 'sideMenu__main lightBg1'
-            : 'sideMenu__main darkBg1'
+            ? 'sideMenu__main tranparent'
+            : 'sideMenu__main transparent'
         }
       >
         <ul
@@ -67,15 +67,15 @@ const SideMenu = ({ filtered }) => {
               onClick={() => handleClick('popular')}
               className={
                 toggleMode === 'white'
-                  ? 'activeCategory lightBg2'
-                  : 'activeCategory darkBg2'
+                  ? 'activeCategory lightBg1'
+                  : 'activeCategory darkBg1'
               }
             >
               Popular
             </li>
           ) : (
             <li
-              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
               onClick={() => handleClick('popular')}
             >
               Popular
@@ -91,15 +91,15 @@ const SideMenu = ({ filtered }) => {
               onClick={() => handleClick('trending')}
               className={
                 toggleMode === 'white'
-                  ? 'activeCategory lightBg2'
-                  : 'activeCategory darkBg2'
+                  ? 'activeCategory lightBg1'
+                  : 'activeCategory darkBg1'
               }
             >
               Trending
             </li>
           ) : (
             <li
-              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
               onClick={() => handleClick('trending')}
             >
               Trending
@@ -115,15 +115,15 @@ const SideMenu = ({ filtered }) => {
               onClick={() => handleClick('in cinemas')}
               className={
                 toggleMode === 'white'
-                  ? 'activeCategory lightBg2'
-                  : 'activeCategory darkBg2'
+                  ? 'activeCategory lightBg1'
+                  : 'activeCategory darkBg1'
               }
             >
               In Cinemas
             </li>
           ) : (
             <li
-              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
               onClick={() => handleClick('in cinemas')}
             >
               In Cinemas
@@ -139,15 +139,15 @@ const SideMenu = ({ filtered }) => {
               onClick={() => handleClick('upcoming')}
               className={
                 toggleMode === 'white'
-                  ? 'activeCategory lightBg2'
-                  : 'activeCategory darkBg2'
+                  ? 'activeCategory lightBg1'
+                  : 'activeCategory darkBg1'
               }
             >
               Upcoming
             </li>
           ) : (
             <li
-              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
               onClick={() => handleClick('upcoming')}
             >
               Upcoming
@@ -163,15 +163,15 @@ const SideMenu = ({ filtered }) => {
               onClick={() => handleClick('top rated')}
               className={
                 toggleMode === 'white'
-                  ? 'activeCategory lightBg2'
-                  : 'activeCategory darkBg2'
+                  ? 'activeCategory lightBg1'
+                  : 'activeCategory darkBg1'
               }
             >
               Top Rated
             </li>
           ) : (
             <li
-              className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+              className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
               onClick={() => handleClick('top rated')}
             >
               Top Rated
@@ -184,8 +184,8 @@ const SideMenu = ({ filtered }) => {
               <p
                 className={
                   toggleMode === 'white'
-                    ? 'sideMenu__list-number darkBg2 lightColor2'
-                    : 'sideMenu__list-number lightBg2 darkColor1'
+                    ? 'sideMenu__list-number darkBg1 lightColor2'
+                    : 'sideMenu__list-number lightBg1 darkColor1'
                 }
               >
                 PAGE {localStorage.getItem('page')}
@@ -206,8 +206,8 @@ const SideMenu = ({ filtered }) => {
                 <h2
                   className={
                     toggleMode === 'white'
-                      ? 'sideMenu__filter-counter lightBg2 darkColor1'
-                      : 'sideMenu__filter-counter darkBg2 lightColor2'
+                      ? 'sideMenu__filter-counter lightBg1 darkColor1'
+                      : 'sideMenu__filter-counter darkBg1 lightColor2'
                   }
                 >
                   <span>

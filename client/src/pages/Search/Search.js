@@ -54,7 +54,7 @@ const Search = () => {
 
         <div
           className={
-            toggleMode === 'white' ? 'search lightBg2' : 'search darkBg2'
+            toggleMode === 'white' ? 'search lightBg1' : 'search darkBg1'
           }
         >
           {/*<label
@@ -67,8 +67,8 @@ const Search = () => {
           <form
             className={
               toggleMode === 'white'
-                ? 'search-form lightBg1'
-                : 'search-form darkBg1'
+                ? 'search-form lightBg2'
+                : 'search-form darkBg2'
             }
             onSubmit={e => {
               e.preventDefault()

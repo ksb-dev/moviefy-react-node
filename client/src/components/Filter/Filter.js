@@ -252,8 +252,8 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'filter__dropdown lightBg2 darkColor1'
-            : 'filter__dropdown darkBg2 lightColor2'
+            ? 'filter__dropdown lightBg1 darkColor1'
+            : 'filter__dropdown darkBg1 lightColor2'
         }
       >
         <div
@@ -306,7 +306,11 @@ const Filter = ({ activeGenre, setActiveGenre }) => {
                 }}
               >
                 <span
-                  className={toggleMode === 'white' ? 'lightBg2' : 'darkBg2'}
+                  className={
+                    toggleMode === 'white'
+                      ? 'lightBg1 darkShadow'
+                      : 'darkBg1 lightShadow'
+                  }
                 >
                   {option}
                 </span>
