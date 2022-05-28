@@ -83,7 +83,7 @@ const Search = () => {
               className={
                 toggleMode === 'white'
                   ? 'form-input darkColor1'
-                  : 'form-input lightColor1'
+                  : 'form-input lightColor2'
               }
               value={query}
               onChange={e => setQuery(e.target.value)}

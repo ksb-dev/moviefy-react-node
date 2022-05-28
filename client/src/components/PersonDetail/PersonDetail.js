@@ -27,7 +27,7 @@ const PersonDetail = ({ detail, person }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'person-detail__content darkColor2'
+            ? 'person-detail__content darkColor1'
             : 'person-detail__content lightColor2'
         }
       >

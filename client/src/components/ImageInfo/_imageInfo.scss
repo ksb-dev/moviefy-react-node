@@ -299,11 +299,11 @@
 }
 
 .lightBorder {
-  box-shadow: 0 0 5px var(--light-color-1);
+  box-shadow: 0 0 2px var(--light-color-1);
 }
 
 .darkBorder {
-  box-shadow: 0 0 5px var(--dark-color-1);
+  box-shadow: 0 0 2px var(--dark-color-1);
 }
 
 @keyframes scaling {

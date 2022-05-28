@@ -64,9 +64,9 @@
       &-category {
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 0.8rem;
-        border-bottom: 2px solid tomato;
-        padding: 0.3rem;
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
       }
 
       &-filter-length {
@@ -123,6 +123,16 @@
 @media screen and (max-width: 640px) {
   .movies {
     overflow: hidden;
+
+    .category__filter__length {
+      &-category {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 50px;
+      }
+    }
 
     .movie-list {
       width: 100%;

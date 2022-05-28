@@ -150,7 +150,7 @@ const Movie = () => {
                 transition={{ delay: 0.75, duration: 0.75 }}
                 className={
                   toggleMode === 'white'
-                    ? 'movie__overview darkColor2'
+                    ? 'movie__overview darkColor1'
                     : 'movie__overview lightColor2'
                 }
               >

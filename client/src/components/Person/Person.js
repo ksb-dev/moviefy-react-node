@@ -42,8 +42,8 @@ const Person = ({
             ref={charName}
             className={
               toggleMode === 'white'
-                ? 'person__name lightBg2'
-                : 'person__name darkBg2'
+                ? 'person__name lightBg2 darkColor1'
+                : 'person__name darkBg2 lightColor2'
             }
           >
             <h5>{character}</h5>
@@ -52,7 +52,7 @@ const Person = ({
               className={
                 toggleMode === 'white'
                   ? 'darkBg1 lightColor2'
-                  : 'lightBg1 darkColor2'
+                  : 'lightBg2 darkColor1'
               }
             >
               Biography

@@ -95,7 +95,7 @@ export default function Signup () {
         to='#'
         className={
           toggleMode === 'white'
-            ? 'login__back darkColor2'
+            ? 'login__back darkColor1'
             : 'login__back lightColor2'
         }
       >
@@ -107,7 +107,7 @@ export default function Signup () {
       {/*<div
         className={
           toggleMode === 'white'
-            ? 'login__title darkColor2'
+            ? 'login__title darkColor1'
             : 'login__title lightColor2'
         }
       >
@@ -123,7 +123,7 @@ export default function Signup () {
             : 'login__form darkBg1'
         }
       >
-        <h2 className={toggleMode === 'white' ? ' darkColor2' : ' lightColor2'}>
+        <h2 className={toggleMode === 'white' ? ' darkColor1' : ' lightColor2'}>
           Signup
         </h2>
 
@@ -131,7 +131,7 @@ export default function Signup () {
           <span
             className={
               toggleMode === 'white'
-                ? 'login__form-label-name darkColor2'
+                ? 'login__form-label-name darkColor1'
                 : 'login__form-label-name lightColor2'
             }
           >
@@ -153,7 +153,7 @@ export default function Signup () {
           <span
             className={
               toggleMode === 'white'
-                ? 'login__form-label-email darkColor2'
+                ? 'login__form-label-email darkColor1'
                 : 'login__form-label-email lightColor2'
             }
           >
@@ -176,7 +176,7 @@ export default function Signup () {
             <span
               className={
                 toggleMode === 'white'
-                  ? 'login__form-label-password darkColor2'
+                  ? 'login__form-label-password darkColor1'
                   : 'login__form-label-password lightColor2'
               }
             >
@@ -186,7 +186,7 @@ export default function Signup () {
               <i
                 className={
                   toggleMode === 'white'
-                    ? 'fa-regular fa-eye eye darkColor2'
+                    ? 'fa-regular fa-eye eye darkColor1'
                     : ' fa-regular fa-eye eye lightColor2'
                 }
                 onClick={handleClick}
@@ -196,7 +196,7 @@ export default function Signup () {
               <i
                 className={
                   toggleMode === 'white'
-                    ? 'fa-regular fa-eye-slash eye darkColor2'
+                    ? 'fa-regular fa-eye-slash eye darkColor1'
                     : 'fa-regular fa-eye-slash eye lightColor2'
                 }
                 onClick={handleClick}
@@ -220,7 +220,7 @@ export default function Signup () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor2'
+                ? 'login__form-btn lightBg2 darkColor1'
                 : 'login__form-btn darkBg2 lightColor2'
             }
           >
@@ -232,7 +232,7 @@ export default function Signup () {
           <button
             className={
               toggleMode === 'white'
-                ? 'login__form-btn lightBg2 darkColor2'
+                ? 'login__form-btn lightBg2 darkColor1'
                 : 'login__form-btn darkBg2 lightColor2'
             }
           >
@@ -244,7 +244,7 @@ export default function Signup () {
           onClick={showLog}
           className={
             toggleMode === 'white'
-              ? 'login__form-ask darkColor2'
+              ? 'login__form-ask darkColor1'
               : 'login__form-ask lightColor2'
           }
         >
@@ -253,7 +253,7 @@ export default function Signup () {
             to='#'
             className={
               toggleMode === 'white'
-                ? 'login__form-ask-link darkColor2'
+                ? 'login__form-ask-link darkColor1'
                 : 'login__form-ask-link lightColor2'
             }
           >

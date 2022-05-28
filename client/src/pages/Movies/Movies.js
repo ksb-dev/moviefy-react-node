@@ -69,14 +69,24 @@ const Movies = () => {
                 : 'category__filter__length darkBg2'
             }
           >
-            <h4 className='category__filter__length-category'>
-              <span
-                className={
-                  toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                }
-              >
-                {category}
-              </span>
+            <h4
+              className={
+                toggleMode === 'white'
+                  ? 'category__filter__length-category lightBg1 darkColor1'
+                  : 'category__filter__length-category darkBg1 lightColor2'
+              }
+            >
+              <span>{category}</span>
+            </h4>
+
+            <h4
+              className={
+                toggleMode === 'white'
+                  ? 'category__filter__length-category page-no darkBg1 lightColor2'
+                  : 'category__filter__length-category page-no lightBg2 darkColor1'
+              }
+            >
+              <span>PAGE {localStorage.getItem('page')}</span>
             </h4>
 
             <div className='category__filter__length-filter-length'>

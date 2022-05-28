@@ -107,7 +107,7 @@ const MovieCard = ({
             className={
               toggleMode === 'white'
                 ? 'movie-card__title darkColor1'
-                : 'movie-card__title lightColor1'
+                : 'movie-card__title lightColor2'
             }
           >
             {title &&
@@ -119,7 +119,7 @@ const MovieCard = ({
               className={
                 toggleMode === 'white'
                   ? 'movie-card__year darkColor1'
-                  : 'movie-card__year lightColor1'
+                  : 'movie-card__year lightColor2'
               }
             >
               {release_date ? release_date.substring(0, 4) : ''}

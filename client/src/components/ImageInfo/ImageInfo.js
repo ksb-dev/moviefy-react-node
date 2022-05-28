@@ -79,7 +79,7 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'first-segment__content alphaLightBg2 darkColor2'
+            ? 'first-segment__content alphaLightBg2 darkColor1'
             : 'first-segment__content alphaDarkBg2 lightColor2'
         }
       >
@@ -227,7 +227,7 @@ const ImageInfo = ({ movie, id, youtube_div, trailerUrl, setTrailerUrl }) => {
             <button
               className={
                 toggleMode === 'white'
-                  ? 'first-segment__more-info--trailer-btn darkColor2'
+                  ? 'first-segment__more-info--trailer-btn darkColor1'
                   : 'first-segment__more-info--trailer-btn lightColor2'
               }
               onClick={() =>

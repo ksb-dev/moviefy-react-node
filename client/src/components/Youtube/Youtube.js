@@ -25,7 +25,7 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
     <div
       ref={youtube_div}
       className={
-        toggleMode === 'white' ? 'youtube lightBg2' : 'youtube darkBg2'
+        toggleMode === 'white' ? 'youtube lightBg1' : 'youtube darkBg1'
       }
     >
       {trailerUrl && (
@@ -34,7 +34,7 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
             className={
               toggleMode === 'white'
                 ? 'youtube__close darkColor1'
-                : 'youtube__close lightColor1'
+                : 'youtube__close lightColor2'
             }
             ref={off}
             onClick={() => close()}
@@ -61,7 +61,7 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
               className={
                 toggleMode === 'white'
                   ? 'fa-solid fa-xmark fa-3x darkColor1'
-                  : 'fa-solid fa-xmark fa-3x lightColor1'
+                  : 'fa-solid fa-xmark fa-3x lightColor2'
               }
             ></i>
           </button>
@@ -69,7 +69,7 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
             className={
               toggleMode === 'white'
                 ? 'youtube__not-found darkColor1'
-                : 'youtube__not-found lightColor1'
+                : 'youtube__not-found lightColor2'
             }
           >
             trailer not found
