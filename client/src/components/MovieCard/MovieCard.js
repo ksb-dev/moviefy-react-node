@@ -118,8 +118,8 @@ const MovieCard = ({
             <h5
               className={
                 toggleMode === 'white'
-                  ? 'movie-card__year darkColorBg2'
-                  : 'movie-card__year lightColorBg1'
+                  ? 'movie-card__year lightColorBg2'
+                  : 'movie-card__year darkColorBg2'
               }
             >
               {release_date ? release_date.substring(0, 4) : ''}
