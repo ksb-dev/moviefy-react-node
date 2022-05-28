@@ -145,14 +145,20 @@ const Movies = () => {
         <h6
           className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
         ></h6>
+        <Pagination
+          data={filtered}
+          pageLimit={5}
+          dataLimit={20}
+          handleClick={handleClick}
+        />
       </section>
 
-      <Pagination
+      {/*<Pagination
         data={filtered}
         pageLimit={5}
         dataLimit={20}
         handleClick={handleClick}
-      />
+          />*/}
     </>
   )
 }
