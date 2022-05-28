@@ -55,19 +55,19 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .cat-clear {
+  /*.cat-clear {
     padding-top: 11rem;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 786px) {
   .cat-clear {
-    padding-top: 9rem;
+    padding-top: 8rem;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .cat-clear {
+  /*.cat-clear {
     padding-top: 9rem;
-  }
+  }*/
 }

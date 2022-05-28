@@ -71,21 +71,23 @@ const Pagination = ({ data, pageLimit, dataLimit, handleClick }) => {
     <div>
       <div
         className={
-          toggleMode === 'white' ? 'pagination lightBg1' : 'pagination darkBg1'
+          toggleMode === 'white'
+            ? 'pagination alphaLightBg1'
+            : 'pagination alphaDarkBg1'
         }
       >
         {/* previous button */}
         <div
           className={
-            toggleMode === 'white' ? 'inner darkBg1' : 'inner lightBg2'
+            toggleMode === 'white' ? 'inner transparent' : 'inner transparent'
           }
         >
           <button
             onClick={goToPreviousPage}
             className={
               toggleMode === 'white'
-                ? ` ${number === 1 ? 'disabled' : 'prevNextLight'}`
-                : ` ${number === 1 ? 'disabled' : 'prevNextDark'}`
+                ? ` ${number === 1 ? 'prev disabled' : 'prevNextLight'}`
+                : ` ${number === 1 ? 'prev disabled' : 'prevNextDark'}`
             }
           >
             <i className='fa-solid fa-circle-chevron-left fa-2x left'></i>
@@ -117,8 +119,10 @@ const Pagination = ({ data, pageLimit, dataLimit, handleClick }) => {
             onClick={goToNextPage}
             className={
               toggleMode === 'white'
-                ? ` ${number === pages ? 'prevNextLight' : 'prevNextLight'}`
-                : ` ${number === pages ? 'prevNextDark' : 'prevNextDark'}`
+                ? ` ${
+                    number === pages ? 'next prevNextLight' : 'prevNextLight'
+                  }`
+                : ` ${number === pages ? 'next prevNextDark' : 'prevNextDark'}`
             }
           >
             <i className='fa-solid fa-circle-chevron-right fa-2x right'></i>

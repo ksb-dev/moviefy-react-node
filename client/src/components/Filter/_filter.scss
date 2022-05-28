@@ -97,7 +97,7 @@
 .darkShadow {
   background: var(--light-color-2);
   color: var(--dark-color-2);
-  box-shadow: 0 0 5px var(--dark-color-2);
+  box-shadow: 0 0 2px var(--dark-color-2);
   /*border: 2px solid var(--dark-color-2);*/
   border: none;
 }
@@ -105,7 +105,7 @@
 .lightShadow {
   background: var(--dark-color-1);
   color: var(--light-color-2);
-  box-shadow: 0 0 5px var(--light-color-2);
+  box-shadow: 0 0 2px var(--light-color-2);
   /*border: 2px solid var(--light-color-1);*/
   border: none;
 }

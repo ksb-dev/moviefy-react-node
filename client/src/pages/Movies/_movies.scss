@@ -9,7 +9,7 @@
   margin: 0 auto;
   border-radius: var(--border-radius);
   padding-bottom: 1rem;
-  padding-top: 12rem;
+  padding-top: 15rem;
 
   .page-no {
     font-size: 1rem;
@@ -48,23 +48,31 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 786px) {
   .movies {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    .movie-list {
+      margin-left: 0rem;
+    }
+
     .category__filter__length {
       position: fixed;
       z-index: 1;
       width: 100%;
-      height: 75px;
+      height: 55px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      top: 75px;
+      top: 55px;
       left: 0;
+      box-shadow: 0 0 5px #000;
 
       &-category {
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         padding: 0.5rem 1rem;
         border-radius: 50px;
       }
@@ -76,10 +84,10 @@
 
         .length {
           margin: 0;
-          margin-left: 0.5rem;
+          margin-left: 0.3rem;
           letter-spacing: 1px;
-          height: 35px;
-          width: 35px;
+          height: 30px;
+          width: 30px;
           position: relative;
           border-radius: 50%;
 
@@ -96,7 +104,7 @@
   }
 }
 
-@media screen and (max-width: 786px) {
+/*@media screen and (max-width: 786px) {
   .movies {
     margin: 0;
     padding-top: 8rem;
@@ -118,21 +126,12 @@
       }
     }
   }
-}
+}*/
 
 @media screen and (max-width: 640px) {
   .movies {
     overflow: hidden;
-
-    .category__filter__length {
-      &-category {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 0.7rem;
-        padding: 0.4rem 0.5rem;
-        border-radius: 50px;
-      }
-    }
+    padding-bottom: 8rem;
 
     .movie-list {
       width: 100%;

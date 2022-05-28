@@ -65,8 +65,8 @@ const Movies = () => {
           <div
             className={
               toggleMode === 'white'
-                ? 'category__filter__length lightBg2'
-                : 'category__filter__length darkBg2'
+                ? 'category__filter__length lightBg1'
+                : 'category__filter__length darkBg1'
             }
           >
             <h4
@@ -79,7 +79,7 @@ const Movies = () => {
               <span>{category}</span>
             </h4>
 
-            <h4
+            {/*<h4
               className={
                 toggleMode === 'white'
                   ? 'category__filter__length-category page-no darkBg1 lightColor2'
@@ -87,7 +87,7 @@ const Movies = () => {
               }
             >
               <span>PAGE {localStorage.getItem('page')}</span>
-            </h4>
+            </h4>*/}
 
             <div className='category__filter__length-filter-length'>
               <Filter
@@ -97,8 +97,8 @@ const Movies = () => {
               <h4
                 className={
                   toggleMode === 'white'
-                    ? 'length lightColorBg2'
-                    : 'length darkColorBg2'
+                    ? 'length lightColorBg1'
+                    : 'length darkColorBg1'
                 }
               >
                 <span>

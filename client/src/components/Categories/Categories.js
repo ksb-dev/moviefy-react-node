@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/context'
 
 const Categories = ({ sideMenu, back }) => {
-  const { toggleMode, loadMovies } = useGlobalContext()
+  const { toggleMode, loadMovies, user } = useGlobalContext()
 
   const navigate = useNavigate()
 

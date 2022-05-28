@@ -10,8 +10,8 @@
   justify-content: center;
   border-radius: var(--border-radius);
   overflow-x: hidden;
-  padding-top: 11rem;
-  padding-bottom: 5rem;
+  padding-top: 9rem;
+  padding-bottom: 1rem;
 
   h6 {
     margin: 1rem;
@@ -64,8 +64,6 @@
 
 @media screen and (max-width: 1024px) {
   .wishlists {
-    padding-top: 6rem;
-
     .category-length {
       padding-top: 6rem;
     }
@@ -74,7 +72,8 @@
 
 @media screen and (max-width: 786px) {
   .wishlists {
-    padding-top: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
     .category-length {
       padding-top: 5rem;

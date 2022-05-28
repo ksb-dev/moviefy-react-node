@@ -4,17 +4,17 @@
   height: 75px;
   top: 75px;
   left: 0;
-  z-index: 3;
+  z-index: 2;
 
   &__main {
-    width: 95%;
+    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
+    justify-content: center;
+    padding: 0.5rem 0;
   }
 
   &__results {
@@ -115,6 +115,18 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .sideMenu {
+    /*display: none;*/
+
+    &__list li {
+      font-size: 0.65rem;
+      padding: 0.5rem;
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
   .sideMenu {
     display: none;
   }
