@@ -133,5 +133,7 @@
 }
 
 .activeCategory {
-  box-shadow: 0 0 10px var(--tomato);
+  /*box-shadow: 0 0 10px var(--tomato);*/
+  background: tomato !important;
+  color: #fff !important;
 }

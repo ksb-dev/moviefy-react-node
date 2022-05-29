@@ -57,7 +57,11 @@ const SideMenu = ({ filtered }) => {
           !window.location.pathname.includes('/movie')
 */}
 
-          {category && category === 'popular' ? (
+          {category &&
+          category === 'popular' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('popular')}
               className={
@@ -77,7 +81,11 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category && category === 'trending' ? (
+          {category &&
+          category === 'trending' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('trending')}
               className={
@@ -97,7 +105,11 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category && category === 'in cinemas' ? (
+          {category &&
+          category === 'in cinemas' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('in cinemas')}
               className={
@@ -117,7 +129,11 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category && category === 'upcoming' ? (
+          {category &&
+          category === 'upcoming' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('upcoming')}
               className={
@@ -137,7 +153,11 @@ const SideMenu = ({ filtered }) => {
             </li>
           )}
 
-          {category && category === 'top rated' ? (
+          {category &&
+          category === 'top rated' &&
+          !window.location.pathname.includes('/bookmarks') &&
+          !window.location.pathname.includes('/search') &&
+          !window.location.pathname.includes('/movie') ? (
             <li
               onClick={() => handleClick('top rated')}
               className={

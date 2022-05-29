@@ -133,8 +133,14 @@
   }
 }
 
-.movie-card:hover {
-  box-shadow: 0 0 10px var(--tomato);
+.movie-card:hover .movie-card__image-rating,
+.movie-card:hover .movie-card__info {
+  background: tomato;
+  transition: var(--transition);
+}
+
+.movie-card:hover .movie-card__title {
+  color: #fff;
   transition: var(--transition);
 }
 
