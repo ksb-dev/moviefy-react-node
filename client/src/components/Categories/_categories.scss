@@ -39,10 +39,12 @@
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
   &__list li:hover {
-    transform: scale(1.1);
+    color: tomato;
     transition: all 0.3s ease;
   }
 

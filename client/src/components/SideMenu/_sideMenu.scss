@@ -110,6 +110,10 @@
   .sideMenu {
     &__main {
       justify-content: center;
+
+      .paginate-sideMenu {
+        display: none;
+      }
     }
   }
 }

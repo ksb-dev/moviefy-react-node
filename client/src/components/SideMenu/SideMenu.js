@@ -207,12 +207,14 @@ const SideMenu = ({ filtered }) => {
         {!window.location.pathname.includes('/movie') &&
           !window.location.pathname.includes('/search') &&
           !window.location.pathname.includes('/bookmarks') && (
-            <Pagination
-              data={filtered}
-              pageLimit={5}
-              dataLimit={20}
-              handleClick={handleClick}
-            />
+            <div className='paginate-sideMenu'>
+              <Pagination
+                data={filtered}
+                pageLimit={5}
+                dataLimit={20}
+                handleClick={handleClick}
+              />
+            </div>
           )}
       </div>
     </div>

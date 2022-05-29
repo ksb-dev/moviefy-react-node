@@ -48,15 +48,15 @@ const Categories = ({ sideMenu, back }) => {
           className={
             toggleMode === 'white'
               ? 'categories__list darkColor1'
-              : 'categories__list lightColor1'
+              : 'categories__list lightColor2'
           }
         >
           <li>
             <i className='fa-solid fa-xmark fa-2x' onClick={hideMenu}></i>
           </li>
-          <li className='categories__wishlists' onClick={hideMenu}>
-            <Link to='/bookmarks'>Wishlist</Link>
-          </li>
+          {/*<li className='categories__wishlists' onClick={hideMenu}>
+            <Link to='/bookmarks'>Wishlists</Link>
+        </li>*/}
           <li onClick={() => handleClick('popular')}>Popular</li>
           <li onClick={() => handleClick('trending')}>Trending</li>
           <li onClick={() => handleClick('in cinemas')}>In Cinemas</li>

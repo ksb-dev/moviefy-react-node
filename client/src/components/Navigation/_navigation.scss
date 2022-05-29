@@ -209,11 +209,6 @@
       }
     }
 
-    &__list p:hover {
-      box-shadow: none;
-      transition: var(--transition);
-    }
-
     &__list i {
       padding: 0;
       padding-bottom: 0.4rem;
@@ -233,6 +228,18 @@
       .wish-link {
         display: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navigation {
+    &__list p:hover,
+    &__list p:hover i,
+    &__list p:hover a {
+      /*box-shadow: 0 0 20px var(--tomato);
+    */
+      color: unset;
     }
   }
 }

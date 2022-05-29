@@ -111,7 +111,7 @@ const MovieCard = ({
             }
           >
             {title &&
-              (title.length > 25 ? title.substring(0, 15) + '...' : title)}
+              (title.length >= 15 ? title.substring(0, 20) + '...' : title)}
           </h5>
 
           <div>

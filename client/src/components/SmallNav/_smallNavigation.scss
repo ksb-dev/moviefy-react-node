@@ -42,17 +42,13 @@
 
     span {
       display: inline-block;
-      background: linear-gradient(tomato, red);
+      background: tomato;
       color: #fff;
       font-weight: 500;
       padding: 0.3rem 0.5rem;
       border-radius: 50px;
       margin-left: 0.5rem;
     }
-  }
-
-  .wish-link-small:hover {
-    box-shadow: 0 0 10px tomato;
   }
 }
 
