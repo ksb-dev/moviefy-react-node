@@ -95,8 +95,12 @@
     display: none;
   }
 
-  &__list p:hover {
-    box-shadow: 0 0 20px var(--tomato);
+  &__list p:hover,
+  &__list p:hover i,
+  &__list p:hover a {
+    /*box-shadow: 0 0 20px var(--tomato);
+    */
+    color: var(--tomato);
     transition: var(--transition);
   }
 

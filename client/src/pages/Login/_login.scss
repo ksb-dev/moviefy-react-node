@@ -77,8 +77,8 @@
     }
 
     &-btn {
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
+      padding: 0.4rem 0.5rem;
+      border-radius: 5px;
       margin-right: 1rem;
       font-size: 1rem;
       letter-spacing: 1px;
@@ -89,7 +89,8 @@
     }
 
     &-btn:hover {
-      box-shadow: 0 0 10px tomato;
+      background: tomato;
+      color: #fff;
     }
 
     &-ask {
@@ -104,7 +105,7 @@
       }
 
       &-link:hover {
-        box-shadow: 0 0 10px tomato;
+        color: tomato;
       }
     }
 

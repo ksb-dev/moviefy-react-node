@@ -193,8 +193,8 @@ export default function Login () {
             <button
               className={
                 toggleMode === 'white'
-                  ? 'login__form-btn lightBg1 darkColor1'
-                  : 'login__form-btn darkBg1 lightColor2'
+                  ? 'login__form-btn darkBg1 lightColor2'
+                  : 'login__form-btn lightBg2 darkColor1'
               }
             >
               Login
@@ -205,8 +205,8 @@ export default function Login () {
             <button
               className={
                 toggleMode === 'white'
-                  ? 'login__form-btn lightBg1 darkColor1'
-                  : 'login__form-btn darkBg1 lightColor2'
+                  ? 'login__form-btn darkBg1 lightColor2'
+                  : 'login__form-btn lightBg2 darkColor1'
               }
             >
               Loggging in

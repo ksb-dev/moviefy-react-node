@@ -1,22 +1,24 @@
 .pagination {
-  position: fixed;
+  /*position: fixed;
   z-index: 1;
   width: 100vw;
   height: 75px;
   top: 150px;
-  left: 0;
+  left: 0;*/
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
 
   .inner {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    padding: 0.5rem 1rem;
-    margin-left: -1rem;
+
+    /*padding: 0.5rem 1rem;*/
+    /*margin-left: -1rem;*/
 
     .prev,
     .next {
@@ -43,27 +45,31 @@
   }
 }
 
-/*@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .pagination {
-    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    height: 55px;
     top: unset;
     bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
+    left: 0;
+    width: 100vw;
+    border-radius: 0;
 
     .inner {
       margin-right: 0;
+      padding: 0.5rem 1rem;
+      background: transparent !important;
     }
   }
-}*/
+}
 
 @media screen and (max-width: 786px) {
   .pagination {
     top: unset;
     bottom: 55px;
     height: 55px;
+    width: 100vw;
 
     .inner {
       margin-left: 0;
@@ -72,9 +78,6 @@
 }
 
 @media screen and (max-width: 640px) {
-  .pagination {
-  }
-
   .prevNextDark,
   .prevNextLight {
     margin: 0.2rem;
@@ -85,7 +88,7 @@
   border: none;
   background: var(--dark-color-1);
   color: var(--light-color-2);
-  margin: 0rem;
+  margin: 0rem 0.5rem;
   cursor: pointer;
   border-radius: 50%;
   background: transparent;
@@ -97,7 +100,7 @@
   border-radius: 50%;
   border: none;
   color: var(--dark-color-1);
-  margin: 0rem;
+  margin: 0rem 0.5rem;
   cursor: pointer;
   background: transparent;
   padding: 0;
@@ -148,7 +151,7 @@
 }
 
 .darkNumber {
-  background: var(--dark-color-2);
+  background: var(--dark-color-1);
   color: var(--light-color-2);
   box-shadow: 0 0 5px var(--light-color-2);
   /*border: 2px solid var(--dark-color-2);*/

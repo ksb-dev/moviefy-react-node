@@ -8,6 +8,7 @@ import { useGlobalContext } from '../../context/context'
 
 // Components
 import Filter from '../Filter/Filter'
+import Pagination from '../Pagination/Pagination'
 
 const SideMenu = ({ filtered }) => {
   const {
@@ -176,31 +177,42 @@ const SideMenu = ({ filtered }) => {
               Top Rated
             </li>
           )}
+
+          {!window.location.pathname.includes('/movie') &&
+            !window.location.pathname.includes('/search') &&
+            !window.location.pathname.includes('/bookmarks') && (
+              <>
+                <div className='sideMenu__filter'>
+                  <Filter
+                    activeGenre={activeGenre}
+                    setActiveGenre={setActiveGenre}
+                  />
+
+                  <h2
+                    className={
+                      toggleMode === 'white'
+                        ? 'sideMenu__filter-counter lightBg1 darkColor1'
+                        : 'sideMenu__filter-counter darkBg1 lightColor2'
+                    }
+                  >
+                    <span>
+                      <CountUp start={0} end={filtered.length} duration={0.5} />
+                    </span>
+                  </h2>
+                </div>
+              </>
+            )}
         </ul>
 
         {!window.location.pathname.includes('/movie') &&
           !window.location.pathname.includes('/search') &&
           !window.location.pathname.includes('/bookmarks') && (
-            <>
-              <div className='sideMenu__filter'>
-                <Filter
-                  activeGenre={activeGenre}
-                  setActiveGenre={setActiveGenre}
-                />
-
-                <h2
-                  className={
-                    toggleMode === 'white'
-                      ? 'sideMenu__filter-counter lightBg1 darkColor1'
-                      : 'sideMenu__filter-counter darkBg1 lightColor2'
-                  }
-                >
-                  <span>
-                    <CountUp start={0} end={filtered.length} duration={0.5} />
-                  </span>
-                </h2>
-              </div>
-            </>
+            <Pagination
+              data={filtered}
+              pageLimit={5}
+              dataLimit={20}
+              handleClick={handleClick}
+            />
           )}
       </div>
     </div>

@@ -57,11 +57,13 @@
       display: block;
       padding: 0.2rem 0.5rem;
       border-radius: var(--border-radius);
-      transition: var(--transition);
+      transition: all 0.1s ease;
     }
 
     span:hover {
-      box-shadow: 0 0 5px var(--tomato);
+      background: tomato;
+      color: #fff;
+      box-shadow: none;
     }
   }
 }
