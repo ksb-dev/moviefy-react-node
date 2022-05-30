@@ -18,16 +18,13 @@
 
   &__content {
     max-width: 1280px;
-    width: 80%;
-    height: 80%;
+    width: 90%;
     overflow: scroll;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 2rem;
-    max-width: 1280px;
-    margin: 0rem auto;
-    margin-top: 4rem;
+    margin: 2rem auto;
     border-radius: var(--border-radius);
 
     &__close {
@@ -42,7 +39,7 @@
     &__more {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       margin-right: 2rem;
 
       img {
@@ -89,6 +86,9 @@
     &__content {
       display: flex;
       flex-direction: column;
+      padding: 1rem;
+      width: 90%;
+      margin: 2rem auto;
 
       &__bio {
         margin: 1rem;
@@ -103,6 +103,8 @@
   .person-detail {
     &__content {
       padding: 1rem;
+      width: 90%;
+      margin-top: 1rem;
 
       &__bio {
         font-size: 0.9rem;
@@ -117,6 +119,9 @@
 @media screen and (max-width: 640px) {
   .person-detail {
     &__content {
+      padding: 1rem;
+      width: 85%;
+
       &__more {
         img {
           width: 200px;
