@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 // Context
 import { useGlobalContext } from '../../context/context'
@@ -7,6 +7,27 @@ const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
 const PersonDetail = ({ detail, person }) => {
   const { toggleMode } = useGlobalContext()
+
+  const detailInner = useRef(null)
+
+  useEffect(() => {
+    // Function for click event
+    function handleOutsideClick (event) {
+      if (
+        detail.current.contains(event.target) &&
+        !detailInner.current.contains(event.target)
+      ) {
+        //console.logPage('you just clicked outside of box!')
+        detail.current.style.opacity = '0'
+        detail.current.style.zIndex = '-1'
+        detail.current.style.transform = 'scale(0)'
+      }
+    }
+
+    // Adding click event listener
+    document.addEventListener('click', handleOutsideClick)
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [detail])
 
   const closeDetail = () => {
     //detail.current.style.transform = 'translateX(-120%)'
@@ -20,15 +41,16 @@ const PersonDetail = ({ detail, person }) => {
       ref={detail}
       className={
         toggleMode === 'white'
-          ? 'person-detail lightBg1'
-          : 'person-detail darkBg1'
+          ? 'person-detail alphaLightBg2'
+          : 'person-detail alphaDarkBg2'
       }
     >
       <div
+        ref={detailInner}
         className={
           toggleMode === 'white'
-            ? 'person-detail__content darkColor1'
-            : 'person-detail__content lightColor2'
+            ? 'person-detail__content lightBg2 darkColor1'
+            : 'person-detail__content darkBg2 lightColor2'
         }
       >
         <div className='person-detail__content__close'>

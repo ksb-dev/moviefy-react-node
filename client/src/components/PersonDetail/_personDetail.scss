@@ -12,12 +12,23 @@
   transition: var(--transition);
   overflow: auto;
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   &__content {
+    max-width: 1280px;
+    width: 80%;
+    height: 80%;
+    overflow: scroll;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 2rem;
-    min-height: 100vh;
+    max-width: 1280px;
+    margin: 0rem auto;
+    margin-top: 4rem;
+    border-radius: var(--border-radius);
 
     &__close {
       cursor: pointer;
@@ -106,8 +117,6 @@
 @media screen and (max-width: 640px) {
   .person-detail {
     &__content {
-      margin: 0;
-
       &__more {
         img {
           width: 200px;
