@@ -74,8 +74,8 @@
   &__year {
     margin: 0;
     margin-right: 2rem;
-    font-weight: 500;
-    padding: 0.2rem 0.4rem;
+    font-weight: 600;
+    /*padding: 0.2rem 0.4rem;*/
     border-radius: 50px;
   }
 
@@ -152,7 +152,8 @@
   transition: var(--transition);
 }
 
-.movie-card:hover .movie-card__title {
+.movie-card:hover .movie-card__title,
+.movie-card:hover .movie-card__year {
   color: var(--tomato);
   /*transition: var(--transition);*/
 }
