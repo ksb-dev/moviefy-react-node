@@ -93,8 +93,7 @@
     }
 
     &-btn:hover {
-      background: var(--tomato);
-      color: #fff;
+      box-shadow: 0 0 20px var(--tomato);
     }
 
     &-ask {
@@ -109,7 +108,7 @@
       }
 
       &-link:hover {
-        color: var(--tomato);
+        box-shadow: 0 0 10px var(--tomato);
       }
     }
 
