@@ -86,7 +86,7 @@ const MovieCard = ({
             transition={{ delay: 0.5, duration: 0.5 }}
             className={`movie-card__rating ${getClassByRate(vote_average)}`}
           >
-            <span>{vote_average}</span>
+            {vote_average ? <span>{vote_average}</span> : 'Rating'}
           </motion.div>
         </div>
       </Link>
@@ -110,8 +110,11 @@ const MovieCard = ({
                 : 'movie-card__title lightColor2'
             }
           >
-            {title &&
-              (title.length >= 15 ? title.substring(0, 20) + '...' : title)}
+            {title
+              ? title.length >= 15
+                ? title.substring(0, 20) + '...'
+                : title
+              : 'Title'}
           </h5>
 
           <div>
@@ -122,7 +125,7 @@ const MovieCard = ({
                   : 'movie-card__year lightColor2'
               }
             >
-              {release_date ? release_date.substring(0, 4) : ''}
+              {release_date ? release_date.substring(0, 4) : '0000'}
             </h5>
           </div>
         </div>
