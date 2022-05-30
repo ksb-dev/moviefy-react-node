@@ -83,7 +83,8 @@
   }
 
   &__list li:hover {
-    color: tomato;
+    color: var(--tomato);
+    background: #000;
     transition: var(--transition);
   }
 
@@ -144,6 +145,6 @@
 }
 
 .activeCategory {
-  background: tomato !important;
-  color: #fff !important;
+  background: var(--tomato) !important;
+  color: #000 !important;
 }

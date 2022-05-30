@@ -20,7 +20,6 @@
     margin: 0;
     margin-right: 0.5rem;
     border-radius: var(--border-radius);
-    box-shadow: 1px 1px 5px #000;
   }
 
   &__rating {
@@ -50,7 +49,6 @@
     border-radius: var(--border-radius);
     text-align: center;
     cursor: pointer;
-    box-shadow: 1px 1px 5px #000;
     letter-spacing: 2px;
     margin-top: 0.5rem;
     font-weight: 500;
@@ -58,6 +56,7 @@
 
   &__add {
     background: linear-gradient(#38ef7d, green);
+    background: green;
 
     a {
       text-decoration: none;
@@ -67,14 +66,17 @@
 
   &__remove {
     background: linear-gradient(tomato, red);
+    background: red;
   }
 
   &__add:hover {
     background: linear-gradient(green, #38ef7d);
+    background: #00c44b;
   }
 
   &__remove:hover {
     background: linear-gradient(red, tomato);
+    background: tomato;
   }
 
   &__more-info {
@@ -160,8 +162,6 @@
 
 @media only screen and (max-width: 1024px) {
   .first-segment {
-    margin: -0.3rem 0 3rem 0rem;
-
     &__image-rating {
       position: relative;
       width: 250px;

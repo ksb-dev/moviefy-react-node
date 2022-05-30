@@ -26,6 +26,10 @@
     }
   }
 
+  &__back:hover {
+    color: tomato;
+  }
+
   &__title h1 {
     margin-bottom: 2rem;
     letter-spacing: 2px;
@@ -37,7 +41,7 @@
     padding: 2rem;
     letter-spacing: 1px;
     border-radius: var(--border-radius);
-    border-top: 5px solid tomato;
+    border-top: 5px solid var(--tomato);
 
     &-label {
       display: block;
@@ -89,7 +93,7 @@
     }
 
     &-btn:hover {
-      background: tomato;
+      background: var(--tomato);
       color: #fff;
     }
 
@@ -105,7 +109,7 @@
       }
 
       &-link:hover {
-        color: tomato;
+        color: var(--tomato);
       }
     }
 

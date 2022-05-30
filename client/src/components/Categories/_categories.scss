@@ -44,7 +44,7 @@
   }
 
   &__list li:hover {
-    color: tomato;
+    transform: scale(1.1);
     transition: all 0.3s ease;
   }
 
@@ -57,7 +57,7 @@
   }
 
   &__wishlists a {
-    background: tomato;
+    background: var(--tomato);
     color: #fff;
     padding: 0.2rem 0.5rem;
     border-radius: 50px;

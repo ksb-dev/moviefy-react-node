@@ -80,32 +80,22 @@ const Header = () => {
             }}
           >
             Moviefy
-            {window.location.pathname.includes('/movie') && (
-              <span style={{ color: '#fff' }}> / movie</span>
-            )}
-            {window.location.pathname.includes('/search') && (
-              <span style={{ color: '#fff' }}> / search</span>
-            )}
-            {window.location.pathname.includes('/bookmarks') && (
-              <span style={{ color: '#fff' }}> / wishlists</span>
-            )}
           </h2>
 
           <div className='navigation__list'>
             <div className='navigation__options'>
-              <p className='wish-link'>
-                <Link to='/bookmarks'>
-                  Wishlists
-                  <span className='lightColorBg1'>
-                    {wishlistFiltered.length}
-                  </span>
-                </Link>
-              </p>
               {/* Home */}
 
-              {(window.location.pathname === '/bookmarks' ||
-                window.location.pathname.includes('/movie') ||
-                window.location.pathname === '/search') && (
+              {!window.location.pathname.includes('/bookmarks') &&
+              !window.location.pathname.includes('/movie') &&
+              !window.location.pathname.includes('/search') ? (
+                <p>
+                  <Link to='/'>
+                    <i className='fa-solid fa-house activeLink'></i>
+                    <span className='activeLink'>Home</span>
+                  </Link>
+                </p>
+              ) : (
                 <p>
                   <Link to='/'>
                     <i className='fa-solid fa-house'></i>
@@ -116,12 +106,21 @@ const Header = () => {
 
               {/* Search */}
 
-              <p>
-                <Link to='/search'>
-                  <i className='fa-solid fa-magnifying-glass'></i>
-                  <span>Search</span>
-                </Link>
-              </p>
+              {window.location.pathname.includes('/search') ? (
+                <p>
+                  <Link to='/search'>
+                    <i className='fa-solid fa-magnifying-glass activeLink'></i>
+                    <span className='activeLink'>Search</span>
+                  </Link>
+                </p>
+              ) : (
+                <p>
+                  <Link to='/search'>
+                    <i className='fa-solid fa-magnifying-glass'></i>
+                    <span>Search</span>
+                  </Link>
+                </p>
+              )}
 
               {/* Mode*/}
 
@@ -159,11 +158,37 @@ const Header = () => {
                 </p>
               )}
 
+              {/* Wishlists */}
+
+              {window.location.pathname.includes('/bookmarks') ? (
+                <p className='wish-link'>
+                  <Link to='/bookmarks'>
+                    <span className='activeLink' style={{ padding: '0' }}>
+                      Wishlists
+                    </span>
+                    <span className='length activeLength'>
+                      {wishlistFiltered.length}
+                    </span>
+                  </Link>
+                </p>
+              ) : (
+                <p className='wish-link'>
+                  <Link to='/bookmarks'>
+                    Wishlists
+                    <span className='length inactiveLength'>
+                      {wishlistFiltered.length}
+                    </span>
+                  </Link>
+                </p>
+              )}
+
               {/* More */}
 
               <p className='more' onClick={showMenu}>
-                <i className='fa fa-bars-staggered'></i>
-                <span>More</span>
+                <Link to='#'>
+                  <i class='fa-solid fa-bars'></i>
+                  <span>More</span>
+                </Link>
               </p>
             </div>
           </div>

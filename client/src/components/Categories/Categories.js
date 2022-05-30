@@ -1,5 +1,5 @@
-import React from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // Context
 import { useGlobalContext } from '../../context/context'
@@ -8,6 +8,23 @@ const Categories = ({ sideMenu, back }) => {
   const { toggleMode, loadMovies, user } = useGlobalContext()
 
   const navigate = useNavigate()
+
+  useEffect(() => {
+    // Function for click event
+    function handleOutsideClick (event) {
+      if (
+        back.current.contains(event.target) &&
+        !sideMenu.current.contains(event.target)
+      ) {
+        //console.logPage('you just clicked outside of box!')
+        back.current.style.transform = 'translateX(100%)'
+      }
+    }
+
+    // Adding click event listener
+    document.addEventListener('click', handleOutsideClick)
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [back])
 
   const hideMenu = () => {
     sideMenu.current.style.transform = 'translateX(100%)'

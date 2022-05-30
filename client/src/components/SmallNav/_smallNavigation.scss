@@ -21,17 +21,23 @@
   justify-content: space-around;
 
   .title {
+    cursor: pointer;
     span {
       font-size: 0.8rem;
     }
+  }
+
+  .title:hover {
+    transform: rotate(-3deg);
+    transition: var(--transition);
   }
 
   .wish-link-small {
     border-radius: 50px;
     font-size: 0.8rem;
     text-transform: uppercase;
-    font-weight: 500;
-    padding: 0 0.4rem;
+    font-weight: 600;
+    padding: 0;
     margin: 0;
     letter-spacing: 1px;
 
@@ -40,10 +46,8 @@
       color: #fff;
     }
 
-    span {
+    .length {
       display: inline-block;
-      background: tomato;
-      color: #fff;
       font-weight: 500;
       padding: 0.3rem 0.5rem;
       border-radius: 50px;

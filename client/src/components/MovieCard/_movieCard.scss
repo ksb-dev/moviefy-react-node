@@ -141,15 +141,19 @@
   }
 }
 
+.movie-card:hover {
+  box-shadow: 0 0 20px gray;
+  transition: var(--transition);
+}
+
 .movie-card:hover .movie-card__image-rating,
 .movie-card:hover .movie-card__info {
-  background: tomato;
-  background: #000;
+  background: var(--tomato);
   transition: var(--transition);
 }
 
 .movie-card:hover .movie-card__title {
-  color: #fff;
+  color: #000;
   /*transition: var(--transition);*/
 }
 
