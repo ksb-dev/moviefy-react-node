@@ -32,10 +32,7 @@ const PersonDetail = ({ detail, person }) => {
         }
       >
         <div className='person-detail__content__close'>
-          <i
-            className='fa-solid fa-circle-xmark fa-2x'
-            onClick={closeDetail}
-          ></i>
+          <i className='fa-solid fa-xmark fa-2x' onClick={closeDetail}></i>
         </div>
 
         <div className='person-detail__content__more'>

@@ -93,7 +93,8 @@
     }
 
     &-btn:hover {
-      box-shadow: 0 0 20px var(--tomato);
+      background: #000;
+      color: var(--tomato);
     }
 
     &-ask {
