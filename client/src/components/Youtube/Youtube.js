@@ -39,7 +39,7 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
             ref={off}
             onClick={() => close()}
           >
-            <i className='fa-solid fa-xmark fa-3x'></i>
+            <i className='fa-solid fa-xmark-circle fa-3x'></i>
           </div>
 
           <div className='youtube__wrapper'>
@@ -60,8 +60,8 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
             <i
               className={
                 toggleMode === 'white'
-                  ? 'fa-solid fa-xmark fa-3x darkColor1'
-                  : 'fa-solid fa-xmark fa-3x lightColor2'
+                  ? 'fa-solid fa-xmark-circle fa-3x darkColor1'
+                  : 'fa-solid fa-xmark-circle fa-3x lightColor2'
               }
             ></i>
           </button>

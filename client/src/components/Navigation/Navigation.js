@@ -186,7 +186,7 @@ const Header = () => {
 
               <p className='more' onClick={showMenu}>
                 <Link to='#'>
-                  <i class='fa-solid fa-bars'></i>
+                  <i className='fa-solid fa-bars'></i>
                   <span>More</span>
                 </Link>
               </p>
