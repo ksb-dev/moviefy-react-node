@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react'
 
 import { useGlobalContext } from '../../context/context'
 
-//import './Logout.css'
-
 const Logout = ({ log }) => {
   const {
     toggleMode,

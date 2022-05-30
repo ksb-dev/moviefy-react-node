@@ -149,12 +149,14 @@
 .movie-card:hover .movie-card__image-rating,
 .movie-card:hover .movie-card__info {
   background: #000;
+  background: var(--tomato);
   transition: var(--transition);
 }
 
 .movie-card:hover .movie-card__title,
 .movie-card:hover .movie-card__year {
   color: var(--tomato);
+  color: #000;
   /*transition: var(--transition);*/
 }
 
