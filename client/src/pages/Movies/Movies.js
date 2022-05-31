@@ -52,15 +52,6 @@ const Movies = () => {
       <SideMenu filtered={filtered} />
 
       <section className='movies'>
-        {/*<h1
-          className={
-            toggleMode === 'white'
-              ? 'page-no darkColorBg2'
-              : 'page-no lightColorBg1'
-          }
-        >
-          <span>Page {localStorage.getItem('page')}</span>
-        </h1>*/}
         {category && (
           <div
             className={
@@ -78,16 +69,6 @@ const Movies = () => {
             >
               <span>{category}</span>
             </h4>
-
-            {/*<h4
-              className={
-                toggleMode === 'white'
-                  ? 'category__filter__length-category page-no darkBg1 lightColor2'
-                  : 'category__filter__length-category page-no lightBg2 darkColor1'
-              }
-            >
-              <span>PAGE {localStorage.getItem('page')}</span>
-            </h4>*/}
 
             <div className='category__filter__length-filter-length'>
               <Filter
@@ -145,6 +126,7 @@ const Movies = () => {
         <h6
           className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
         ></h6>
+
         <div className='paginate-div'>
           <Pagination
             data={filtered}
@@ -154,13 +136,6 @@ const Movies = () => {
           />
         </div>
       </section>
-
-      {/*<Pagination
-        data={filtered}
-        pageLimit={5}
-        dataLimit={20}
-        handleClick={handleClick}
-          />*/}
     </>
   )
 }

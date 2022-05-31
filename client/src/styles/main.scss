@@ -124,12 +124,12 @@ code {
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  background-color: tomato;
+  background-color: var(--tomato);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  background-color: tomato;
+  background-color: var(--tomato);
   border-radius: 20px;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import CountUp from 'react-countup'
 
@@ -17,7 +17,6 @@ const SideMenu = ({ filtered }) => {
     setActiveGenre,
     loadMovies,
     category
-    //wishlistFiltered
   } = useGlobalContext()
 
   const navigate = useNavigate()
@@ -52,12 +51,6 @@ const SideMenu = ({ filtered }) => {
               : 'sideMenu__list lightColor2'
           }
         >
-          {/*&&
-          !window.location.pathname.includes('/bookmarks') &&
-          !window.location.pathname.includes('/search') &&
-          !window.location.pathname.includes('/movie')
-*/}
-
           {category &&
           category === 'popular' &&
           !window.location.pathname.includes('/bookmarks') &&
@@ -112,21 +105,21 @@ const SideMenu = ({ filtered }) => {
           !window.location.pathname.includes('/search') &&
           !window.location.pathname.includes('/movie') ? (
             <li
-              onClick={() => handleClick('in cinemas')}
+              onClick={() => handleClick('now playing')}
               className={
                 toggleMode === 'white'
                   ? 'activeCategory lightBg1'
                   : 'activeCategory darkBg1'
               }
             >
-              In Cinemas
+              Now Playing
             </li>
           ) : (
             <li
               className={toggleMode === 'white' ? 'lightBg1' : 'darkBg1'}
-              onClick={() => handleClick('in cinemas')}
+              onClick={() => handleClick('now playing')}
             >
-              In Cinemas
+              Now Playing
             </li>
           )}
 

@@ -9,6 +9,7 @@ import axios from 'axios'
 
 const AppContext = React.createContext()
 
+const TV_POPULAR_URL = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_KEY}&language=en-US&page=1`
 const POPULAR_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_KEY}&language=en-US&sort_by=popularity.desc`
 const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_KEY}`
 const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_KEY}&language=en-US`
@@ -159,7 +160,7 @@ const AppProvider = ({ children }) => {
   const loadMovies = useCallback((category, page) => {
     if (category === 'popular') fetchMovies(POPULAR_URL, category, page)
     if (category === 'trending') fetchMovies(TRENDING, category, page)
-    if (category === 'in cinemas') fetchMovies(NOW_PLAYING, category, page)
+    if (category === 'now playing') fetchMovies(NOW_PLAYING, category, page)
     if (category === 'upcoming') fetchMovies(UPCOMING, category, page)
     if (category === 'top rated') fetchMovies(TOP_RATED, category, page)
   }, [])

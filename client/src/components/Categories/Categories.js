@@ -76,7 +76,7 @@ const Categories = ({ sideMenu, back }) => {
         </li>*/}
           <li onClick={() => handleClick('popular')}>Popular</li>
           <li onClick={() => handleClick('trending')}>Trending</li>
-          <li onClick={() => handleClick('in cinemas')}>In Cinemas</li>
+          <li onClick={() => handleClick('now playing')}>Now Playing</li>
           <li onClick={() => handleClick('upcoming')}>Upcoming</li>
           <li onClick={() => handleClick('top rated')}>Top Rated</li>
         </ul>
