@@ -6,9 +6,9 @@ import CountUp from 'react-countup'
 import { useGlobalContext } from '../../context/context'
 
 // Components
+import Header from '../../components/Header/Header'
+import NavigationBar from '../../components/NavigationBar/NavigationBar'
 import MovieCard from '../../components/MovieCard/MovieCard'
-import Navgation from '../../components/Navigation/Navigation'
-import SideMenu from '../../components/SideMenu/SideMenu'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup'
@@ -45,46 +45,20 @@ const Wishlists = () => {
   return (
     <>
       <Login />
-      <SideMenu filtered={filtered} />
+
       <Signup />
+
+      <Header />
+
+      <NavigationBar filtered={filtered} />
 
       <div
         className={toggleMode === 'white' ? 'whole lightBg1' : 'whole darkBg1'}
       >
-        <Navgation />
-
         <SmallNav />
 
-        {/*<SideMenu filtered={wishlistFiltered} />*/}
-
         <section className='wishlists'>
-          {/*<div className='category-length'>
-            <h4 className='category'>
-              <span
-                className={
-                  toggleMode === 'white' ? 'darkColor1' : 'lightColor1'
-                }
-              >
-                wishlists
-              </span>
-            </h4>
-
-            <h4
-              className={
-                toggleMode === 'white'
-                  ? 'length lightColorBg2'
-                  : 'length darkColorBg2'
-              }
-            >
-              <CountUp start={0} end={wishlistFiltered.length} duration={0.1} />
-            </h4>
-            </div>*/}
-
           <div className='wishlist-list'>
-            {/*{wishlist.length === 0 && (
-            <h3 style={{ color: 'tomato' }}>Add Movies To Wishlist</h3>
-          )}*/}
-
             {wishlistFiltered.length > 0 &&
               wishlistFiltered.map(movie => {
                 const {

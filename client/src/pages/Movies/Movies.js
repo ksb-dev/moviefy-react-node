@@ -6,10 +6,10 @@ import CountUp from 'react-countup'
 import { useGlobalContext } from '../../context/context'
 
 // Components
+import Header from '../../components/Header/Header'
+import NavigationBar from '../../components/NavigationBar/NavigationBar'
 import MovieCard from '../../components/MovieCard/MovieCard'
 import Pagination from '../../components/Pagination/Pagination'
-import Navgation from '../../components/Navigation/Navigation'
-import SideMenu from '../../components/SideMenu/SideMenu'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
 import Filter from '../../components/Filter/Filter'
 
@@ -45,11 +45,11 @@ const Movies = () => {
 
   return (
     <>
-      <Navgation />
+      <Header />
 
       <SmallNav />
 
-      <SideMenu filtered={filtered} />
+      <NavigationBar filtered={filtered} />
 
       <section className='movies'>
         {category && (

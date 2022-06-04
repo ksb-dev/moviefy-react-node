@@ -5,13 +5,13 @@ import { useParams } from 'react-router-dom'
 import { useGlobalContext } from '../../context/context'
 
 // Components
-import Navigation from '../../components/Navigation/Navigation'
+import Header from '../../components/Header/Header'
+import NavigationBar from '../../components/NavigationBar/NavigationBar'
 import ImageInfo from '../../components/ImageInfo/ImageInfo'
 import Youtube from '../../components/Youtube/Youtube'
 import Cast from '../../components/Cast/Cast'
 import PersonDetail from '../../components/PersonDetail/PersonDetail'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
-import SideMenu from '../../components/SideMenu/SideMenu'
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup'
 
@@ -106,11 +106,11 @@ const Movie = () => {
       <Signup />
 
       <div className='movie'>
-        {/* Navigation */}
+        {/* Header Component */}
 
-        <Navigation />
+        <Header />
 
-        <SideMenu filtered={filtered} />
+        <NavigationBar filtered={filtered} />
 
         <SmallNav />
 

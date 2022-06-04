@@ -48,7 +48,7 @@ const Cast = ({ setPerson, setPersonError, detail, people }) => {
             const { profile_path, character, original_name, id } = person
 
             return (
-              <div className='cast__person' key={id}>
+              <div key={id}>
                 <Person
                   profile_path={profile_path}
                   character={character}

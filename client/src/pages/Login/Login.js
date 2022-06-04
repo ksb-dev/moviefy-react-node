@@ -95,16 +95,6 @@ export default function Login () {
           </h4>
         </Link>
 
-        {/*<div
-          className={
-            toggleMode === 'white'
-              ? 'login__title darkColor1'
-              : 'login__title lightColor1'
-          }
-        >
-          <h1>Moviefy</h1>
-        </div>*/}
-
         <form
           ref={logPageInner}
           onSubmit={handleSubmit}
@@ -115,7 +105,7 @@ export default function Login () {
           }
         >
           <h2
-            className={toggleMode === 'white' ? ' darkColor1' : ' lightColor2'}
+            className={toggleMode === 'white' ? 'darkColor1' : ' lightColor2'}
           >
             Login
           </h2>
@@ -235,7 +225,13 @@ export default function Login () {
           </h5>
 
           {error && (
-            <h4 className='login__form-error' style={{ color: 'tomato' }}>
+            <h4
+              className='login__form-error'
+              style={{
+                color: 'tomato',
+                fontWeight: '500'
+              }}
+            >
               {error}
             </h4>
           )}

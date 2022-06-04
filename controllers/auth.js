@@ -8,7 +8,7 @@ const register = async (req, res) => {
   if (!name || !email || !password) {
     res
       .status(StatusCodes.BAD_REQUEST)
-      .json({ message: 'Please fill all above fields' })
+      .json({ message: 'Please fill all the above fields' })
     return
   }
 
@@ -38,7 +38,7 @@ const login = async (req, res) => {
   if (!email || !password) {
     res
       .status(StatusCodes.BAD_REQUEST)
-      .json({ message: 'Please fill in all above fields' })
+      .json({ message: 'Please fill all the above fields' })
     return
   }
 
@@ -54,7 +54,7 @@ const login = async (req, res) => {
   const isPasswordCorrect = await user.comparePassword(password)
 
   if (!isPasswordCorrect) {
-    res.status(StatusCodes.UNAUTHORIZED).json({ message: 'Incorrect Password' })
+    res.status(StatusCodes.UNAUTHORIZED).json({ message: 'Incorrect password' })
     return
   }
 

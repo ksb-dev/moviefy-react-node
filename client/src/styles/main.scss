@@ -1,9 +1,10 @@
 //Components
+
+@import '../components/Header/header';
+@import '../components/NavigationBar/navigationBar';
+@import '../components/SideNavigation/sideNavigation';
 @import '../components/MovieCard/movieCard';
 @import '../components/Filter/filter';
-@import '../components/Navigation/navigation';
-@import '../components/Categories/categories';
-@import '../components/sideMenu/sideMenu';
 @import '../components/Pagination/pagination';
 @import '../components/ImageInfo/imageInfo';
 @import '../components/Cast/cast';
@@ -109,7 +110,7 @@ code {
 
 ::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-button:start:decrement,
@@ -124,12 +125,12 @@ code {
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  background-color: var(--tomato);
+  background-color: gray;
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  background-color: var(--tomato);
+  background-color: gray;
   border-radius: 20px;
 }
 

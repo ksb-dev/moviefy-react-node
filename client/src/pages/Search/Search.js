@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react'
 import { useGlobalContext } from '../../context/context'
 
 // Components
+import Header from '../../components/Header/Header'
+import NavigationBar from '../../components/NavigationBar/NavigationBar'
 import SearchedMovies from '../../components/SearchedMovies/SearchedMovies'
-import Navigation from '../../components/Navigation/Navigation'
-import SideMenu from '../../components/SideMenu/SideMenu'
 import SmallNav from '../../components/SmallNav/SmallNavigation'
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup'
@@ -30,14 +30,6 @@ const Search = () => {
     if (isLoading && query) searchMovies(SEARCH_API + query, query)
   }, [isLoading])
 
-  /*useEffect(() => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-  })*/
-
   return (
     <>
       <Login />
@@ -46,9 +38,9 @@ const Search = () => {
       <div
         className={toggleMode === 'white' ? 'full lightBg1' : 'full darkBg1'}
       >
-        <Navigation />
+        <Header />
 
-        <SideMenu filtered={filtered} />
+        <NavigationBar filtered={filtered} />
 
         <SmallNav />
 
@@ -57,13 +49,6 @@ const Search = () => {
             toggleMode === 'white' ? 'search lightBg1' : 'search darkBg1'
           }
         >
-          {/*<label
-          className={toggleMode === 'white' ? 'darkColor1' : 'lightColor1'}
-          id='input'
-        >
-          Enter your search here
-      </label>*/}
-
           <form
             className={
               toggleMode === 'white'

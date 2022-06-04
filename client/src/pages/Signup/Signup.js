@@ -262,7 +262,10 @@ export default function Signup () {
         </h5>
 
         {error && (
-          <h4 className='login__form-error' style={{ color: 'tomato' }}>
+          <h4
+            className='login__form-error'
+            style={{ color: 'tomato', fontWeight: '500' }}
+          >
             {error}
           </h4>
         )}

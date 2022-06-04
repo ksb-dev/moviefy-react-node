@@ -7,7 +7,6 @@ import Login from '../Login/Login'
 import Movies from '../Movies/Movies'
 
 // Styles
-import './Home.css'
 import '../../styles/main.scss'
 
 const Home = () => {
