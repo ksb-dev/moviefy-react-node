@@ -31,16 +31,20 @@
     }
 
     .paginationItem {
-      height: 27px;
-      width: 27px;
+      height: 28px;
+      width: 28px;
       position: relative;
       margin: 0 0.5rem;
       cursor: pointer;
       border-radius: 50%;
+      transition: var(--transition);
+      font-weight: 500;
     }
 
     .paginationItem:hover {
-      transform: scale(1.1);
+      background: var(--tomato);
+      color: #000;
+      box-shadow: none;
     }
   }
 }
@@ -122,15 +126,15 @@
   padding: 0;
 }
 
-.dbg {
-  background: rgba(13, 37, 63, 0.95);
-  box-shadow: 0 0 2px rgb(220, 220, 220);
-}
+// .dbg {
+//   background: rgba(13, 37, 63, 0.95);
+//   box-shadow: 0 0 2px rgb(220, 220, 220);
+// }
 
-.lbg {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 2px #0d253f;
-}
+// .lbg {
+//   background: rgba(255, 255, 255, 0.95);
+//   box-shadow: 0 0 2px #0d253f;
+// }
 
 .darkActive {
   background: var(--light-color-2);
@@ -156,16 +160,14 @@
   box-shadow: 0 0 5px var(--light-color-2);
   /*border: 2px solid var(--dark-color-2);*/
   border: none;
-  padding: 0;
 }
 
 .lightNumber {
-  background: var(--light-color-2);
+  background: var(--light-color-1);
   color: var(--dark-color-1);
   box-shadow: 0 0 5px var(--dark-color-1);
   /*border: 2px solid var(--light-color-1);*/
   border: none;
-  padding: 0;
 }
 
 .transparent {
